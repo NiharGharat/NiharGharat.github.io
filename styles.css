@@ -9,25 +9,41 @@ html, body {
 }
 
 body {
-    /* The image used */
-    background-image: url("aspectResized.jpeg");
-    
-    /* Add the blur effect */
-    /* filter: blur(10px);
-    -webkit-filter: blur(10px); */
-  
-    /* Full height */
-  
-    /* Center and scale the image nicely */
-    background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
+    
+}
+
+.bg-image::before {
+    content: "";
+    background-image: url("almostPerfectTextureWithLeft.jpeg");
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 }
 
 .section-1 {
-    display: grid;   
+    position: relative;
+    display: grid;
     align-items: center;
     /* justify-items: center; */
+}
+
+.section-2 {
+    display: grid;
+}
+
+.section-2-header {
+    
 }
 
 .big {
@@ -42,35 +58,13 @@ body {
     font-size: calc(0.5rem + 1vw);
 }
 
-.rotated {
-    transform: rotate(45deg);
-}
-
 .name {
     font-size: calc(5rem + 3vw);
     color: #e8e730;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(232,232,232, 0.12);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.circular-button {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-}
-
-.circular-button:hover {
-    opacity: 0.7;
-}
-
-.about-me-button {
-    background: #3B5998;
-    color: white;
 }

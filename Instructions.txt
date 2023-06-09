@@ -1,0 +1,2 @@
+- npm create next-app portfolio-nextjs
+- npm run dev

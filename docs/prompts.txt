@@ -1,0 +1,40 @@
+1
+Hello,
+I'm Nihar Gharat
+A backend developer
+I am passionate about working on interesting product ideas, developing projects from start to finish. I love to learn new stuff!
+
+2
+Work Experience
+I have worked....
+
+at LTI, Shivajinagar, Pune, India
+as a Java backend developer
+from 2018 - 21
+- REsponsibilites
+- Learning
+
+at FedEx, Plano, Texas, US
+as a SDE intern
+from 
+- REsponsibilites
+- Learning
+
+3
+Side Projects
+I loved to contemplate and learn while I was working on...
+
+YouTubePlaylistScrapper
+- I love youtube. I love its recommendation system. But. I am tormented by YouTubes incessent copyright strikes, them handling it by removing all the video metadata. And, when I have that song in your playlist, the only thing which you are left with is 'Unavailable video'. Think about it, you lost the song which you so dearly enjoyed. My project will simply ensure that you never face that, you always have the song names saved safely in an offline xlsx format. You 1 YouTube 0.
+
+GoogleApartmentReviewScrapper
+- We all have been there. Searching for apartments to rent, which ones good, which ones are bad? Whats a good metric? Number of reviews? Number of 5 stars?
+
+SalesforceDataParser
+YelpReviews
+Dropbox Photos
+Gym Workout recommendation system(TailorSweat)
+
+4
+About Me
+Hey all, a bit about me. 

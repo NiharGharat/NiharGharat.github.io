@@ -1,2 +1,4 @@
-- npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+- npm create next-app portfolio-nextjs
 - npm run dev
+
+npx create-next-app@latest portfolio-nextjs --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"

@@ -26,15 +26,34 @@ I loved to contemplate and learn while I was working on...
 
 YouTubePlaylistScrapper
 - I love youtube. I love its recommendation system. But. I am tormented by YouTubes incessent copyright strikes, them handling it by removing all the video metadata. And, when I have that song in your playlist, the only thing which you are left with is 'Unavailable video'. Think about it, you lost the song which you so dearly enjoyed. My project will simply ensure that you never face that, you always have the song names saved safely in an offline xlsx format. You 1 YouTube 0.
+- Developed in Java, used docker for contanerisation, put CiCd with github actions, cronned the job to run daily with Anacron(Linux)
 
 GoogleApartmentReviewScrapper
-- We all have been there. Searching for apartments to rent, which ones good, which ones are bad? Whats a good metric? Number of reviews? Number of 5 stars?
+- We all have been there. Searching for apartments to rent, which ones good, which ones are bad? Whats a good metric? Number of reviews? Number of 5 stars? etc.. I was in same delima when I was moving to a new city, and had to search for aparment. I came up with this idea, get all apartment and later analyse them to give a sort of crunched rating on the apartment.
+- Python3, Selenium
 
 SalesforceDataParser
+- Developed a Java maven project for learning to pull data from Salesforce as structured data.
+
 YelpReviews
+- As a part of academic project, developed a webapp for showing Yelp reviews of restaurants in the vincinity of a geo area. The area was defined on a specific co ordinate(Texas), and the user can drag it to any location, which refreshes the view. 
+- Used Php for backend, Yelp Api, and Google Map api, and Javascript.
+
 Dropbox Photos
+- As a part of academic project, developed a webapp to act as dropbox client with upload download functionality. ....
+
+
 Gym Workout recommendation system(TailorSweat)
+- As a part of capstone academic project, developed a ML project to give the user a workout recommendation system. The app injested users profile, and past workout data. Performed feature engg, and used neural nets to come up with high confidence exercises which the user should/might do. 
+- Calculations were based on fun factor, exercise importance, and lots more parameters(like profile). Feature engg was run on new user entries, retraining the neural net was done on 14 day period.
+- Used python, pandas for feature engg, and keras for neural net.
+- Team effort 
 
 4
 About Me
-Hey all, a bit about me. 
+Hey, a bit about me - I am Nihar Gharat. I am from Mumbai, India, currently in US as a masters student. I love software engineering. I believe in observing the world and solving the problems with my 
+Prompt which I submitted to chatGpt.
+Suggest an intro line for my portfolio website. I believe in solving real world problems, I like to ponder on problems and solutions, read about stuff ranging from design, to history, to tech. I love to read. I love music. A little bit architecture, too much history. Personally, I like being outdoors and playing sports. Dont be too cringy.
+
+5
+Contact

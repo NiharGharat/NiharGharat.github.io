@@ -1,2 +1,0 @@
-# NiharGharat.github.io
-Portfolio

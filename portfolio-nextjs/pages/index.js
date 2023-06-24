@@ -1,17 +1,38 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Contact from '../components/contact';
-import Experience from '../components/experience';
-import Intro from '../components/intro';
-import Project from '../components/project';
+import Contact from './contact';
+import Experience from './experience';
+import Intro from './intro';
+import Project from './project';
+import {getSortedExperienceData, getSortedProjectData} from '../lib/project-util'
 
-export default function Home() {
+
+export default function Home(props) {
+  console.log("Here now till")
+  console.log(props)
   return (
     <>
+    <Head></Head>
+    <section>
       <Intro />
-      <Experience />
-      <Project />
+      <Experience data={props.allExpData}/>
+      <Project data={props.allProjectData}/>
       <Contact />
+    </section>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // This var is accessible in the porps if passed
+  const allExpData = getSortedExperienceData();
+  const allProjectData = getSortedProjectData();
+  console.log("Now here ")
+  console.log(allExpData)
+  return {
+    props: {
+      allExpData,
+      allProjectData,
+    },
+  };
 }

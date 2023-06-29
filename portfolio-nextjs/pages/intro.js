@@ -4,9 +4,6 @@ import styles from "./intro.module.css"
 
 export default function Intro() {
     return (<Layout>
-        <Head>
-            <title>IntroPage</title>
-        </Head>
         <main className={styles.introMain}>
             <section className={styles.introName}>Nihar Gharat</section>
             <section className={styles.introTag}>Software developer | Histroy Enthusiast</section>

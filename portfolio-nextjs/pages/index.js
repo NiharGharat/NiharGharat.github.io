@@ -12,7 +12,10 @@ export default function Home(props) {
   console.log(props)
   return (
     <>
-    <Head></Head>
+    <Head>
+      <title>Nihar</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <section>
       <Intro />
       <Experience data={props.allExpData}/>

@@ -10,9 +10,6 @@ export default function Project(allProjectData) {
         console.log(each)
     })
     return (<Layout>
-        <Head>
-
-        </Head>
         <main className={styles.projectMain}>
             <div className={styles.projectName}>
                 Projects

@@ -3,9 +3,6 @@ import Layout from "./layout"
 
 export default function Contact() {
     return (<Layout>
-        <Head>
-
-        </Head>
         <main>
             <section>
                 <div>Image</div>

@@ -5,9 +5,6 @@ export default function Experience(allExpData) {
     console.log("Experience")
     console.log(allExpData.data[0])
     return (<Layout>
-        <Head>
-
-        </Head>
         <main>
             <ul>
             {allExpData.data.map((eachExpData) => (

@@ -30,9 +30,9 @@ export function getSortedExperienceData() {
             ...matterResult.data
         }
     })
-    console.log(allExpData)
+    // console.log(allExpData)
     return allExpData.sort((a, b) => {
-        if (a.dateFrom < b.dateFrom) {
+        if (a.dateFrom > b.dateFrom) {
           return 1
         } else {
           return -1
@@ -61,7 +61,7 @@ export function getSortedProjectData() {
             ...matterResult.data
         }
     })
-    console.log(allProjectData)
+    // console.log(allProjectData)
     return allProjectData.sort((a, b) => {
         if (a.dateFrom < b.dateFrom) {
           return 1

@@ -18,12 +18,21 @@ export default function Project(allProjectData) {
                 Projects
             </div>
             <div className={styles.projectList}>
-                {/* Can load the project details from external md file */}
-                {/* Loop here and push the details to ProjectCard component */}
                 <ul>
-                    <ProjectCard title="project_1"></ProjectCard>
-                    <ProjectCard title="project_2"></ProjectCard>
-                    <ProjectCard title="project_3"></ProjectCard>
+                {allProjectData.data.map((eachProjectData) => (
+                    <li key={eachProjectData.id}>
+                        {eachProjectData.title}
+                        <br />
+                        {eachProjectData.type}
+                        <br />
+                        {eachProjectData.dateFrom}
+                        <br />
+                        {eachProjectData.techStack}
+                        <br />
+                        {eachProjectData.whyLoved}
+                        <br />
+                    </li>
+                ))}
                 </ul>
             </div>
         </main>

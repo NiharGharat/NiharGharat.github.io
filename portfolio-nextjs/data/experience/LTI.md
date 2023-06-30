@@ -12,5 +12,4 @@ I was part of the product engineering team, working on LTI big data analytics to
 working on the connector framework; a framework which can pull data from sources like RDBMS, NoSql, Cloud, etc. and push to any destination. 
 
 Worked on various technologies, rdbms tech like postgres, mysql, oracle, sqlserver, snowflake, etc. File types like Json, Csv, Xlsx, Xml, Parquet, Sas7bdat, etc. NoSql like MongoDb, cloud storages like Azure, S3, Sftp, GCP, Sharepoint, etc.. 
-
 ...

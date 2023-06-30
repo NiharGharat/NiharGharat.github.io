@@ -1,9 +1,8 @@
+import { all } from "hast-util-to-html/lib";
 import Layout from "./layout";
 import Head from "next/head";
 
 export default function Experience(allExpData) {
-    console.log("Experience")
-    console.log(allExpData.data[0])
     return (<Layout>
         <main>
             <ul>
@@ -19,6 +18,7 @@ export default function Experience(allExpData) {
                     <br />
                     {eachExpData.whyLoved}
                     <br />
+                    <div dangerouslySetInnerHTML={{ __html: eachExpData.contentHtml }} />
                 </li>
             ))}
             </ul>

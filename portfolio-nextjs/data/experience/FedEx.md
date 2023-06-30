@@ -9,4 +9,3 @@ whyLoved: 'Got to learn system design in great detail, good team, helped me a lo
 Joined as an intern at FedEx at their printAndGo product team. Key responsibilities where:
 1. Understanding architecture
 2. Revamping the old product to new microservice based product
-...

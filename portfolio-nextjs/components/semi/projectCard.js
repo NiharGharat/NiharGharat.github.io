@@ -2,12 +2,20 @@ import styles from "./projectCard.module.css";
 import Image from "next/image";
 
 // Take children
-export default function ProjectCard( {children} ) {
+export default function ProjectCard( {eachProjectData} ) {
     return (<div className={styles.eachCard}>
         <Image className={styles.cardImage}></Image>
         <section className={styles.cardDetailsSection}>
-            <div className={styles.eachCardTitle}></div>
-            <div className={styles.eachCardDesc}></div>
+            {eachProjectData.title}
+            <br />
+            {eachProjectData.type}
+            <br />
+            {eachProjectData.dateFrom}
+            <br />
+            {eachProjectData.techStack}
+            <br />
+            {eachProjectData.whyLoved}
+            <br />
         </section>
     </div>)
 }

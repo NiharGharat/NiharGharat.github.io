@@ -6,10 +6,7 @@ import Intro from './intro';
 import Project from './project';
 import {getSortedExperienceData, getSortedProjectData} from '../lib/project-util'
 
-
 export default function Home(props) {
-  console.log("Here now till")
-  console.log(props)
   return (
     <>
     <Head>
@@ -28,10 +25,12 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   // This var is accessible in the porps if passed
-  const allExpData = getSortedExperienceData();
-  const allProjectData = getSortedProjectData();
-  console.log("Now here ")
+  const allExpData = await getSortedExperienceData();
+  console.log("Here")
   console.log(allExpData)
+  console.log(allExpData.contentHtml)
+  console.log("Here")
+  const allProjectData = await getSortedProjectData();
   return {
     props: {
       allExpData,

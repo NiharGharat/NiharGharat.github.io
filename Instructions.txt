@@ -2,3 +2,10 @@
 - npm run dev
 
 npx create-next-app@latest portfolio-nextjs --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+
+npm install gray-matter
+npm install remark remark-html
+
+
+Future
+- Impl getStaticPaths - on click of LTI - create new page with LTI specifics and all details of the project

@@ -4,11 +4,6 @@ import styles from "./layout.module.css";
 import ProjectCard from "../components/semi/projectCard";
 
 export default function Project(allProjectData) {
-    console.log("Project")
-    console.log(allProjectData)
-    allProjectData.data.map(each => {
-        console.log(each)
-    })
     return (<Layout>
         <main className={styles.projectMain}>
             <div className={styles.projectName}>
@@ -17,7 +12,7 @@ export default function Project(allProjectData) {
             <div className={styles.projectList}>
                 <ul>
                 {allProjectData.data.map((eachProjectData) => (
-                    <li key={eachProjectData.id}>
+                        <li key={eachProjectData.id}>
                         {eachProjectData.title}
                         <br />
                         {eachProjectData.type}
@@ -28,7 +23,8 @@ export default function Project(allProjectData) {
                         <br />
                         {eachProjectData.whyLoved}
                         <br />
-                    </li>
+                        <div dangerouslySetInnerHTML={{ __html: eachProjectData.contentHtml }} />
+                        </li>
                 ))}
                 </ul>
             </div>

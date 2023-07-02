@@ -1,6 +1,4 @@
-import { all } from "hast-util-to-html/lib";
 import Layout from "./layout";
-import Head from "next/head";
 
 export default function Experience(allExpData) {
     return (<Layout>

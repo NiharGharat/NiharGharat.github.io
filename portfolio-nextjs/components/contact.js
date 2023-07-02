@@ -1,4 +1,3 @@
-import Head from "next/head"
 import Layout from "./layout"
 
 export default function Contact() {
@@ -11,11 +10,13 @@ export default function Contact() {
                 <div>#tech</div>
                 <div>#environment</div>
                 <div>#history</div>
+                <div>#software</div>
             </section>
             <section>
                 <div>LinkedIn</div>
                 <div>Instagram</div>
                 <div>Email</div>
+                <div>StackOverflow</div>
             </section>
         </main>
     </Layout>)

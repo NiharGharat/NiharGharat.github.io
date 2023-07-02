@@ -1,7 +1,5 @@
-import Head from "next/head";
 import Layout from "./layout";
 import styles from "./layout.module.css";
-import ProjectCard from "../components/semi/projectCard";
 
 export default function Project(allProjectData) {
     return (<Layout>

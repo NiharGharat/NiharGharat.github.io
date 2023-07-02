@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout from "./layout";
 import styles from "./intro.module.css"
 

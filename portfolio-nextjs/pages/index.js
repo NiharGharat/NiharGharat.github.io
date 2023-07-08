@@ -1,8 +1,5 @@
 import Head from 'next/head';
-import Contact from '../components/contact';
-import Experience from '../components/experience';
-import Intro from '../components/intro';
-import Project from '../components/project';
+import Intro from './intro';
 import {getSortedExperienceData, getSortedProjectData} from '../lib/project-util'
 
 export default function Home(props) {
@@ -14,9 +11,9 @@ export default function Home(props) {
     </Head>
     <section>
       <Intro />
-      <Experience data={props.allExpData}/>
+      {/* <Experience data={props.allExpData}/>
       <Project data={props.allProjectData}/>
-      <Contact />
+      <Contact /> */}
     </section>
     </>
   )
@@ -25,9 +22,6 @@ export default function Home(props) {
 export async function getStaticProps() {
   // This var is accessible in the porps if passed
   const allExpData = await getSortedExperienceData();
-  console.log("Here")
-  console.log(allExpData)
-  console.log("Here")
   const allProjectData = await getSortedProjectData();
   return {
     props: {

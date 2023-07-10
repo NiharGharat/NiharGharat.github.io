@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from 'next/image';
 import Head from "next/head";
 
 export default function Intro() {
@@ -7,10 +6,7 @@ export default function Intro() {
         <>
         {/* TODO
         1. Colour of Buttons match theme
-        2. Hover effects on buttons
-        3. Responsive
         4. Logo
-        5. Responsive fonts sizes
         6. Get the profile pic advance
         */}
         <Head>

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Intro from './intro';
-import {getSortedExperienceData, getSortedProjectData} from '../lib/project-util'
 
 export default function Home(props) {
   return (
@@ -17,16 +16,4 @@ export default function Home(props) {
     </section>
     </>
   )
-}
-
-export async function getStaticProps() {
-  // This var is accessible in the porps if passed
-  const allExpData = await getSortedExperienceData();
-  const allProjectData = await getSortedProjectData();
-  return {
-    props: {
-      allExpData,
-      allProjectData,
-    },
-  };
 }

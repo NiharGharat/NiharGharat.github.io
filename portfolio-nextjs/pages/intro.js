@@ -13,7 +13,7 @@ export default function Intro() {
             <title>AboutMe</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className="bg-gray-100 m-6 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-5xl">
+        <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-5xl">
             <section className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 sm:border-solid border-2 border-black content-center shadow-xl">
                 <div className="hidden sm:block sm:col-span-1">
                     <img src="/images/mock_icon.jpeg" alt="Profile icon" className="h-16 sm:h-20 md:h-24 lg:h-28 m-2 pl-0"/>

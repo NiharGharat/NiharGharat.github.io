@@ -16,14 +16,14 @@ export default function Experience(props) {
                 <title>Work Experience</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="bg-gray-100 m-6 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-5xl">
+            <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-5xl">
                 <section className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 sm:border-solid border-2 border-black content-center shadow-xl">
                     <div className="hidden sm:block sm:col-span-1">
                         <img src="/images/mock_icon.jpeg" alt="Profile icon" className="h-16 sm:h-20 md:h-24 lg:h-28 m-2 pl-0"/>
                         {/* TODO - Icon here */}
                     </div>
                     <div className="grid grid-cols-3 text-center text-lg content-center sm:col-span-2">
-                        <Link href={"./intro"} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">AboutMe</span></Link>
+                        <Link href={"./intro"} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">About Me</span></Link>
                         <Link href={"./projects"} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">Projects</span></Link>
                         <Link href={"./contact"} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">Contact</span></Link>
                     </div>
@@ -36,26 +36,44 @@ export default function Experience(props) {
                     </div>
                     <div className="md:col-span-2">
                         {/* The cards */}
-                        <div className="bg-cyan-500">
+                        <div className="bg-cyan-500 mt-4">
                             {/* Icon of the company */}
                             <div className="grid grid-cols-3 content-center">
-                                <img className="h-20 p-4 col-span-1 my-auto" src={"/logos/mock_lti_logo.png"} alt="LTI company logo"/>
-                                <div className="col-span-2 pl-4 p-2 my-auto text-3xl">LnT Infotech</div>
+                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl">LnT Infotech</div>
+                                <img className="h-20 p-4 col-span-1 my-auto mx-auto" src={"/logos/mock_lti_logo.png"} alt="LTI company logo"/>
                             </div>
-                            <div className="grid col-span-3">
-                                <div className="col-span-1">Senior Software Developer, Product Engineering</div>
+                            <div className='text-center mx-auto text-2xl'>Senior Software Developer</div>
+                            <div className='grid grid-cols-2 px-4'>
+                                <div>Pune, India</div>
+                                <div>April, 2018 - August 2021</div>
                             </div>
-                            <div className="grid grid-cols-3 justify-between">
-                                <div className="col-span-1 text-sm">
-                                    Pune, India
-                                </div>
-                                <div className="col-span-2 text-sm">
-                                    April, 2018 - August 2021
-                                </div>
+                            <div className='px-4 mt-4 text-sm'>
+                                {/* TODO */}
+                                Part of product engineering team MOSAIC. Was working on connector framework. First job, got to learn a lot ...
                             </div>
-                            
-                            <div>
-                                Part of product engineering team MOSAIC. Was working on connector framework. First job, got to learn a lot
+                            <div className='px-4 mt-2 text-sm'>
+                                {/* TODO */}
+                                Got to learn a lot ...
+                            </div>
+                        </div>
+                        <div className="bg-cyan-500 mt-4">
+                            {/* Icon of the company */}
+                            <div className="grid grid-cols-3 content-center">
+                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl">FedEx</div>
+                                <img className="h-20 p-4 col-span-1 my-auto mx-auto" src={"/logos/mock_fedex_logo.png"} alt="FedEx company logo"/>
+                            </div>
+                            <div className='text-center mx-auto text-2xl'>Software Developer Intern</div>
+                            <div className='grid grid-cols-2 px-4'>
+                                <div>Plano, Texas</div>
+                                <div>June, 2023 - August 2023</div>
+                            </div>
+                            <div className='px-4 mt-4 text-sm'>
+                                {/* TODO */}
+                                Part of product development working on print and go solution modernisation
+                            </div>
+                            <div className='px-4 mt-2 text-sm'>
+                                {/* TODO */}
+                                Got to learn a lot ...
                             </div>
                         </div>
                     </div>

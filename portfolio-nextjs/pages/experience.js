@@ -39,7 +39,7 @@ export default function Experience(props) {
                         <div className="bg-cyan-500 mt-4">
                             {/* Icon of the company */}
                             <div className="grid grid-cols-3 content-center">
-                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl">LnT Infotech</div>
+                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl font-bold">LnT Infotech</div>
                                 <img className="h-20 p-4 col-span-1 my-auto mx-auto" src={"/logos/mock_lti_logo.png"} alt="LTI company logo"/>
                             </div>
                             <div className='text-center mx-auto text-2xl'>Senior Software Developer</div>
@@ -59,7 +59,7 @@ export default function Experience(props) {
                         <div className="bg-cyan-500 mt-4">
                             {/* Icon of the company */}
                             <div className="grid grid-cols-3 content-center">
-                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl">FedEx</div>
+                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl font-bold">FedEx</div>
                                 <img className="h-20 p-4 col-span-1 my-auto mx-auto" src={"/logos/mock_fedex_logo.png"} alt="FedEx company logo"/>
                             </div>
                             <div className='text-center mx-auto text-2xl'>Software Developer Intern</div>

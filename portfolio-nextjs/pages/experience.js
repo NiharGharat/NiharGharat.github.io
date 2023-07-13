@@ -36,45 +36,31 @@ export default function Experience(props) {
                     </div>
                     <div className="md:col-span-2">
                         {/* The cards */}
-                        <div className="bg-cyan-500 mt-4">
-                            {/* Icon of the company */}
-                            <div className="grid grid-cols-3 content-center">
-                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl font-bold">LnT Infotech</div>
-                                <img className="h-20 p-4 col-span-1 my-auto mx-auto" src={"/logos/mock_lti_logo.png"} alt="LTI company logo"/>
+                        <div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400">
+                            <div className='grid grid-cols-3'>
+                                <div className='col-span-1'>
+                                    <img className="h-18" src={"/logos/mock_lti_logo_2.png"} alt="LTI company logo"/>
+                                </div>
+                                <div className='col-span-2 my-auto text-right'>
+                                    <div className='text-2xl font-bold text-gray-700'>Pune, India</div>
+                                    <div className='text-lg text-gray-600'>2018-21</div>
+                                </div>
                             </div>
-                            <div className='text-center mx-auto text-2xl'>Senior Software Developer</div>
-                            <div className='grid grid-cols-2 px-4'>
-                                <div>Pune, India</div>
-                                <div>April, 2018 - August 2021</div>
-                            </div>
-                            <div className='px-4 mt-4 text-sm'>
-                                {/* TODO */}
-                                Part of product engineering team MOSAIC. Was working on connector framework. First job, got to learn a lot ...
-                            </div>
-                            <div className='px-4 mt-2 text-sm'>
-                                {/* TODO */}
-                                Got to learn a lot ...
-                            </div>
+                            <div className='mt-4 text-center text-gray-700 text-xl'>Trainee -&gt; Senior Dev</div>
+                            <div className='mt-2 text-sm text-right text-gray-700'>Find out More...</div>
                         </div>
-                        <div className="bg-cyan-500 mt-4">
-                            {/* Icon of the company */}
-                            <div className="grid grid-cols-3 content-center">
-                                <div className="col-span-2 pl-4 p-2 my-auto text-4xl font-bold">FedEx</div>
-                                <img className="h-20 p-4 col-span-1 my-auto mx-auto" src={"/logos/mock_fedex_logo.png"} alt="FedEx company logo"/>
+                        <div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400">
+                            <div className='grid grid-cols-3'>
+                                <div className='col-span-1'>
+                                    <img className="h-18" src={"/logos/mock_fedex_logo.png"} alt="Fedex company logo"/>
+                                </div>
+                                <div className='col-span-2 my-auto text-right'>
+                                    <div className='text-2xl font-bold text-gray-700'>Plano, Texas</div>
+                                    <div className='text-lg text-gray-600'>Summer 23</div>
+                                </div>
                             </div>
-                            <div className='text-center mx-auto text-2xl'>Software Developer Intern</div>
-                            <div className='grid grid-cols-2 px-4'>
-                                <div>Plano, Texas</div>
-                                <div>June, 2023 - August 2023</div>
-                            </div>
-                            <div className='px-4 mt-4 text-sm'>
-                                {/* TODO */}
-                                Part of product development working on print and go solution modernisation
-                            </div>
-                            <div className='px-4 mt-2 text-sm'>
-                                {/* TODO */}
-                                Got to learn a lot ...
-                            </div>
+                            <div className='mt-4 text-center text-gray-700 text-xl'>SDE Summer Intern</div>
+                            <div className='mt-2 text-sm text-right text-gray-700'>Find out More...</div>
                         </div>
                     </div>
                 </section>

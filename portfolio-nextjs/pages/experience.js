@@ -31,31 +31,31 @@ export default function Experience(props) {
                 {/* Now the main body */}
                 <section className="p-3 grid grid-cols-1 md:grid-cols-3">
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
-                        <div className="p-3 text-4xl sm:text-6xl px-3 font-bold text-center">Work Experience</div>
+                        <div className="p-3 text-4xl md:text-5xl px-3 font-bold text-center">Work Experience</div>
                         {/* The short desc of work exp if necessary */}
                     </div>
-                    <div className="md:col-span-2">
+                    <div className="sm:px-2 md:col-span-2">
                         {/* The cards */}
-                        <div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400">
+                        <div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400 hover:-translate-y-1 transform transition">
                             <div className='grid grid-cols-3'>
                                 <div className='col-span-1'>
                                     <img className="h-18" src={"/logos/mock_lti_logo_2.png"} alt="LTI company logo"/>
                                 </div>
                                 <div className='col-span-2 my-auto text-right'>
-                                    <div className='text-2xl font-bold text-gray-700'>Pune, India</div>
+                                    <div className='text-2xl text-gray-700'>Pune, <span className='text-3xl font-bold'>India</span></div>
                                     <div className='text-lg text-gray-600'>2018-21</div>
                                 </div>
                             </div>
                             <div className='mt-4 text-center text-gray-700 text-xl'>Trainee -&gt; Senior Dev</div>
                             <div className='mt-2 text-sm text-right text-gray-700'>Find out More...</div>
                         </div>
-                        <div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400">
+                        <div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400 hover:-translate-y-1 transform transition">
                             <div className='grid grid-cols-3'>
                                 <div className='col-span-1'>
                                     <img className="h-18" src={"/logos/mock_fedex_logo.png"} alt="Fedex company logo"/>
                                 </div>
                                 <div className='col-span-2 my-auto text-right'>
-                                    <div className='text-2xl font-bold text-gray-700'>Plano, Texas</div>
+                                    <div className='text-2xl text-gray-700'>Plano, <span className='text-3xl font-bold'>Texas</span></div>
                                     <div className='text-lg text-gray-600'>Summer 23</div>
                                 </div>
                             </div>

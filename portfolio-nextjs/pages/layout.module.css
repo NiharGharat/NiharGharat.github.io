@@ -1,9 +1,0 @@
-/* This has the wrapper styles of each component */
-
-.layout {
-    min-height: 100vh;
-    background-color: aqua;
-    border: 1px solid black;
-    border-radius: 3px;
-    margin: 5px;
-}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import HeaderSection from "../components/headerSection";
 
 export default function Intro() {
     return (
@@ -14,17 +15,7 @@ export default function Intro() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
-            <section className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 sm:border-solid border-2 border-black content-center shadow-xl">
-                <div className="hidden sm:block sm:col-span-1">
-                    <img src="/images/mock_icon.jpeg" alt="Profile icon" className="h-16 sm:h-20 md:h-24 lg:h-28 m-2 pl-0"/>
-                    {/* TODO - Icon here */}
-                </div>
-                <div className="grid grid-cols-3 text-center text-lg content-center sm:col-span-2">
-                    <Link href={"./experience"} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">Experience</span></Link>
-                    <Link href={"./project"} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">Projects</span></Link>
-                    <Link href={"./contact"} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">Contact</span></Link>
-                </div>
-            </section>
+            <HeaderSection firstName="Experience" firstLink="experience" secondName="Projects" secondLink="project" thirdName="Contact" thirdLink="contanct" />
             <img src="/images/mock_intro_2.jpeg" alt="Profile icon" className="h-96 m-2 mt-6 p-2 sm:p-4 flex items-center justify-center mx-auto w-full object-cover md:hidden"/>
             <section className="p-3 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="pt-3">

@@ -9,9 +9,9 @@ export default function HeaderSection(props) {
                 {/* TODO - Icon here */}
             </div>
             <div className="grid grid-cols-3 text-center text-lg content-center sm:col-span-2">
-                <Link href={"./" + props.firstLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">{props.firstName}</span></Link>
-                <Link href={"./" + props.secondLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">{props.secondName}</span></Link>
-                <Link href={"./" + props.thirdLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">{props.thirdName}</span></Link>
+                <Link href={"./" + props.firstLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">{props.firstName}</span></Link>
+                <Link href={"./" + props.secondLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">{props.secondName}</span></Link>
+                <Link href={"./" + props.thirdLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-cyan-400 shadow-lg shadow-cyan-500/50 hover:bg-cyan-300 hover:-translate-y-0.5 transform transition active:bg-cyan-500"><span className="">{props.thirdName}</span></Link>
             </div>
         </section>
     );

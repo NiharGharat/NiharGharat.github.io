@@ -33,11 +33,11 @@ export default function Project(props) {
                                     <div className='text-sm text-gray-600'>Github(private)</div>
                                 </div>
                             </div>
-                            <div className="grid grid-flow-row">
-                                <div className='text-sm text-gray-600'>Java</div>
-                                <div className='text-sm text-gray-600'>SpringBoot</div>
-                                <div className='text-sm text-gray-600'>Cronned</div>
-                                <div className='text-sm text-gray-600'>Dockerised</div>
+                            <div className="">
+                                <span className='p-2 text-sm text-gray-600'>Java</span>
+                                <span className='p-2 text-sm text-gray-600'>SpringBoot</span>
+                                <span className='p-2 text-sm text-gray-600'>Cronned</span>
+                                <span className='p-2 text-sm text-gray-600'>Dockerised</span>
                             </div>
                             <div className='mt-4 text-right text-gray-700 text-xl'>Trainee -&gt; Senior Dev</div>
                             <div className='mt-2 text-sm text-right text-gray-700'>Find out More...</div>

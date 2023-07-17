@@ -3,7 +3,7 @@ import React from "react";
 // Take children
 export default function CompanyCard(props) {
     const pathOfImage = "/logos/" + props.logo_name;
-    return (<div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400 hover:-translate-y-1 transform transition active:bg-gray-300">
+    return (<div className="mt-4 p-4 pb-2 text-xl hover:bg-gray-200 hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 transform transition active:bg-gray-300">
     <div className='grid grid-cols-3'>
         <div className='col-span-1'>
             <img className="h-18" src={pathOfImage} alt="LTI company logo"/>

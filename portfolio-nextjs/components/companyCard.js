@@ -1,19 +1,57 @@
 import React from "react";
 
+const EachSkill = function({skill}) {
+    return (<li key={skill} className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-400'>{skill}</li>)
+};
+
+const AllSkills = function({isHiddenOnSm, skillsArray}) {
+    const status = Boolean(isHiddenOnSm)
+    console.log(status)
+    let com;
+    if (status) {
+        console.log("True")
+        com = (<ul className='hidden sm:flex flex-wrap text-gray-600 text-sm'>
+        {skillsArray.map(e => (
+            <EachSkill skill={e} />
+        ))}
+    </ul>)
+    } else {
+        com = (<ul className='flex sm:hidden flex-wrap text-gray-600 text-sm'>
+        {skillsArray.map(e => (
+            <EachSkill skill={e} />
+        ))}
+    </ul>)
+    }
+    return (
+        <>{com}</>
+    )
+}
+
 // Take children
 export default function CompanyCard(props) {
-    const pathOfImage = "/logos/" + props.logo_name;
-    return (<div className="mt-4 p-4 pb-2 text-xl hover:bg-gray-200 hover:shadow-lg hover:shadow-gray-400 hover:-translate-y-1 transform transition active:bg-gray-300">
-    <div className='grid grid-cols-3'>
-        <div className='col-span-1'>
-            <img className="h-18" src={pathOfImage} alt="LTI company logo"/>
+    return (<section className='text-gray-700 p-2 m-2 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400'>
+    <div className='grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6'>
+        <div className='col-span-1 text-sm py-2'>
+            {props.duration}
         </div>
-        <div className='col-span-2 my-auto text-right'>
-            <div className='text-2xl text-gray-700'>{props.baseLocation}, <span className='text-3xl font-bold'>{props.country}</span></div>
-            <div className='text-lg text-gray-600'>{props.duration}</div>
+        <div className='col-span-3 md:col-span-4 lg:col-span-5 sm:bg-blue-200'>
+            <div className='grid grid-cols-3'>
+                <div className='col-span-1 text-2xl font-bold text-brand_lti_dark_blue my-auto sm:my-0 uppercase'>
+                    {props.company}
+                </div>
+                <div className='col-span-2 text-right my-auto align-text-bottom text-gray-600'>
+                    {props.baseLocation}, <span className=' font-bold text-gray-700'>{props.country}</span>
+                </div>
+            </div>
+            <div className='text-gray-600 text-sm mt-4'>
+                <ol>
+                    <li>{props.p1}</li>
+                    <li>{props.p2}</li>
+                </ol>
+            </div>
+            <AllSkills isHiddenOnSm skillsArray={props.skillsArray}/>
         </div>
     </div>
-    <div className='mt-4 text-right text-gray-700 text-xl'>{props.catchPhrase}</div>
-    <div className='mt-2 text-sm text-right text-gray-700'>Find out More...</div>
-    </div>)
+    <AllSkills skillsArray={props.skillsArray} />
+</section>)
 }

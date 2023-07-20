@@ -1,8 +1,7 @@
-import {getSortedExperienceData, getSortedProjectData} from '../lib/project-util'
+import {getSortedExperienceData, getSortedProjectData, getAllExperienceData} from '../lib/project-util'
 import Head from "next/head";
 import CompanyCard from '../components/companyCard';
 import HeaderSection from '../components/headerSection';
-import data from "../data/experience/lti_data.json";
 
 export default function Experience(props) {
     const skillsArrayLti = ["SpringBoot", "Java", "Python"]
@@ -12,17 +11,18 @@ export default function Experience(props) {
             {/* TODO
             5. Write correct info data
             6. Implement Link on click to go to card
-            8. Externalise the css of the company logo to data file and load and pass it
-            11. Externalise CompanySkills, CompanyLocation, CompanyNameWithCss, CompanyCountry, CompanyDuration, Company 4 bullet points
-            
+            12. Externalise company logo css
+
             Done
+            11. Externalise CompanySkills, CompanyLocation, CompanyNameWithCss, CompanyCountry, CompanyDuration, Company 4 bullet points
             1. Create the cards
             2. Font reponsiveness
             3. Card responsiveness
             4. Extract components
             7. Till now tech
             */}
-            {console.log(data.skills)}
+            {console.log(props.allExperienceData)}
+            {/* {console.log(data.skills)} */}
             <Head>
                 <title>Nihar Portfolio Work Experience</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -40,9 +40,9 @@ export default function Experience(props) {
                         </div>
                     </div>
                     <div className="md:col-span-2">
-                        {/* The cards */}
-                        <CompanyCard skillsArray={skillsArrayLti} company="lti" baseLocation="Pune" country="India" duration="2018-21" p1="- Part of product engineering team" p2="- Worked on lti big data analytics platform mosaic" />
-                        <CompanyCard skillsArray={skillsArrayFedex} company="fedex" baseLocation="Plano" country="US" duration="2023 Summer" p1="- Part of product engineering team" p2="- Worked on lti big data analytics platform mosaic" />
+                        {props.allExperienceData.map(eachCompany => (
+                            <CompanyCard skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} />
+                        ))}
                     </div>
                 </section>
             </main>
@@ -52,10 +52,12 @@ export default function Experience(props) {
 
 export async function getStaticProps() {
     // This var is accessible in the porps if passed
+    const allExperienceData = await getAllExperienceData();
     const allExpData = await getSortedExperienceData();
     const allProjectData = await getSortedProjectData();
     return {
       props: {
+        allExperienceData,
         allExpData,
         allProjectData,
       },

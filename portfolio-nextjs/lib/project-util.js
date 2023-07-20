@@ -57,7 +57,7 @@ export async function getSortedProjectData() {
     // Read markdown file as string
     const fullPath = path.join(projectsDirectory, eachfileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-
+    
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
@@ -83,3 +83,17 @@ export async function getSortedProjectData() {
       }
     })
   }
+
+export async function getAllExperienceData() {
+  const fileNames = fs.readdirSync(expDirectory)
+  const allExpData = await Promise.all(
+    fileNames.map(async (eachfileName) => {
+      if (path.extname(eachfileName) === ".json") {
+        const filePath = path.join(expDirectory, eachfileName);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(fileContent);
+      }
+      return null;
+  }));
+  return allExpData.filter(each => each != null).sort((a, b) => b.order - a.order);
+}

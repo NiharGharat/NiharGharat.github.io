@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Head from "next/head";
 import HeaderSection from "../components/headerSection";
 
@@ -7,8 +6,8 @@ export default function Intro() {
         <>
         {/* TODO
         1. Colour of Buttons match theme
-        4. Logo
-        6. Get the profile pic advance
+        4. Logo work
+        6. Fair the profile pic
         */}
         <Head>
             <title>AboutMe</title>

@@ -44,8 +44,8 @@ export default function CompanyCard(props) {
             </div>
             <div className='text-gray-600 text-sm mt-4 lg:text-lg'>
                 <ol>
-                    {props.allPoints.map(eachPoint => (
-                        <li>- {eachPoint}</li>
+                    {props.allPoints.map((eachPoint, index) => (
+                        <li key={index}>- {eachPoint}</li>
                     ))}
                     {/* <li>{props.p1}</li>
                     <li>{props.p2}</li> */}

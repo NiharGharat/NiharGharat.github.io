@@ -1,17 +1,16 @@
-import {getSortedExperienceData, getSortedProjectData, getAllExperienceData} from '../lib/project-util'
+import {getAllExperienceData} from '../lib/project-util'
 import Head from "next/head";
 import CompanyCard from '../components/companyCard';
 import HeaderSection from '../components/headerSection';
 
 export default function Experience(props) {
-    const skillsArrayLti = ["SpringBoot", "Java", "Python"]
-    const skillsArrayFedex = ["SpringJpa", "Dao", "JMS"]
     return (
         <>
             {/* TODO
             5. Write correct info data
             6. Implement Link on click to go to card
             12. Externalise company logo css
+            13. Truely externalise data - eg head title name
 
             Done
             11. Externalise CompanySkills, CompanyLocation, CompanyNameWithCss, CompanyCountry, CompanyDuration, Company 4 bullet points
@@ -21,7 +20,7 @@ export default function Experience(props) {
             4. Extract components
             7. Till now tech
             */}
-            {console.log(props.allExperienceData)}
+            {/* {console.log(props.allExperienceData)} */}
             {/* {console.log(data.skills)} */}
             <Head>
                 <title>Nihar Portfolio Work Experience</title>
@@ -40,8 +39,8 @@ export default function Experience(props) {
                         </div>
                     </div>
                     <div className="md:col-span-2">
-                        {props.allExperienceData.map(eachCompany => (
-                            <CompanyCard skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} />
+                        {props.allExperienceData.map((eachCompany, index) => (
+                            <CompanyCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} />
                         ))}
                     </div>
                 </section>
@@ -53,13 +52,9 @@ export default function Experience(props) {
 export async function getStaticProps() {
     // This var is accessible in the porps if passed
     const allExperienceData = await getAllExperienceData();
-    const allExpData = await getSortedExperienceData();
-    const allProjectData = await getSortedProjectData();
     return {
       props: {
         allExperienceData,
-        allExpData,
-        allProjectData,
       },
     };
   }

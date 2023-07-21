@@ -4,31 +4,32 @@ const EachSkill = function({skill}) {
     return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-400 lg:text-sm'>{skill}</li>)
 };
 
+const SkillSection = function(props) {
+    return (
+        <ul className={props.classNameToUse}>
+            {props.skillsArray.map(e => (
+                <EachSkill key={e} skill={e} />
+            ))}
+        </ul>
+    )
+}
+
 const AllSkills = function({isHiddenOnSm, skillsArray}) {
     const status = Boolean(isHiddenOnSm)
-    let com;
+    let classNameToUse;
     if (status) {
-        // console.log("True")
-        com = (<ul className='hidden sm:flex flex-wrap text-gray-600 text-sm'>
-        {skillsArray.map(e => (
-            <EachSkill key={e} skill={e} />
-        ))}
-    </ul>)
+        classNameToUse = 'hidden sm:flex flex-wrap text-gray-600 text-sm'
     } else {
-        com = (<ul className='flex sm:hidden flex-wrap text-gray-600 text-sm'>
-        {skillsArray.map(e => (
-            <EachSkill key={e} skill={e} />
-        ))}
-    </ul>)
+        classNameToUse = 'flex sm:hidden flex-wrap text-gray-600 text-sm'
     }
     return (
-        <>{com}</>
+        <SkillSection classNameToUse={classNameToUse} skillsArray={skillsArray} />
     )
 }
 
 // Take children
 export default function CompanyCard(props) {
-    return (<section className='text-gray-700 p-2 m-2 mt-4 md:mt-6 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400'>
+    return (<section className='text-gray-700 p-4 m-2 mt-4 md:mt-6 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400'>
     <div className='grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6'>
         <div className='col-span-1 text-sm py-2 px-2'>
             {props.duration}

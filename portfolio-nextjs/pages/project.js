@@ -1,9 +1,19 @@
 import Head from "next/head";
 import HeaderSection from "../components/headerSection";
+import {getAllProjectData} from '../lib/project-util'
+import ProjectCard from "../components/projectCard";
 
 export default function Project(props) {
+    const skillsForProject = ["Java", "SpringBoot", "Docker", "Anacron"]
     return (
         <>
+            {/* 
+            TODO
+            1. Para and multiple pictures
+            2. Tech stack
+            3. Responsive
+            4. Accurate info
+            */}
             <Head>
                 <title>Nihar Portfolio Work Experience</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -14,38 +24,30 @@ export default function Project(props) {
                 <section className="p-3 grid grid-cols-1 md:grid-cols-3 md:gap-2 lg:gap-4">
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
                         <div className="p-3 text-4xl px-3 font-bold text-center">Projects</div>
-                        {/* TODO */}
+                        {/* TODO Till now tech!!*/}
                         <div className='mx-12 p-3 text-sm border-2 border-gray-800 text-justify'>
                             <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
                             <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
                         </div>
-                        {/* The short desc of work exp if necessary */}
                     </div>
-                    <div className="sm:px-2 md:col-span-2">
-                        {/* The cards */}
-                        <div className="bg-gray-200 mt-4 p-4 pb-2 text-xl shadow-lg shadow-gray-400 hover:-translate-y-1 transform transition active:bg-gray-300">
-                            <div className='grid grid-cols-5'>
-                                <div className='col-span-2'>
-                                    <img className="h-18" src={"/logos/mock_youtube_logo.png"} alt="Youtube project logo - Downloaded from https://www.vecteezy.com/png/18930572-youtube-logo-png-youtube-icon-transparent"/>
-                                </div>
-                                <div className='col-span-3 text-right'>
-                                    <div className='text-lg text-gray-700 font-bold'>Youtube Playlist backup</div>
-                                    <div className='text-sm text-gray-600'>Github(private)</div>
-                                </div>
-                            </div>
-                            <div className="">
-                                <span className='p-2 text-sm text-gray-600'>Java</span>
-                                <span className='p-2 text-sm text-gray-600'>SpringBoot</span>
-                                <span className='p-2 text-sm text-gray-600'>Cronned</span>
-                                <span className='p-2 text-sm text-gray-600'>Dockerised</span>
-                            </div>
-                            <div className='mt-4 text-right text-gray-700 text-xl'>Trainee -&gt; Senior Dev</div>
-                            <div className='mt-2 text-sm text-right text-gray-700'>Find out More...</div>
-                        </div>
-                        
+                    <div className="md:col-span-2">
+                    <ProjectCard titleOfProject="YouTube playlist backup" mainLogo="/logos/mock_youtube_logo.png" tagLine="Developed a Java based project which will do multithreaded http requests and backup your playlists, cronned and dockerised" techStack={skillsForProject}/>
+                        {/* {props.allProjectData.map((eachProject, index) => (
+                            <ProjectCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} />
+                        ))} */}
                     </div>
                 </section>
             </main>
         </>
     )
 }
+
+export async function getStaticProps() {
+    // This var is accessible in the porps if passed
+    const allProjectData = await getAllProjectData();
+    return {
+      props: {
+        allProjectData,
+      },
+    };
+  }

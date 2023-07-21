@@ -97,3 +97,17 @@ export async function getAllExperienceData() {
   }));
   return allExpData.filter(each => each != null).sort((a, b) => b.order - a.order);
 }
+
+export async function getAllProjectData() {
+  const fileNames = fs.readdirSync(projectsDirectory)
+  const allProjData = await Promise.all(
+    fileNames.map(async (eachfileName) => {
+      if (path.extname(eachfileName) === ".json") {
+        const filePath = path.join(projectsDirectory, eachfileName);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(fileContent);
+      }
+      return null;
+  }));
+  return allProjData.filter(each => each != null).sort((a, b) => b.order - a.order);
+}

@@ -1,5 +1,5 @@
 {
-    "projectName": "YouTube Playlist Backup",
+    "projectName": "Tailor Sweat",
     "techStack": [
         "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
     ],

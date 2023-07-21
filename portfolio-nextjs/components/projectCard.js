@@ -8,7 +8,7 @@ const EachSkill = function({skill}) {
 const SkillSection = function(props) {
     return (
         <ul className={props.classNameToUse}>
-            {props.skillsArray.map(e => (
+            {props.techStack.map(e => (
                 <EachSkill key={e} skill={e} />
             ))}
         </ul>
@@ -21,15 +21,15 @@ export default function ProjectCard(props) {
         <>
             <main>
                 <div>
-                    {props.titleOfProject}
+                    {props.title}
                 </div>
                 <section>
-                    <img src={props.mainLogo} alt={`Project logo for ${props.titleOfProject}`} className=""/>
+                    <img src={props.mainLogo} alt={`Project logo for ${props.title}`} className=""/>
                     <div>
                         {props.tagLine}
                     </div>
                     <div>
-                        <SkillSection skillsArray={props.techStack} classNameToUse="" />
+                        <SkillSection techStack={props.techStack} classNameToUse="" />
                     </div>
                 </section>
             </main>

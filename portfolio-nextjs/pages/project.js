@@ -31,10 +31,10 @@ export default function Project(props) {
                         </div>
                     </div>
                     <div className="md:col-span-2">
-                    <ProjectCard titleOfProject="YouTube playlist backup" mainLogo="/logos/mock_youtube_logo.png" tagLine="Developed a Java based project which will do multithreaded http requests and backup your playlists, cronned and dockerised" techStack={skillsForProject}/>
-                        {/* {props.allProjectData.map((eachProject, index) => (
-                            <ProjectCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} />
-                        ))} */}
+                    {/* <ProjectCard titleOfProject="YouTube playlist backup" mainLogo="/logos/mock_youtube_logo.png" tagLine="Developed a Java based project which will do multithreaded http requests and backup your playlists, cronned and dockerised" techStack={skillsForProject}/> */}
+                        {props.allProjectData.map((eachProject, index) => (
+                            <ProjectCard key={index} title={eachProject.projectName} mainLogo={eachProject.mainLogo} tagLine={eachProject.why} techStack={eachProject.techStack} />
+                        ))}
                     </div>
                 </section>
             </main>

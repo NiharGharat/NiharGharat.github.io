@@ -11,7 +11,7 @@ Done
 
 // also present in comapnyCard
 const EachSkill = function({skill}) {
-    return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 lg:text-sm'>{skill}</li>)
+    return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
 };
 
 const SkillSection = function(props) {
@@ -73,7 +73,7 @@ export default function ProjectCard(props) {
     badgesArray.push(badgeSelection(projectPersonalBadge, 'Personal Project', 'Academic Project', "/logos/badges/mock_project_personal.png", "/logos/badges/mock_project_academic.png"))
     badgesArray.push(badgeSelection(projectPrivateBadge, 'Private Repo', 'Public Repo', "/logos/badges/mock_repo_private.png", "/logos/badges/mock_repo_public.png"))
     return (
-        <div className="mt-4 p-2 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400">
+        <div className="mt-4 p-2 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400 duration-200 ease-in-out">
             <main>
                 <div className="p-2 grid grid-cols-6">
                     <div className="text-xl sm:text-2xl md:text-4xl col-span-4 sm:col-span-5">

@@ -8,11 +8,11 @@
     "addiction" : "",
     "storyParas" : [
         "Did this as a learning for REST api calling",
-        "Wanted to implement a writer to salesforce, but didnt impl one"
+        "Wanted to implement a writer to salesforce, but did not impl one"
     ],
     "projectType": "personal",
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/SalesforceParser",
     "order": 3,
     "mainLogo": "/logos/mock_project_salesforce_reader.png"
-}
+} 

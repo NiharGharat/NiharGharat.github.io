@@ -4,12 +4,12 @@
     "techStack": [
         "Python", "Selenium", "Scrapping"
     ],
-    "why": "Ever rented an apartment? Yeah, thats why. Didnt wrote the analyser engine, but I will someday",
+    "why": "Ever rented an apartment? Yeah, that's why. Didn't wrote the analyser engine, but I will someday",
     "addiction" : "",
     "storyParas" : [
-        "So when I was moving to US for studies and hunting apartments, I didnt knew that hunting for apartments would be such a tormenting process",
-        "Wrote a project on python which used selenium to pull data from google apartment reviews, and analyse for authenticity",
-        "My plan was to check the number of bad reviews, number of reviews by indians to get the authenticity and usefulness of a review(Didnt wrote this part)",
+        "So when I was moving to US for studies and hunting apartments, I didn't knew that hunting for apartments would be such a tormenting process",
+        "Wrote a project on python which used selenium to pull data from google apartment reviews, and analyze for authenticity",
+        "My plan was to check the number of bad reviews, number of reviews by indians to get the authenticity and usefulness of a review(Did Not write this part)",
         "Provide a list of apartments, and it will fetch the data"
     ],
     "projectType": "personal",
@@ -17,4 +17,4 @@
     "githubLink": "https://github.com/NiharGharat/ReviewScrapperAnalyser",
     "order": 1,
     "mainLogo": "/logos/mock_project_google_apartment_review_analyser.png"
-}
+} 

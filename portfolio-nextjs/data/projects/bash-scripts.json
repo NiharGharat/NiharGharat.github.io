@@ -8,13 +8,13 @@
     "addiction" : "",
     "storyParas" : [
         "Needed huge files for performance benchmarking. Wrote a bash script to create a variable columnar/rows csv file from a sample smaller file.",
-        "LTI(Not a part of this repo) - Midway with all the hype of deployment to ease the deployment at client environment, support came up with their version of script to do so. Easy for them, aint so for us, we needed to be extra meticulous with the git push on their branch. I wrote a script clientAutoDeploy which will take the cutout from our main, do necessary commit on supports deploy_repo, and push the changes. Deployment successful!",
+        "LTI(Not a part of this repo) - Midway with all the hype of deployment to ease the deployment at client environment, support came up with their version of script to do so. Easy for them, ain't so for us, we needed to be extra meticulous with the git push on their branch. I wrote a script clientAutoDeploy which will take the cutout from our main, do necessary commit on supports deploy_repo, and push the changes. Deployment successful!",
         "Tried my hand using rSync for ensuring backups are periodic and my mobile data is backed up correctly on my HDD (WIP)",
-        "LTI(Not a part of this repo) - Wrote 2 bash scripts for doing auto performance benchmarking of our connector service. Eg-Today we will perf benchmark how our MySQL connector, it would do 1 paralle request, 3, 5, 10, etc. on load of 10k, 50k, 100k rows, etc. All standardised. All metric data pushed as csv export, safely tucked away on our service pod mounted storage. I would start the script at the start of the day, and retrieve the results at EOD. Script was robust enough to handle pod failuers. The one for Spark on K8S submitted a job on Spark on K8S monitored pod activity periodically, and once finished collected the metric. THe other one will submit our requested load requests periodically and monitor the service pod logs and collect metrics once done."
+        "LTI(Not a part of this repo) - Wrote 2 bash scripts for doing auto performance benchmarking of our connector service. Eg-Today we will benchmark our MySQL connector; it will do 1 parallel request, 3, 5, 10, etc. on load of 10k, 50k, 100k rows, etc. All standardized. All metric data pushed as csv export, safely tucked away on our service pod mounted storage. I would start the script at the start of the day, and retrieve the results at EOD. Script was robust enough to handle pod failures. The one for Spark on K8S submitted a job on Spark on K8S monitored pod activity periodically, and once finished collected the metric. THe other one will submit our requested load requests periodically and monitor the service pod logs and collect metrics once done."
     ],
     "projectType": "personal",
     "repoPrivate": true,
     "githubLink": "",
     "order" : 5,
     "mainLogo": "/logos/mock_project_bash_scripts.png"
-}
+} 

@@ -30,7 +30,7 @@ export default function Project(props) {
                         <div className="p-3 text-4xl px-3 font-bold text-center">Projects</div>
                         <div className='mx-12 p-3 text-sm border-2 border-gray-800 text-justify'>
                             <div className='mt-2'>I sort of manifest myself through my work and my projects</div>
-                            <div className='mt-2'>I loved on each on of these. Ranging from Java, to Python, to Pandas, to Keras. Academic non-academic. I tried to justify each one of them.</div>
+                            <div className='mt-2'>I loved on each on of these. Ranging from Java, to Python, to Pandas, to Keras. Academic non-academic. I tried to justify each one of them</div>
                         </div>
                     </div>
                     <div className="md:col-span-2">

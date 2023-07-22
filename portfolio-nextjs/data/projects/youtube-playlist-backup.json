@@ -1,0 +1,19 @@
+{
+    "projectName": "Youtube Playlist backup",
+    "techStack": [
+        "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
+    ],
+    "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
+    "addiction" : "",
+    "storyParas" : [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+    ],
+    "projectType": "personal",
+    "repoPrivate": true,
+    "githubLink": "",
+    "order" : 1,
+    "mainLogo": "/logos/mock_youtube_logo.png"
+}

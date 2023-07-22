@@ -1,0 +1,18 @@
+{
+    "projectName": "Yelp Reviews",
+    "techStack": [
+        "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
+    ],
+    "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
+    "addiction" : "",
+    "storyParas" : [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+    ],
+    "projectType": "academic",
+    "repoPrivate": true,
+    "githubLink": "",
+    "order": 2
+}

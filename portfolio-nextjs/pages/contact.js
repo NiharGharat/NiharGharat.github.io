@@ -1,25 +1,14 @@
-import Head from "next/head"
-import Layout from "./layout"
+/*
+1. Credits to icons
+2. Credits to logo
 
+
+
+//
+<a href="https://www.flaticon.com/free-icons/laptop" title="laptop icons">Laptop icons created by Smashicons - Flaticon</a>
+*/
 export default function Contact() {
-    return (<Layout>
-        <Head>
-
-        </Head>
-        <main>
-            <section>
-                <div>Image</div>
-                <div>#developer</div>
-                <div>#design</div>
-                <div>#tech</div>
-                <div>#environment</div>
-                <div>#history</div>
-            </section>
-            <section>
-                <div>LinkedIn</div>
-                <div>Instagram</div>
-                <div>Email</div>
-            </section>
-        </main>
-    </Layout>)
+    return (<>
+    
+    </>)
 }

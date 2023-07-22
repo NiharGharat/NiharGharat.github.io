@@ -11,6 +11,9 @@ export default function Project(props) {
             1. Link, Para and multiple pictures
             3. Responsive
             4. Accurate info in json
+            5. Photos jsonArray in data of the project pics if any
+            6. Each project seperate page with back option
+            7. Spell check the data
             
             Done
             5. Responsive Cards
@@ -26,12 +29,11 @@ export default function Project(props) {
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
                         <div className="p-3 text-4xl px-3 font-bold text-center">Projects</div>
                         <div className='mx-12 p-3 text-sm border-2 border-gray-800 text-justify'>
-                            <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
-                            <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
+                            <div className='mt-2'>I sort of manifest myself through my work and my projects</div>
+                            <div className='mt-2'>I loved on each on of these. Ranging from Java, to Python, to Pandas, to Keras. Academic non-academic. I tried to justify each one of them.</div>
                         </div>
                     </div>
                     <div className="md:col-span-2">
-                    {/* <ProjectCard title="YouTube playlist backup" mainLogo="/logos/mock_youtube_logo.png" tagLine="Developed a Java based project which will do multithreaded http requests and backup your playlists, cronned and dockerised" techStack={skillsForProject}/> */}
                         {props.allProjectData.map((eachProject, index) => (
                             <ProjectCard data={eachProject} key={index} />
                         ))}

@@ -1,7 +1,8 @@
 {
-    "projectName": "Google Apartment Reviews",
+    "projectName": "Google Apartment Review Analyser",
+    "identifier": "google_apartment_review_analyser",
     "techStack": [
-        "Python", "Selenium"
+        "Python", "Selenium", "Scrapping"
     ],
     "why": "Ever rented an apartment? Yeah, thats why. Didnt wrote the analyser engine, but I will someday",
     "addiction" : "",
@@ -15,5 +16,5 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/ReviewScrapperAnalyser",
     "order": 1,
-    "mainLogo": "/logos/mock_project_google_apt.png"
+    "mainLogo": "/logos/mock_project_google_apartment_review_analyser.png"
 }

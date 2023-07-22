@@ -1,5 +1,6 @@
 {
-    "projectName": "My Portfolio",
+    "projectName": "The Portfolio",
+    "identifier": "the_portfolio",
     "techStack": [
         "ReactJs", "NextJs", "TailwindCss", "Vercel", "Lots of introspection"
     ],
@@ -17,5 +18,5 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/NiharGharat.github.io",
     "order" : 1,
-    "mainLogo": "/logos/mock_project_me.jpeg"
+    "mainLogo": "/logos/mock_project_the_portfolio.jpeg"
 }

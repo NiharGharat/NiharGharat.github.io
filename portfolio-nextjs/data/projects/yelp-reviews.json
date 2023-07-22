@@ -1,18 +1,21 @@
 {
     "projectName": "Yelp Reviews",
+    "identifier": "yelp_reviews",
     "techStack": [
-        "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
+        "Vanilla Javascript", "Ajax", "Css", "Yelp API", "Google Maps API"
     ],
-    "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
+    "why": "Developed a web app based on pure javscript to fetch data from yelp api on hottest restaurants near me, and present the data on a web page on a google map. Courtesy to prof. Leonidas Fegaras",
     "addiction" : "",
     "storyParas" : [
-        "P1",
-        "P2",
-        "P3",
-        "P4"
+        "Sem 2 Web Data Management project - Yelp Reviews",
+        "The app will get the data from yelp api on specific lat long co-ordinate",
+        "This list will be presented to the user as pins on a Google Map",
+        "The user can drag, zoom in/out, and explore the presented restaurants on the map. Events on the map will invoke new response from yelp. Interacting with the pin will get details on that restaurant",
+        "Had the most fun in styling the page, tried my hand on the comic theme which I so dearly loved"
     ],
     "projectType": "academic",
     "repoPrivate": true,
     "githubLink": "",
-    "order": 2
+    "order": 2,
+    "mainLogo": "/logos/mock_project_yelp_reviews.png"
 }

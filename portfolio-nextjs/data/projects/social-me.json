@@ -1,18 +1,21 @@
 {
     "projectName": "Social Me",
+    "identifier": "social_me",
     "techStack": [
-        "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
+        "React Native", "Firebase", "Android"
     ],
-    "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
+    "why": "An android app to add friends, and push notification on your social status at a set region",
     "addiction" : "",
     "storyParas" : [
-        "P1",
-        "P2",
-        "P3",
-        "P4"
+        "Sem 3 Software Engg project - Social Me",
+        "Letting your friend circle know(except some pesky once) on whats on your mind",
+        "Set a region as social region and when you come in vincinity of that region, your status is shared as a push notification to your circle",
+        "Developed this one as an organic new idea with major contribution from Sushrut Diwan as academic SE1 project - courtesy Dr. Mike Siok",
+        "Had fun learning React and programming for android(and css)"
     ],
     "projectType": "academic",
     "repoPrivate": true,
     "githubLink": "",
-    "order": 3
+    "order": 3,
+    "mainLogo": "/logos/mock_project_social_me.png"
 }

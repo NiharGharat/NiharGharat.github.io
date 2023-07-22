@@ -1,7 +1,8 @@
 {
     "projectName": "Salesforce Reader",
+    "identifier": "salesforce_reader",
     "techStack": [
-        "Java", "Salesforce API"
+        "Java", "Salesforce API", "REST"
     ],
     "why": "Developed a reader for pulling data from Salesforce as a structured data",
     "addiction" : "",
@@ -13,5 +14,5 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/SalesforceParser",
     "order": 3,
-    "mainLogo": "/logos/mock_project_salesforce.png"
+    "mainLogo": "/logos/mock_project_salesforce_reader.png"
 }

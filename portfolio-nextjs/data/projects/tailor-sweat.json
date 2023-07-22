@@ -11,8 +11,9 @@
         "P3",
         "P4"
     ],
-    "projectType": "personal/academic",
+    "projectType": "personal",
     "repoPrivate": true,
     "githubLink": "",
-    "order": 1
+    "order" : 1,
+    "mainLogo": "/logos/mock_youtube_logo.png"
 }

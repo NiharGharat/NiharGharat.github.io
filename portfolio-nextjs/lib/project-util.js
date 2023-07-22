@@ -109,5 +109,5 @@ export async function getAllProjectData() {
       }
       return null;
   }));
-  return allProjData.filter(each => each != null).sort((a, b) => b.order - a.order);
+  return allProjData.filter(each => each != null).sort((a, b) => a.order - b.order);
 }

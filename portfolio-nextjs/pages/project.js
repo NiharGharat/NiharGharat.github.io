@@ -8,13 +8,16 @@ export default function Project(props) {
         <>
             {/* 
             TODO
-            1. Para and multiple pictures
-            2. Tech stack
+            1. Link, Para and multiple pictures
             3. Responsive
-            4. Accurate info
+            4. Accurate info in json
+            
+            Done
+            5. Responsive Cards
+            2. Tech stack
             */}
             <Head>
-                <title>Nihar Portfolio Work Experience</title>
+                <title>Nihar Projects</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
@@ -30,7 +33,7 @@ export default function Project(props) {
                     <div className="md:col-span-2">
                     {/* <ProjectCard title="YouTube playlist backup" mainLogo="/logos/mock_youtube_logo.png" tagLine="Developed a Java based project which will do multithreaded http requests and backup your playlists, cronned and dockerised" techStack={skillsForProject}/> */}
                         {props.allProjectData.map((eachProject, index) => (
-                            <ProjectCard key={index} title={eachProject.projectName} mainLogo={eachProject.mainLogo} tagLine={eachProject.why} techStack={eachProject.techStack} />
+                            <ProjectCard data={eachProject} key={index} />
                         ))}
                     </div>
                 </section>

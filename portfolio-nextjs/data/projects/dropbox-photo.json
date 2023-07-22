@@ -1,18 +1,19 @@
 {
     "projectName": "Dropbox Photo Storage",
     "techStack": [
-        "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
+        "Php", "Html", "Css", "Javascript", "Dropbox API"
     ],
-    "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
+    "why": "Developed a Php client(academic) for pulling your data from dropbox and displaying on a web page. You can pull(download) and push(upload) new files from your configured dropbox account! Courtesy to prof. Leonidas Fegaras",
     "addiction" : "",
     "storyParas" : [
-        "P1",
-        "P2",
-        "P3",
-        "P4"
+        "Sem 3 Web Data Management project - Dropbox File storage",
+        "Developed a php frontend client with which any user can configure his/her account with secret key to pull/push files from/to the configured dropbox storage",
+        "Not much of a UI guy, but I enjoyed every bit of frontend as much as the backend",
+        "User can upload, download, delete, explore his/her account files in real time. Auth using token"
     ],
     "projectType": "academic",
     "repoPrivate": true,
     "githubLink": "",
-    "order": 2
+    "order": 2,
+    "mainLogo": "/logos/mock_project_dropbox.png"
 }

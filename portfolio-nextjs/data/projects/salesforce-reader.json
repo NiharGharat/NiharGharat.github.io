@@ -1,18 +1,17 @@
 {
     "projectName": "Salesforce Reader",
     "techStack": [
-        "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
+        "Java", "Salesforce API"
     ],
-    "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
+    "why": "Developed a reader for pulling data from Salesforce as a structured data",
     "addiction" : "",
     "storyParas" : [
-        "P1",
-        "P2",
-        "P3",
-        "P4"
+        "Did this as a learning for REST api calling",
+        "Wanted to implement a writer to salesforce, but didnt impl one"
     ],
     "projectType": "personal",
-    "repoPrivate": true,
-    "githubLink": "",
-    "order": 3
+    "repoPrivate": false,
+    "githubLink": "https://github.com/NiharGharat/SalesforceParser",
+    "order": 3,
+    "mainLogo": "/logos/mock_project_salesforce.png"
 }

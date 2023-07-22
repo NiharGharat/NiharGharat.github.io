@@ -1,5 +1,5 @@
 {
-    "projectName": "YouTube Playlist Backup",
+    "projectName": "Youtube Playlist backup",
     "techStack": [
         "Java", "Docker", "Anacron", "Git", "Apache Poi", "Registry", "Github Actions"
     ],
@@ -14,5 +14,6 @@
     "projectType": "personal",
     "repoPrivate": true,
     "githubLink": "",
-    "order": 1
+    "order" : 1,
+    "mainLogo": "/logos/mock_youtube_logo.png"
 }

@@ -10,12 +10,12 @@ export default function Project(props) {
             TODO
             1. Link, Para and multiple pictures
             3. Responsive
-            4. Accurate info in json
             5. Photos jsonArray in data of the project pics if any
             6. Each project seperate page with back option
             7. Spell check the data
             
             Done
+            4. Accurate info in json
             5. Responsive Cards
             2. Tech stack
             */}
@@ -35,7 +35,7 @@ export default function Project(props) {
                     </div>
                     <div className="md:col-span-2">
                         {props.allProjectData.map((eachProject, index) => (
-                            <ProjectCard data={eachProject} key={index} />
+                            <ProjectCard data={eachProject} key={eachProject.identifier} />
                         ))}
                     </div>
                 </section>

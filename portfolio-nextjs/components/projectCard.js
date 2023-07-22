@@ -38,9 +38,9 @@ const EachBadge = function(props) {
 
 const BadgesSection = function(props) {
     return (
-        <ul className="flex flex-wrap col-span-2 sm:col-span-1 my-auto justify-end">
+        <ul key={props.unq} className="flex flex-wrap col-span-2 sm:col-span-1 my-auto justify-end">
             {props.badgesArray.map(e => (
-                <EachBadge key={e} badgeData={e} />
+                <EachBadge key={e.get('title')} badgeData={e} />
             ))}
         </ul>
     )
@@ -79,7 +79,7 @@ export default function ProjectCard(props) {
                     <div className="text-xl sm:text-2xl md:text-4xl col-span-4 sm:col-span-5">
                         {props.data.projectName}
                     </div>
-                    <BadgesSection className="" badgesArray={badgesArray} />
+                    <BadgesSection className="" badgesArray={badgesArray} unq={props.data.projectName}/>
                 </div>
                 <section className="p-2">
                     <img className="m-2 h-40 mx-auto" src={props.data.mainLogo} alt={`Project logo for ${props.data.projectName}`}/>

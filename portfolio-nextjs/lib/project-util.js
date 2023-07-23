@@ -111,3 +111,58 @@ export async function getAllProjectData() {
   }));
   return allProjData.filter(each => each != null).sort((a, b) => a.order - b.order);
 }
+
+export async function getAllProjectIdsNew() {
+  const fileNames = fs.readdirSync(projectsDirectory)
+  let allProjData = await Promise.all(
+    fileNames.map(async (eachfileName) => {
+      if (path.extname(eachfileName) === ".json") {
+        const filePath = path.join(projectsDirectory, eachfileName);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(fileContent);
+      }
+      return null;
+  })
+  .filter(each => each != null)
+  .sort((a, b) => a.order - b.order));
+  allProjData = allProjData.map((eachProject) => {
+    return {
+      params: {
+        id: eachProject.identifier,
+      },
+    };
+  })
+  return allProjData;
+}
+
+// export async function getAllProjectIds() {
+//   const allProjectData = await getAllProjectData();
+//   return allProjectData.map((eachProjectData) => {
+//     return {
+//         params: {
+//             id: eachProjectData.identifier,
+//         },
+//     };
+//   });
+// }
+
+export async function getSpecificPostData(id) {
+  const fileNames = fs.readdirSync(projectsDirectory)
+  let allProjData = await Promise.all(
+    fileNames.map(async (eachfileName) => {
+      if (path.extname(eachfileName) === ".json") {
+        const filePath = path.join(projectsDirectory, eachfileName);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const jsonContent = JSON.parse(fileContent);
+        if (jsonContent.identifier === id) {
+          return {id, jsonContent}
+        }
+      }
+      return null;
+  }));
+  allProjData = allProjData.filter(each => each != null);
+  return {
+    id, 
+    allProjData,
+  };
+}

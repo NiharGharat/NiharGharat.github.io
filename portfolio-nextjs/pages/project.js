@@ -1,7 +1,11 @@
 import Head from "next/head";
 import HeaderSection from "../components/headerSection";
-import {getAllProjectData} from '../lib/project-util'
+import {getAllProjectData} from '../lib/project-util';
 import ProjectCard from "../components/projectCard";
+
+const pageTitle = "Nihar Projects";
+const pageIntroPara1 = "I sort of manifest myself through my work and my projects";
+const pageIntroPara2 = "I loved working on each one of these. Ranging from Java, to Python, to Pandas, to Keras. Academic, non-academic";
 
 export default function Project(props) {
     return (
@@ -20,7 +24,7 @@ export default function Project(props) {
             2. Tech stack
             */}
             <Head>
-                <title>Nihar Projects</title>
+                <title>{pageTitle}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
@@ -29,12 +33,12 @@ export default function Project(props) {
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
                         <div className="p-3 text-4xl px-3 font-bold text-center">Projects</div>
                         <div className='mx-12 p-3 text-sm border-2 border-gray-800 text-justify'>
-                            <div className='mt-2'>I sort of manifest myself through my work and my projects</div>
-                            <div className='mt-2'>I loved on each on of these. Ranging from Java, to Python, to Pandas, to Keras. Academic non-academic. I tried to justify each one of them</div>
+                            <div className='mt-2'>{pageIntroPara1}</div>
+                            <div className='mt-2'>{pageIntroPara2}</div>
                         </div>
                     </div>
                     <div className="md:col-span-2">
-                        {props.allProjectData.map((eachProject, index) => (
+                        {props.allProjectData.map((eachProject) => (
                             <ProjectCard data={eachProject} key={eachProject.identifier} />
                         ))}
                     </div>

@@ -159,7 +159,7 @@ export function getSpecificPostData(identifier) {
         }
       }
       return null;
-  }).filter(each => each != null);
+  }).filter(each => each != null).at(0).jsonContent;
   const retnData = {
     identifier, 
     allProjData,

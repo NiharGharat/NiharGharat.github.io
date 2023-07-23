@@ -2,7 +2,7 @@
     "projectName": "Bash Scripts",
     "identifier": "bash_scripts",
     "techStack": [
-        "Bash", "Kubernetes", "Git", "Automation", "Csv", "Ubuntu"
+        "Bash", "Kubernetes", "Git", "Automation", "Ubuntu", "rSync"
     ],
     "why": "Tried and was hooked to bash. Tried and was tired of doing same task manually",
     "addiction" : "",

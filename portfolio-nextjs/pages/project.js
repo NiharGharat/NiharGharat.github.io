@@ -2,6 +2,7 @@ import Head from "next/head";
 import HeaderSection from "../components/headerSection";
 import {getAllProjectData} from '../lib/project-util';
 import ProjectCard from "../components/projectCard";
+import Link from "next/link";
 
 const pageTitle = "Nihar Projects";
 const pageIntroPara1 = "I sort of manifest myself through my work and my projects";
@@ -39,7 +40,7 @@ export default function Project(props) {
                     </div>
                     <div className="md:col-span-2">
                         {props.allProjectData.map((eachProject) => (
-                            <ProjectCard data={eachProject} key={eachProject.identifier} />
+                            <Link id={eachProject.identifier} href={"./project/" + eachProject.identifier}><ProjectCard data={eachProject} key={eachProject.identifier} /></Link>
                         ))}
                     </div>
                 </section>

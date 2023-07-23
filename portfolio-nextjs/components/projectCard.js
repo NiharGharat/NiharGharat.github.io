@@ -1,8 +1,9 @@
 import React from "react";
+import { BadgesSection, handleBadges } from "./semi/badges";
 
 /*
 TODO
-1. Hove colour text of skill Array on hover
+1. Hover colour text of skill Array on hover
 
 Done
 2. Display Academic logo for all academic projects in Chrome Yellow
@@ -24,54 +25,15 @@ const SkillSection = function(props) {
     )
 }
 
-const EachBadge = function(props) {
-    return (
-        <li>
-            <img title={props.badgeData.get('title')} className="p-2 h-10 inline-block float-right" src={props.badgeData.get('src')} alt={props.badgeData.get('title')} />
-        </li>
-    )
-}
-
-// const pushData = (dataArray, key, value) => {
-//     dataArray.push({key, value});
-// };
-
-const BadgesSection = function(props) {
-    return (
-        <ul key={props.unq} className="flex flex-wrap col-span-2 sm:col-span-1 my-auto justify-end">
-            {props.badgesArray.map(e => (
-                <EachBadge key={e.get('title')} badgeData={e} />
-            ))}
-        </ul>
-    )
-}
-
-const badgeSelection = function(boolCndn, title1, title2, src1, src2, type) {
-    let theMap = new Map();
-    let badgeCompSrc;
-    let title;
-    if (boolCndn) {
-        badgeCompSrc = src1
-        title = title1
-    } else {
-        badgeCompSrc = src2
-        title = title2
-    }
-    theMap.set('src', badgeCompSrc)
-    theMap.set('type', type)
-    theMap.set('title', title)
-    return theMap
-}
-
 // Take children
 export default function ProjectCard(props) {
     // The kind of badges which you want against your projects
     const projectPersonalBadge = Boolean(props.data.projectType) && props.data.projectType === "personal";
     const projectPrivateBadge = Boolean(props.data.repoPrivate) && props.data.repoPrivate;
-    let badgesArray = []
+    let badgesArray = handleBadges(projectPersonalBadge, projectPrivateBadge)
     
-    badgesArray.push(badgeSelection(projectPersonalBadge, 'Personal Project', 'Academic Project', "/logos/badges/mock_project_personal.png", "/logos/badges/mock_project_academic.png"))
-    badgesArray.push(badgeSelection(projectPrivateBadge, 'Private Repo', 'Public Repo', "/logos/badges/mock_repo_private.png", "/logos/badges/mock_repo_public.png"))
+    // badgesArray.push(badgeSelection(projectPersonalBadge, badge_title_personal_project, badge_title_academic_project, badge_src_personal_project, badge_src_academic_project))
+    // badgesArray.push(badgeSelection(projectPrivateBadge, badge_title_private_project, badge_title_public_project, badge_src_private_project, badge_src_public_project))
     return (
         <div className="mt-4 p-2 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400 duration-200 ease-in-out">
             <main>

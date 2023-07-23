@@ -112,10 +112,9 @@ export async function getAllProjectData() {
   return allProjData.filter(each => each != null).sort((a, b) => a.order - b.order);
 }
 
-export async function getAllProjectIdsNew() {
+export function getAllProjectIdsNew() {
   const fileNames = fs.readdirSync(projectsDirectory)
-  let allProjData = await Promise.all(
-    fileNames.map(async (eachfileName) => {
+  let allProjData = fileNames.map((eachfileName) => {
       if (path.extname(eachfileName) === ".json") {
         const filePath = path.join(projectsDirectory, eachfileName);
         const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -124,11 +123,11 @@ export async function getAllProjectIdsNew() {
       return null;
   })
   .filter(each => each != null)
-  .sort((a, b) => a.order - b.order));
-  allProjData = allProjData.map((eachProject) => {
+  .sort((a, b) => a.order - b.order)
+  .map((eachProject) => {
     return {
       params: {
-        id: eachProject.identifier,
+        identifier: eachProject.identifier,
       },
     };
   })
@@ -146,23 +145,26 @@ export async function getAllProjectIdsNew() {
 //   });
 // }
 
-export async function getSpecificPostData(id) {
+export function getSpecificPostData(identifier) {
+  console.log(">>getSpecificPostData")
+  console.log(identifier)
   const fileNames = fs.readdirSync(projectsDirectory)
-  let allProjData = await Promise.all(
-    fileNames.map(async (eachfileName) => {
+  let allProjData = fileNames.map((eachfileName) => {
       if (path.extname(eachfileName) === ".json") {
         const filePath = path.join(projectsDirectory, eachfileName);
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const jsonContent = JSON.parse(fileContent);
-        if (jsonContent.identifier === id) {
-          return {id, jsonContent}
+        if (jsonContent.identifier == identifier) {
+          return {identifier, jsonContent}
         }
       }
       return null;
-  }));
-  allProjData = allProjData.filter(each => each != null);
-  return {
-    id, 
+  }).filter(each => each != null);
+  const retnData = {
+    identifier, 
     allProjData,
   };
+  console.log("Pap")
+  console.log(retnData);
+  return retnData;
 }

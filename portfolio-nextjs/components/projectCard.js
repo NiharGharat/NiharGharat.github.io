@@ -4,6 +4,7 @@ import { BadgesSection, handleBadges } from "./semi/badges";
 /*
 TODO
 1. Hover colour text of skill Array on hover
+2. Golden shadow on academic logo hover
 
 Done
 2. Display Academic logo for all academic projects in Chrome Yellow
@@ -41,7 +42,7 @@ export default function ProjectCard(props) {
                     <div className="text-xl sm:text-2xl md:text-4xl col-span-4 sm:col-span-5">
                         {props.data.projectName}
                     </div>
-                    <BadgesSection className="" badgesArray={badgesArray} unq={props.data.projectName}/>
+                    <BadgesSection classToUse="flex flex-wrap col-span-2 sm:col-span-1 my-auto justify-end" className="" badgesArray={badgesArray} unq={props.data.projectName}/>
                 </div>
                 <section className="p-2">
                     <img className="m-2 h-40 mx-auto" src={props.data.mainLogo} alt={`Project logo for ${props.data.projectName}`}/>

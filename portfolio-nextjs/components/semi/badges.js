@@ -32,7 +32,7 @@ export const handleBadges = function(projectPersonalBadge, projectPrivateBadge) 
 
 export const BadgesSection = function(props) {
     return (
-        <ul key={props.unq} className="flex flex-wrap col-span-2 sm:col-span-1 my-auto justify-end">
+        <ul key={props.unq} className={props.classToUse}>
             {props.badgesArray.map(e => (
                 <EachBadge key={e.get('title')} badgeData={e} />
             ))}

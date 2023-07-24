@@ -1,11 +1,15 @@
 import Head from 'next/head';
 import {getAllProjectIdsNew, getSpecificPostData} from '../../lib/project-util';
+import { BadgesSection, handleBadges } from '../../components/semi/badges';
 
 export default function Project({specificPostData}) {
     console.log("Inside actual impl");
     console.log(specificPostData);
     const projectName = specificPostData.allProjData.projectName;
     const titleOfPage = "Nihar Project " + projectName;
+    const projectPersonalBadge = Boolean(specificPostData.allProjData.projectType) && specificPostData.allProjData.projectType === "personal";
+    const projectPrivateBadge = Boolean(specificPostData.allProjData.repoPrivate) && specificPostData.allProjData.repoPrivate;
+    let badgesArray = handleBadges(projectPersonalBadge, projectPrivateBadge)
     return (
         <>
             <Head>
@@ -29,6 +33,16 @@ export default function Project({specificPostData}) {
                             return (<li>{eachPara}</li>)
                         })}
                     </ul>
+                </section>
+                <section>
+                    {/* Badges */}
+                    <BadgesSection classToUse="flex flex-wrap my-auto" className="" badgesArray={badgesArray} unq={specificPostData.allProjData.projectName}/>
+                </section>
+                <section>
+                    {/* Github link */}
+                </section>
+                <section>
+                    {/* Tech stack */}
                 </section>
             </main>
         </>

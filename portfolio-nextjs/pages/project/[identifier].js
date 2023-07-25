@@ -1,6 +1,21 @@
 import Head from 'next/head';
 import {getAllProjectIdsNew, getSpecificPostData} from '../../lib/project-util';
 import { BadgesSection, handleBadges } from '../../components/semi/badges';
+import Link from 'next/link';
+
+const SkillSection = function(props) {
+    return (
+        <ul className={props.classNameToUse}>
+            {props.techStack.map(e => (
+                <EachSkill skill={e} />
+            ))}
+        </ul>
+    )
+}
+
+const EachSkill = function({skill}) {
+    return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
+};
 
 export default function Project({specificPostData}) {
     console.log("Inside actual impl");
@@ -9,7 +24,9 @@ export default function Project({specificPostData}) {
     const titleOfPage = "Nihar Project " + projectName;
     const projectPersonalBadge = Boolean(specificPostData.allProjData.projectType) && specificPostData.allProjData.projectType === "personal";
     const projectPrivateBadge = Boolean(specificPostData.allProjData.repoPrivate) && specificPostData.allProjData.repoPrivate;
+    const isGithubLinkPresent = specificPostData.allProjData.githubLink;
     let badgesArray = handleBadges(projectPersonalBadge, projectPrivateBadge)
+    // console.log(specificPostData.allProjData.techStack)
     return (
         <>
             <Head>
@@ -21,7 +38,7 @@ export default function Project({specificPostData}) {
                         {projectName}
                     </div>
                     <div className='col-span-1'>
-                        Back
+                        <Link href="javascript:history.back()">Back</Link>
                     </div>
                 </section>
                 <section>
@@ -29,8 +46,8 @@ export default function Project({specificPostData}) {
                         {specificPostData.allProjData.why}
                     </div>
                     <ul>
-                        {specificPostData.allProjData.storyParas.map(eachPara => {
-                            return (<li>{eachPara}</li>)
+                        {specificPostData.allProjData.storyParas.map((eachPara, index) => {
+                            return (<li key={index}>{eachPara}</li>)
                         })}
                     </ul>
                 </section>
@@ -38,12 +55,13 @@ export default function Project({specificPostData}) {
                     {/* Badges */}
                     <BadgesSection classToUse="flex flex-wrap my-auto" className="" badgesArray={badgesArray} unq={specificPostData.allProjData.projectName}/>
                 </section>
+                {isGithubLinkPresent && 
                 <section>
                     {/* Github link */}
-                </section>
-                <section>
-                    {/* Tech stack */}
-                </section>
+                    <span>Github Link</span> - <Link href={specificPostData.allProjData.githubLink} >{specificPostData.allProjData.githubLink}</Link>
+                </section>}
+                
+                {/* <SkillSection techStack={specificPostData.allProjData.techStack} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" /> */}
             </main>
         </>
     );

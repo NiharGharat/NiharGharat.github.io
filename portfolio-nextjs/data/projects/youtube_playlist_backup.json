@@ -7,7 +7,7 @@
     "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
     "addiction" : "",
     "storyParas" : [
-        "I use free music, I believe in free music. I also believe I should need to remember all the names of the songs in my youtube playlists",
+        "I use free music, I believe in free music. I also believe I shouldnt need to remember all the names of the songs in my youtube playlists",
         "When a copyright strike happens on any song in the playlist, its removed and shows up as video unavailable on the playlist",
         "To mitigate this horrendous behaviour, I came up with an idea where I would just take periodic backups of all my(public) playlists, and store them in xlsx format",
         "Wrote the project in Java, performed multithreaded requests to get playlist data, did regex matching on songs, and stored the data in xlsx format",

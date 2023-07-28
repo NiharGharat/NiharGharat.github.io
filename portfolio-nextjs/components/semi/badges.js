@@ -10,7 +10,7 @@ export const badge_title_public_project = "Public Repo";
 const EachBadge = function(props) {
     return (
         <li>
-            <img title={props.badgeData.get('title')} className="p-2 h-10 inline-block float-right" src={props.badgeData.get('src')} alt={props.badgeData.get('title')} />
+            <img title={props.badgeData.get('title')} className="p-2 h-10 sm:h-12 inline-block float-right" src={props.badgeData.get('src')} alt={props.badgeData.get('title')} />
         </li>
     )
 }

@@ -4,7 +4,7 @@
     "techStack": [
         "Python", "Pandas", "Jupyter", "Machine Learning", "Neural Nets", "Keras", "Github Actions"
     ],
-    "why": "Catalog your gym data, use the app, workout on the recommendation, repeat",
+    "why": "Catalog your gym data, use the app, workout on the recommendation, rise, repeat",
     "addiction" : "",
     "storyParas" : [
         "I have been cataloging my gym data entries from around Oct 2022. I had the idea, can I use some fancy algo to just give me a good enough recommendation of the exercises which I should do when I visit the gym the next time?",

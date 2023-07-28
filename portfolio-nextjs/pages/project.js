@@ -15,9 +15,9 @@ export default function Project(props) {
             TODO
             1. Project pictures
             5. Photos jsonArray in data of the project pics if any
-            6. Each project seperate page with back option
             
             Done
+            6. Each project seperate page with back option
             7. Spell check the data
             3. Responsive
             4. Accurate info in json

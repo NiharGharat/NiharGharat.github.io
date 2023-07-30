@@ -19,5 +19,6 @@
     "repoPrivate": true,
     "githubLink": "",
     "order" : 1,
-    "mainLogo": "/logos/mock_project_youtube_playlist_backup.png"
+    "mainLogo": "/logos/mock_project_youtube_playlist_backup.png",
+    "author": true
 } 

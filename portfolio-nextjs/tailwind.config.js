@@ -12,6 +12,9 @@ module.exports = {
         brandBrown_200: "#db9f72",
         brand_lti_dark_blue: "#2f3187",
       },
+      transitionProperty: {
+        height: 'height'
+      }
     },
   },
   plugins: [],

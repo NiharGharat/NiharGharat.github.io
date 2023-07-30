@@ -16,5 +16,6 @@
     "repoPrivate": true,
     "githubLink": "",
     "order": 2,
-    "mainLogo": "/logos/mock_project_dropbox_photo_storage.png"
+    "mainLogo": "/logos/mock_project_dropbox_photo_storage.png",
+    "author": true
 }

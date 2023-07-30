@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import {getAllProjectIdsNew, getSpecificPostData} from '../../lib/project-util';
-import { BadgesSection, handleBadges } from '../../components/semi/badges';
+import { BadgesSection, getBadgeInfo, type_author_project, type_personal_project, type_private_project } from '../../components/semi/badges';
 import Link from 'next/link';
 
 /*
@@ -12,7 +12,7 @@ const SkillSection = function(props) {
     return (
         <ul className={props.classNameToUse}>
             {props.techStack.map(e => (
-                <EachSkill skill={e} />
+                <EachSkill key={e} skill={e} />
             ))}
         </ul>
     )
@@ -23,14 +23,17 @@ const EachSkill = function({skill}) {
 };
 
 export default function Project({specificPostData}) {
-    console.log("Inside actual impl");
-    console.log(specificPostData);
     const projectName = specificPostData.allProjData.projectName;
     const titleOfPage = "Nihar Project " + projectName;
-    const projectPersonalBadge = Boolean(specificPostData.allProjData.projectType) && specificPostData.allProjData.projectType === "personal";
-    const projectPrivateBadge = Boolean(specificPostData.allProjData.repoPrivate) && specificPostData.allProjData.repoPrivate;
     const isGithubLinkPresent = specificPostData.allProjData.githubLink;
-    let badgesArray = handleBadges(projectPersonalBadge, projectPrivateBadge)
+    
+    const jsonForPersonalBadge = getBadgeInfo(type_personal_project, Boolean(specificPostData.allProjData.projectType) && specificPostData.allProjData.projectType === "personal");
+    const jsonForPrivateBadge = getBadgeInfo(type_private_project, Boolean(specificPostData.allProjData.repoPrivate) && specificPostData.allProjData.repoPrivate);
+    const jsonForMeAuthorBadge = getBadgeInfo(type_author_project, Boolean(specificPostData.allProjData.author) && specificPostData.allProjData.author);
+    let arrayForBadges = []
+    arrayForBadges.push(jsonForPersonalBadge)
+    arrayForBadges.push(jsonForPrivateBadge)
+    arrayForBadges.push(jsonForMeAuthorBadge)
     const backPageId = "/project#" + specificPostData.allProjData.identifier;
     return (
         <>
@@ -44,15 +47,15 @@ export default function Project({specificPostData}) {
                     </div>
                     <div className='my-auto col-span-1 justify-self-end'>
                         <Link href={backPageId}>
-                            <img title="Go Back" className="pr-4 h-6 inline-block" src="/logos/mock_nav_back.png" alt="Back navigation" />
+                            <img title="Go Back" className="pr-4 h-6 inline-block hover:h-8 active:h-10 transition-height duration-300 ease-in-out" src="/logos/mock_nav_back.png" alt="Back navigation" />
                         </Link>
                     </div>
                 </section>
-                <section className='p-2 mt-4'>
+                <section className='p-2 mt-2'>
                     <div className='text-xl lg:text-2xl tracking-tight px-6'>
                         {specificPostData.allProjData.why}
                     </div>
-                    <ul className='mt-2 p-2 text-lg lg:text-xl'>
+                    <ul className='mt-6 p-2 text-lg lg:text-xl'>
                         {specificPostData.allProjData.storyParas.map((eachPara, index) => {
                             return (<li className='mt-3' key={index}>{eachPara}</li>)
                         })}
@@ -60,7 +63,7 @@ export default function Project({specificPostData}) {
                 </section>
                 <section className='m-2 pl-4'>
                     {/* Badges */}
-                    <BadgesSection classToUse="flex flex-wrap my-auto" className="" badgesArray={badgesArray} unq={specificPostData.allProjData.projectName}/>
+                    <BadgesSection classToUse="flex flex-wrap my-auto" className="" badgesArray={arrayForBadges} unq={specificPostData.allProjData.projectName}/>
                 </section>
                 <section className='p-2'>
                     {isGithubLinkPresent && 

@@ -16,5 +16,6 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/ReviewScrapperAnalyser",
     "order": 1,
-    "mainLogo": "/logos/mock_project_google_apartment_review_analyser.png"
+    "mainLogo": "/logos/mock_project_google_apartment_review_analyser.png",
+    "author": true
 } 

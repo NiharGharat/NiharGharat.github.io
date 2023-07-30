@@ -16,5 +16,6 @@
     "repoPrivate": true,
     "githubLink": "",
     "order" : 5,
-    "mainLogo": "/logos/mock_project_bash_scripts.png"
+    "mainLogo": "/logos/mock_project_bash_scripts.png",
+    "author": true
 } 

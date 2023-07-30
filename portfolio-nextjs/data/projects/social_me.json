@@ -17,5 +17,6 @@
     "repoPrivate": true,
     "githubLink": "",
     "order": 3,
-    "mainLogo": "/logos/mock_project_social_me.png"
+    "mainLogo": "/logos/mock_project_social_me.png",
+    "author": false
 }

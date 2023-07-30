@@ -8,6 +8,7 @@ export default function Intro() {
         1. Colour of Buttons match theme
         4. Logo work
         6. Fair the profile pic
+        7. Externalise data read, take from json
         */}
         <Head>
             <title>AboutMe</title>

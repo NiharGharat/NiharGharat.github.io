@@ -48,8 +48,6 @@ export default function CompanyCard(props) {
                     {props.allPoints.map((eachPoint, index) => (
                         <li key={index}>- {eachPoint}</li>
                     ))}
-                    {/* <li>{props.p1}</li>
-                    <li>{props.p2}</li> */}
                 </ol>
             </div>
             <AllSkills isHiddenOnSm skillsArray={props.skillsArray}/>

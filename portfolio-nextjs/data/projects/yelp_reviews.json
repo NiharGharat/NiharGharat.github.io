@@ -18,5 +18,6 @@
     "githubLink": "",
     "order": 2,
     "mainLogo": "/logos/mock_project_yelp_reviews.png",
-    "author": true
+    "author": true,
+    "demoPicturesPresent": true
 } 

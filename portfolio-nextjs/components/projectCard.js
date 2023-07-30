@@ -3,7 +3,6 @@ import { BadgesSection, getBadgeInfo, handleBadges, type_personal_project, type_
 
 /*
 TODO
-1. Hover colour text of skill Array on hover
 2. Golden shadow on academic logo hover
 
 Done

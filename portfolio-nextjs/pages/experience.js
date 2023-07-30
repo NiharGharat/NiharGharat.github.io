@@ -11,7 +11,7 @@ export default function Experience(props) {
             6. Implement Link on click to go to card
             12. Externalise company logo css
             13. Truely externalise data - eg head title name
-
+            
             Done
             11. Externalise CompanySkills, CompanyLocation, CompanyNameWithCss, CompanyCountry, CompanyDuration, Company 4 bullet points
             1. Create the cards
@@ -20,8 +20,6 @@ export default function Experience(props) {
             4. Extract components
             7. Till now tech
             */}
-            {/* {console.log(props.allExperienceData)} */}
-            {/* {console.log(data.skills)} */}
             <Head>
                 <title>Nihar Portfolio Work Experience</title>
                 <link rel="icon" href="/favicon.ico" />

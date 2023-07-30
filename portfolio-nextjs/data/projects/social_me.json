@@ -18,5 +18,7 @@
     "githubLink": "",
     "order": 3,
     "mainLogo": "/logos/mock_project_social_me.png",
-    "author": false
+    "author": false,
+    "demoLink": "https://youtu.be/QSBwQTnvzNs",
+    "demoPicturesPresent": true
 }

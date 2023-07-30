@@ -7,15 +7,6 @@ import HeaderSection from "../components/headerSection";
 import { header_link_path_about_me, header_link_path_experience, header_link_path_projects, header_link_title_about_me, header_link_title_experience, header_link_title_projects } from "../components/constants";
 import Link from "next/link";
 
-/*
-2. Credits to logo
-
-Done
-1. Credits to icons
-3. Resume
-
-//
-*/
 const dataLine1 = "If you have an opportunity to work on some innovative product/idea, feel free to connect";
 const dataLine2 = "Drop me a line, contact me through any of the below mentioned channels!";
 

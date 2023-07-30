@@ -13,19 +13,6 @@ const pageIntroPara2 = "I loved working on each one of these. Ranging from Java,
 export default function Project(props) {
     return (
         <>
-            {/* 
-            TODO
-            1. Project pictures
-            5. Photos jsonArray in data of the project pics if any
-            
-            Done
-            6. Each project seperate page with back option
-            7. Spell check the data
-            3. Responsive
-            4. Accurate info in json
-            5. Responsive Cards
-            2. Tech stack
-            */}
             <Head>
                 <title>{pageTitle}</title>
                 <link rel="icon" href="/favicon.ico" />

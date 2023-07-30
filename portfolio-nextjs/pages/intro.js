@@ -5,12 +5,6 @@ import { header_link_path_contact, header_link_path_experience, header_link_path
 export default function Intro() {
     return (
         <>
-        {/* TODO
-        1. Colour of Buttons match theme
-        4. Logo work
-        6. Fair the profile pic
-        7. Externalise data read, take from json
-        */}
         <Head>
             <title>AboutMe</title>
             <link rel="icon" href="/favicon.ico" />

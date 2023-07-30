@@ -7,20 +7,6 @@ import { header_link_path_about_me, header_link_path_contact, header_link_path_p
 export default function Experience(props) {
     return (
         <>
-            {/* TODO
-            5. Write correct info data
-            6. Implement Link on click to go to card
-            12. Externalise company logo css
-            13. Truely externalise data - eg head title name
-            
-            Done
-            11. Externalise CompanySkills, CompanyLocation, CompanyNameWithCss, CompanyCountry, CompanyDuration, Company 4 bullet points
-            1. Create the cards
-            2. Font reponsiveness
-            3. Card responsiveness
-            4. Extract components
-            7. Till now tech
-            */}
             <Head>
                 <title>Nihar Portfolio Work Experience</title>
                 <link rel="icon" href="/favicon.ico" />

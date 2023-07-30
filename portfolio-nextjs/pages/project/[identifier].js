@@ -3,11 +3,6 @@ import {getAllProjectIdsNew, getSpecificPostData} from '../../lib/project-util';
 import { BadgesSection, getBadgeInfo, type_author_project, type_personal_project, type_private_project } from '../../components/semi/badges';
 import Link from 'next/link';
 
-/*
-TODO
-1. Do keyword bolding on the main paras eg Dockerized, etc.
-*/
-
 const SkillSection = function(props) {
     return (
         <ul className={props.classNameToUse}>

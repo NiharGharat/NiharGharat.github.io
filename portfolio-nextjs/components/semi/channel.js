@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { pre_contact_badges } from "../constants";
 
-/*
-TODO
-1. Correct info on stack, and on Github
-*/
-
 export const Channel = function(props) {
     const srcToUse = "/logos/badges/" + pre_contact_badges + props.data.logo;
     return (

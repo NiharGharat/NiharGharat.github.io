@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getAllContactDataFromJson } from "../lib/project-util";
-import { Channel, Trial } from "../components/semi/channel";
+import { Channel } from "../components/semi/channel";
 import Script from "next/script";
 import Clipboard from 'react-clipboard.js';
 import HeaderSection from "../components/headerSection";
@@ -15,9 +15,8 @@ Done
 3. Resume
 
 //
-<a href="https://www.flaticon.com/free-icons/laptop" title="laptop icons">Laptop icons created by Smashicons - Flaticon</a>
 */
-const dataLine1 = "If you have an opportunity to work on some innovative product/idea, feel free to connect.";
+const dataLine1 = "If you have an opportunity to work on some innovative product/idea, feel free to connect";
 const dataLine2 = "Drop me a line, contact me through any of the below mentioned channels!";
 
 export default function Contact(props) {
@@ -57,11 +56,11 @@ export default function Contact(props) {
                     )}
                 </ul>
             </section>
-            <section>
+            <section className="mt-4 text-xs text-gray-400">
                 Credits-
                 <ul>
-                    <li>App created on nextjs/tailwindcss</li>
-                    <li>Icons from </li>
+                    <li>App created on <span className="font-bold">nextjs/tailwindcss</span>, Deployed on <span className="font-bold">Vercel</span></li>
+                    <li>Icons from <Link className="font-bold hover:underline " href="https://www.flaticon.com/" target="_blank" rel='noopener noreferrer' >flaticon</Link></li>
                 </ul>
             </section>
         </main>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const EachSkill = function({skill}) {
-    return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-400 lg:text-sm'>{skill}</li>)
+    return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 hover:text-gray-800 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
 };
 
 const SkillSection = function(props) {

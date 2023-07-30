@@ -40,7 +40,7 @@ export default function Project({specificPostData}) {
             <Head>
                 <title>{titleOfPage}</title>
             </Head>
-            <main className='p-2 md:p-4 text-gray-600 bg-gray-200'>
+            <main className='p-2 md:p-4 text-gray-600 bg-gray-200 min-h-screen'>
                 <section className='grid grid-cols-5 hover:shadow-lg hover:text-gray-800 hover:shadow-gray-300 active:shadow-gray-300 transition duration-300 ease-in-out'>
                     <div className='p-2 col-span-4 text-gray-700 justify-self-start text-4xl md:text-5xl lg:text-6xl tracking-normal my-auto'>
                         {projectName}
@@ -69,7 +69,7 @@ export default function Project({specificPostData}) {
                     {isGithubLinkPresent && 
                     <section className='text-xs'>
                         {/* Github link */}
-                        <Link className='mx-2 text-lg font-bold text-blue-900 hover:underline duration-300 ease-in-out transition' href={specificPostData.allProjData.githubLink} >GithubLink</Link>
+                        <Link className='mx-2 text-lg font-bold text-blue-900 hover:underline duration-300 ease-in-out transition' target="_blank" rel='noopener noreferrer' href={specificPostData.allProjData.githubLink} >GithubLink</Link>
                     </section>}
                     <SkillSection techStack={specificPostData.allProjData.techStack} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>

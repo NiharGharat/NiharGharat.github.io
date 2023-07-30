@@ -1,0 +1,26 @@
+{
+    "allLinks": [
+        {
+            "url": "https://stackoverflow.com/users/8311083/niharght",
+            "logo": "stack_overflow.png",
+            "title": "Stack Overflow"
+        },
+        {
+            "url": "https://github.com/NiharGharat",
+            "logo": "github.png",
+            "title": "Github"
+        },
+        {
+            "url": "https://www.linkedin.com/in/nihar-gharat-csihvoshone/",
+            "logo": "linkedin.png",
+            "title": "LinkedIn"
+        },
+        {
+            "url": "https://instagram.com/nihar_ght",
+            "logo": "instagram.png",
+            "title": "Instagram"
+        }
+    ],
+    "resume": "/files/Nihar_Gharat_CV_Jul.pdf",
+    "email": "nihar.gharat@gmail.com"
+}

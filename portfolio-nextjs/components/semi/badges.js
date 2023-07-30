@@ -20,7 +20,7 @@ export const type_author_project = "myself_author";
 const EachBadge = function(props) {
     return (
         <li>
-            <img title={props.badgeData.title} className="p-2 h-10 sm:h-12 inline-block float-right drop-shadow-lg shadow-blue-500 transform hover:scale-125 transition ease-in-out duration-300" src={props.badgeData.src} alt={props.badgeData.title} />
+            <img title={props.badgeData.title} className="p-2 h-10 sm:h-12 inline-block float-right transform hover:scale-125 transition ease-in-out duration-300" src={props.badgeData.src} alt={props.badgeData.title} />
         </li>
     )
 }

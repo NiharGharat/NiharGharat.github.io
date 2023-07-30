@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
+/*
+TODO
+1. Correct the colours on button click
+*/
+
 export default function HeaderSection(props) {
     return (
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 sm:border-solid border-2 border-black content-center shadow-xl">

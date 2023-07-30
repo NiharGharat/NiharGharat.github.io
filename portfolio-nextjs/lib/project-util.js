@@ -3,7 +3,7 @@ import path from 'path'
 
 const expDirectory = path.join(process.cwd(), 'data/experience')
 const projectsDirectory = path.join(process.cwd(), 'data/projects')
-
+const contactDirectory = path.join(process.cwd(), 'data/general')
 
 export async function getAllExperienceData() {
   const fileNames = fs.readdirSync(expDirectory)
@@ -73,4 +73,10 @@ export function getSpecificPostData(identifier) {
     allProjData,
   };
   return retnData;
+}
+
+// For contact
+export function getAllContactDataFromJson() {
+  const fileContents = JSON.parse(fs.readFileSync(contactDirectory + '/contact.json', 'utf-8'));
+  return fileContents;
 }

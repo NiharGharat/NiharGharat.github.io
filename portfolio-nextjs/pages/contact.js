@@ -4,7 +4,7 @@ import { Channel } from "../components/semi/channel";
 import Script from "next/script";
 import Clipboard from 'react-clipboard.js';
 import HeaderSection from "../components/headerSection";
-import { header_link_path_about_me, header_link_path_experience, header_link_path_projects, header_link_title_about_me, header_link_title_experience, header_link_title_projects } from "../components/constants";
+import { button_theme_flag_blue, header_link_path_about_me, header_link_path_experience, header_link_path_projects, header_link_title_about_me, header_link_title_experience, header_link_title_projects } from "../components/constants";
 import Link from "next/link";
 
 const dataLine1 = "If you have an opportunity to work on some innovative product/idea, feel free to connect";
@@ -19,7 +19,7 @@ export default function Contact(props) {
             <Script src="dist/clipboard.min.js" />
         </Head>
         <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl text-gray-700">
-        <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_projects} thirdLink={header_link_path_projects} />
+        <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_projects} thirdLink={header_link_path_projects} themeColour={button_theme_flag_blue}/>
             <section className='p-2 mt-2 text-4xl px-3 font-bold text-center'>
                 Contact
             </section>

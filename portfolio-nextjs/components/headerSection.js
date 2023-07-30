@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
+import { colourVariants } from "./constants";
 
 export default function HeaderSection(props) {
+    
     return (
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 sm:border-solid border-2 border-black content-center shadow-xl">
             <div className="hidden sm:block sm:col-span-1">
@@ -9,9 +11,9 @@ export default function HeaderSection(props) {
                 {/* TODO - Icon here */}
             </div>
             <div className="grid grid-cols-3 text-center text-lg content-center sm:col-span-2">
-                <Link href={"./" + props.firstLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg lg:px-9 mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-brandBrown shadow-lg shadow-gray-400 hover:bg-brandBrown_200 hover:-translate-y-0.5 transform transition"><span className="">{props.firstName}</span></Link>
-                <Link href={"./" + props.secondLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg lg:px-9 mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-brandBrown shadow-lg shadow-gray-400 hover:bg-brandBrown_200 hover:-translate-y-0.5 transform transition"><span className="">{props.secondName}</span></Link>
-                <Link href={"./" + props.thirdLink} className="m-3 p-3 font-bold text-sm sm:text-md md:text-lg lg:px-9 mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit bg-brandBrown shadow-lg shadow-gray-400 hover:bg-brandBrown_200 hover:-translate-y-0.5 transform transition"><span className="">{props.thirdName}</span></Link>
+                <Link href={"./" + props.firstLink} className={`${colourVariants[props.themeColour]} m-3 p-3 font-bold text-sm sm:text-md md:text-lg lg:px-9 mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit shadow-lg shadow-gray-400 hover:-translate-y-0.5 transform transition`}><span className="">{props.firstName}</span></Link>
+                <Link href={"./" + props.secondLink} className={`${colourVariants[props.themeColour]} m-3 p-3 font-bold text-sm sm:text-md md:text-lg lg:px-9 mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit shadow-lg shadow-gray-400 hover:-translate-y-0.5 transform transition`}><span className="">{props.secondName}</span></Link>
+                <Link href={"./" + props.thirdLink} className={`${colourVariants[props.themeColour]} m-3 p-3 font-bold text-sm sm:text-md md:text-lg lg:px-9 mx-auto rounded-sm uppercase tracking-wide sm:tracking-normal md:text-inherit shadow-lg shadow-gray-400 hover:-translate-y-0.5 transform transition`}><span className="">{props.thirdName}</span></Link>
             </div>
         </section>
     );

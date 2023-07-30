@@ -1,12 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
-import { remark } from 'remark';
-import html from 'remark-html';
-
-// Populate the projects from md files
-
-// Populate experience from md files
 
 const expDirectory = path.join(process.cwd(), 'data/experience')
 const projectsDirectory = path.join(process.cwd(), 'data/projects')
@@ -63,8 +56,6 @@ export function getAllProjectIdsNew() {
 }
 
 export function getSpecificPostData(identifier) {
-  console.log(">>getSpecificPostData")
-  console.log(identifier)
   const fileNames = fs.readdirSync(projectsDirectory)
   let allProjData = fileNames.map((eachfileName) => {
       if (path.extname(eachfileName) === ".json") {
@@ -81,7 +72,5 @@ export function getSpecificPostData(identifier) {
     identifier, 
     allProjData,
   };
-  console.log("Pap")
-  console.log(retnData);
   return retnData;
 }

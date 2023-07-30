@@ -3,11 +3,13 @@ import { BadgesSection, getBadgeInfo, handleBadges, type_personal_project, type_
 
 /*
 TODO
-2. Golden shadow on academic logo hover
 
 Done
 2. Display Academic logo for all academic projects in Chrome Yellow
 3. Display personal logo for personal projects
+
+Pending/Deferred
+2. Golden shadow on academic logo hover
 */
 
 // also present in comapnyCard

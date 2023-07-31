@@ -13,10 +13,10 @@ module.exports = {
         brand_lti_dark_blue: "#2f3187",
         pastel_green: "#B2D3BE",
         pastel_green_dark: "#709A98",
-        pastel_lime: "#F2F4D1",
-        pastel_lime_dark: "#BCD2B7",
-        pastel_blue: "#CDF0EA",
-        pastel_blue_dark: "#8BB4CC",
+        pastel_lime: "#FFF6BD",
+        pastel_lime_dark: "#ffee80",
+        pastel_blue: "#B6D8F2",
+        pastel_blue_dark: "#67aee4",
       },
       transitionProperty: {
         height: 'height'

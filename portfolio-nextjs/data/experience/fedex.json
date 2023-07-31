@@ -1,13 +1,15 @@
 {
     "companyName" : "FedEx",
+    "identifier" : "fedex",
     "baseLocation" : "Plano",
     "country" : "Texas",
     "skills" : [
         "Java", "SpringBoot", "SpringJdbc", "OracleDB", "JMS", "Jenkins", "WebClient"
     ],
+    "why": "Explored Java Spring Boot in more detail, dived deep in planning and execution",
     "duration": "2023 Summer",
     "companyLoved4Points" : [
-        "Part of printAndGo product team as intern, responsible for modernizing the legacy application",
+        "SDE intern at FedEx printAndGo product team, responsible for modernizing the legacy application",
         "Implemented newer functionality with better throughout, while ensuring legacy systems work with it",
         "Tested and deepened understanding of development best practices",
         "Hands on knowledge in task bifurcation, and working as a team"

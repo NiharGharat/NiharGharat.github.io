@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { colourVariants } from "./constants";
 
+// Ref - https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 export default function HeaderSection(props) {
     
     return (

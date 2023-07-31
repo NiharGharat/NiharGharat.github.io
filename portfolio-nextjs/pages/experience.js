@@ -3,6 +3,7 @@ import Head from "next/head";
 import CompanyCard from '../components/companyCard';
 import HeaderSection from '../components/headerSection';
 import { button_theme_flag_green, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
+import Link from 'next/link';
 
 export default function Experience(props) {
     return (
@@ -25,7 +26,7 @@ export default function Experience(props) {
                     </div>
                     <div className="md:col-span-2">
                         {props.allExperienceData.map((eachCompany, index) => (
-                            <CompanyCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} />
+                            <Link key={eachCompany.identifier} id={eachCompany.identifier} href={"./experience/" + eachCompany.identifier}><CompanyCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} /></Link>
                         ))}
                     </div>
                 </section>

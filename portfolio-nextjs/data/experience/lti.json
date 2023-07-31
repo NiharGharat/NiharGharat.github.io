@@ -1,0 +1,29 @@
+{
+    "companyName" : "LTI",
+    "identifier" : "lti",
+    "baseLocation" : "Pune",
+    "country" : "India",
+    "skills" : [
+        "Java", "SpringBoot", "MySQL", "PostgreSQL", "Snowflake", "Hive", "MongoDB", "Azure Blob", "S3", "GCP", "Spark"
+    ],
+    "why": "Learnt everything, coding from scratch to Ubuntu",
+    "duration": "2018-2021",
+    "companyLoved4Points" : [
+        "Part of product engineering team, working on the connector framework - ie - reading data from any source(RDBMS, Cloud, etc.), and pushing to any source",
+        "Developed upsert implementation from scratch for mongoDB on Spark dataset API",
+        "Supported implementation of 15 connectors ranging from AzureBlob, S3, file formats like json, csv, parquet, xml, etc., RDBMS like snowflake, MySQL, postgreSQL, etc.",
+        "Loved working on core functionality, thinking about problems at scale"
+    ],
+    "order": 2,
+    "companyDetailPoints" : [
+        "Designed and developed REST APIs on Java for services like connector and scanner service; developed data parsers(connectors) for various sources like RDBMS systems (Postgres, MySql, Hive, SqlServer, Snowflake, etc.); file formats like xlsx, delimited, sas7bdat, json, xml; NoSql like mongoDb; and crm platforms like Salesforce.",
+        "Worked on cloud connectors like Azure Blob, Amazon S3, GCP; with a major focus on Azure Blob.",
+        "Improved performance of Xlsx data parser by ~50%, by identifying bottlenecks in Apache Poi implementation. Designed, implemented, and maintained new features like range read, streaming read, etc. for xlsx connector.",
+        "Developed bash scripts on Linux for doing automated performance benchmarking for various connectors for Spark on K8S.",
+        "Designed and developed functionality like upsert for RDBMS via spark, mongoDb authentication.",
+        "Researched the feasibility of a connector for Google Drive. Developed a POC to demo the integrated functionality.",
+        "Worked on other technologies like Docker, Kubernetes, Azure Blob, Amazon S3, Sftp, Spring boot, CI/CD, Snowflake, SonarQube, ElasticSearch. Strong experience in Linux, with Ubuntu as the choice of development OS.",
+        "Contributed to maintenance and enhancement of Spark cluster processing for about 15 connectors."
+    ],
+    "logo": "lti.png"
+} 

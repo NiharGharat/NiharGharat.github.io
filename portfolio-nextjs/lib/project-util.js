@@ -55,6 +55,38 @@ export function getAllProjectIdsNew() {
   return allProjData;
 }
 
+export function getAllComapnyIdsNew() {
+  const fileNames = fs.readdirSync(expDirectory)
+  let allExpData = fileNames.map((eachfileName) => {
+      if (path.extname(eachfileName) === ".json") {
+        const filePath = path.join(expDirectory, eachfileName);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(fileContent);
+      }
+      return null;
+  })
+  .filter(each => each != null)
+  .sort((a, b) => a.order - b.order)
+  .map((eachExp) => {
+    return {
+      params: {
+        identifier: eachExp.identifier,
+      },
+    };
+  })
+  return allExpData;
+}
+
+export function getSpecificExpData(identifier) {
+  const fileContents = JSON.parse(fs.readFileSync(expDirectory + "/" + identifier + '.json', 'utf-8'));
+  const retnData = {
+    identifier,
+    fileContents,
+  };
+  return retnData;
+}
+
+// Simplify this logic by reading just one file
 export function getSpecificPostData(identifier) {
   const fileNames = fs.readdirSync(projectsDirectory)
   let allProjData = fileNames.map((eachfileName) => {

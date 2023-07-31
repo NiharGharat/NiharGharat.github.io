@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { getAllComapnyIdsNew, getSpecificExpData } from "../../lib/project-util";
-import Image from "next/image";
 
 export default function Company(props) {
     console.log(props.specificExpData.fileContents)
-    const path = "/logos/" + props.specificExpData.fileContents.logo;
+    const path = "/logos/mock_" + props.specificExpData.fileContents.logo;
+    console.log(path)
     return (
         <>
             <Head>

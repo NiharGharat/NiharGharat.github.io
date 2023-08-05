@@ -46,15 +46,17 @@ export default function Project({specificPostData}) {
                         </Link>
                     </div>
                 </section>
-                <section className='mt-4 m-4 mx-6 sm:mx-12 md:mx-16 border-2 border-gray-400 rounded-sm'>
-                    <img className="mx-auto p-4 h-40 sm:h-48 md:h-52 lg:h-64 xl:h-80 object-cover" src={specificPostData.allProjData.mainLogo} alt={`Project logo for ${specificPostData.allProjData.projectName}`}/>
+                <section className='p-2'>
+                    <div className='text-lg sm:text-xl lg:text-2xl tracking-tight px-4 text-gray-800'>
+                        {specificPostData.allProjData.why}
+                    </div>
+                </section>
+                <section className='mt-6 m-4 mx-6 sm:mx-12 md:mx-16 border-2 border-gray-400 rounded-sm'>
+                    <img className="mx-auto p-4 h-48 sm:h-54 md:h-64 lg:h-72 xl:h-80 object-cover" src={specificPostData.allProjData.mainLogo} alt={`Project logo for ${specificPostData.allProjData.projectName}`}/>
                 </section>
                 <div className='px-4 text-center'>{projectName}</div>
                 <section className='p-2 mt-2'>
-                    <div className='text-xl lg:text-2xl tracking-tight px-4 text-gray-800'>
-                        {specificPostData.allProjData.why}
-                    </div>
-                    <ul className='mt-6 p-2 text-lg lg:text-xl text-gray-700'>
+                    <ul className='p-2 text-lg lg:text-xl text-gray-600'>
                         {specificPostData.allProjData.storyParas.map((eachPara, index) => {
                             return (<li className='mt-3' key={index}>{eachPara}</li>)
                         })}

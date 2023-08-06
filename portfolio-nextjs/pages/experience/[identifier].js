@@ -2,6 +2,20 @@ import Head from "next/head";
 import { getAllComapnyIdsNew, getSpecificExpData } from "../../lib/project-util";
 import Link from "next/link";
 
+const SkillSection = function(props) {
+    return (
+        <ul className={props.classNameToUse}>
+            {props.techStack.map(e => (
+                <EachSkill key={e} skill={e} />
+            ))}
+        </ul>
+    )
+}
+
+const EachSkill = function({skill}) {
+    return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 hover:text-gray-800 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
+};
+
 export default function Company(props) {
     console.log(props.specificExpData.fileContents)
     const path = "/logos/mock_" + props.specificExpData.fileContents.logo;
@@ -45,12 +59,13 @@ export default function Company(props) {
                     {/* Show a list of resourceful insights here */}
                     <ul className="px-6 text-lg lg:text-xl text-gray-600">
                         {props.specificExpData.fileContents.highlights.map((eachPt) => 
-                            <li className="mt-2">{eachPt}</li>
+                            <li className="mt-2"><ExpHighlights data={eachPt} /></li>
                         )}
                     </ul>
                 </section>
                 <section>
                     {/* Tech stack */}
+                    <SkillSection techStack={props.specificExpData.fileContents.techStack} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>
             </main>
         </>

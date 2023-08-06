@@ -61,8 +61,9 @@
             "type": "extra",
             "name": "Bash Scripts",
             "logo": "extra_bash_scripts.png",
-            "stmt": ["Bash scripting is my favourite. I started to write bash scripts for almost all mundane jobs. Honorary mention - while doing performance benchmarking, I developed a script that will spawn pods(Kubernetes) of different configs, for specified connector type, and sleep in background. It will periodically check the pods completion status, and once done, it will grep the log, and prune the the timings to present the result. EOD - the performance timings were ready for me. All this thanks to the support team not tightly controlling the environment",
-            "Wrote another bash script for pushing our latest code on supports git env for deployment only based on image tags. The script would \"correctly\" rebase main, and push our new tags on the deploy file, and push with a consistent commit message. Also, handled scenarios were there would be conflicts on pull/push. With the script, you just need to have the image tags ready, dont need to interact with git"
+            "stmt": [
+                "Bash scripting is my favourite. I started to write bash scripts for almost all mundane jobs. Honorary mention - while doing performance benchmarking, I developed a script that will spawn pods(Kubernetes) of different configs, for specified connector type, and sleep in background. It will periodically check the pods completion status, and once done, it will grep the log, and prune the the timings to present the result. EOD - the performance timings were ready for me. All this thanks to the support team not tightly controlling the environment",
+                "Wrote another bash script for pushing our latest code on supports git env for deployment only based on image tags. The script would \"correctly\" rebase main, and push our new tags on the deploy file, and push with a consistent commit message. Also, handled scenarios were there would be conflicts on pull/push. With the script, you just need to have the image tags ready, dont need to interact with git"
                     ]
         }
     ],

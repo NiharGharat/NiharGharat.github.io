@@ -35,13 +35,22 @@ export default function Company(props) {
                     </div>
                 </section>
                 <section className="px-2 mt-2">
-                    <div className="text-xl lg:text-4xl text-gray-700">Working at LTI...</div>
+                    <div className="mt-2 text-xl lg:text-4xl text-gray-700">Working at LTI...</div>
                     <ol className="px-6 list-decimal text-lg lg:text-xl text-gray-600">
                         {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => 
                             <li className="mt-2">{eachPt}</li>
                         )}
                     </ol>
-                    <div className="text-xl lg:text-4xl text-gray-700">Insight work exp</div>
+                    <div className="mt-2 text-xl lg:text-4xl text-gray-700">Insight work exp</div>
+                    {/* Show a list of resourceful insights here */}
+                    <ul className="px-6 text-lg lg:text-xl text-gray-600">
+                        {props.specificExpData.fileContents.highlights.map((eachPt) => 
+                            <li className="mt-2">{eachPt}</li>
+                        )}
+                    </ul>
+                </section>
+                <section>
+                    {/* Tech stack */}
                 </section>
             </main>
         </>

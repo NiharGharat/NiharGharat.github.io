@@ -47,6 +47,7 @@ export default function Project({specificPostData}) {
             </Head>
             <main className='p-2 md:p-4 text-gray-600 bg-gray-100 min-h-screen'>
                 <HeadingSection data={dataToPassToHeader} titleContent={titleText} />
+                {/* DO NOT REMOVE THIS PART */}
                 {/* <section className='p-2 grid grid-cols-5 hover:shadow-lg hover:text-gray-800 hover:shadow-gray-300 active:shadow-gray-300 transition duration-300 ease-in-out'>
                     <div className='col-span-4 text-gray-700 justify-self-start text-4xl md:text-5xl lg:text-6xl tracking-normal my-auto'>
                         {projectName}
@@ -57,6 +58,7 @@ export default function Project({specificPostData}) {
                         </Link>
                     </div>
                 </section> */}
+                {/* DO NOT REMOVE THIS PART */}
                 <section className='p-2'>
                     <div className='text-lg sm:text-xl lg:text-2xl tracking-tight px-4 text-gray-800'>
                         {specificPostData.allProjData.why}

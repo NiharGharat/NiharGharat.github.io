@@ -56,18 +56,20 @@ export default function Company(props) {
                         {props.specificExpData.fileContents.baseLocation}, {props.specificExpData.fileContents.country}
                     </div>
                 </section>
-                <section className="px-4 mt-2">
-                    <div className="mt-6 text-xl lg:text-4xl text-gray-700">Working at LTI...</div>
-                    <ol className="px-6 list-decimal text-lg lg:text-xl text-gray-600">
+                <section className="px-4 mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
+                    <div className="mt-6 text-gray-700">Working at LTI...</div>
+                    <ol className="px-6 list-none text-sm lg:text-xl text-gray-600 bg-gray-200">
                         {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => 
-                            <li className="mt-2">{eachPt}</li>
+                            <li className="mt-2 p-2 md:p-4 ">{eachPt}</li>
                         )}
                     </ol>
-                    <div className="mt-6 text-xl lg:text-4xl text-gray-700">Insight from work exp</div>
+                    <div className="mt-6 text-gray-700">Insight from work exp</div>
                     {/* Show a list of resourceful insights here */}
-                    <ul className="px-6 text-lg lg:text-xl text-gray-600">
+                    <ul className="mt-4 p-4 text-lg lg:text-xl text-gray-600 bg-gray-200 grid grid-flow-row gap-4">
                         {props.specificExpData.fileContents.highlights.map((eachPt, index) => 
-                            <li key={eachPt.name} className="mt-2 p-2 bg-gray-200"><ExpHighlights data={eachPt} index={index} /></li>
+                            <li key={eachPt.name} className="border-2 border-gray-300">
+                                <ExpHighlights data={eachPt} index={index} />
+                            </li>
                         )}
                     </ul>
                 </section>

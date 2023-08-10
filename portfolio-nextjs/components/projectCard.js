@@ -1,5 +1,5 @@
 import React from "react";
-import { BadgesSection, getBadgeInfo, handleBadges, type_personal_project, type_private_project } from "./semi/badges";
+import { BadgesSection, getBadgeInfo, type_personal_project, type_private_project } from "./semi/badges";
 
 /*
 TODO
@@ -49,7 +49,7 @@ export default function ProjectCard(props) {
                     <div className="mt-2 p-2 text-sm md:text-lg text-gray-800">
                         {props.data.why}
                     </div>
-                    <SkillSection techStack={props.data.techStack} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
+                    <SkillSection techStack={props.data.techStack} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" lengthInterested={10} />
                     <div className="mt-2 text-right text-sm text-gray-600">
                         Check it out...
                     </div>

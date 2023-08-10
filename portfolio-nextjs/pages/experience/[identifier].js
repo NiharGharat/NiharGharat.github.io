@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { getAllComapnyIdsNew, getSpecificExpData } from "../../lib/project-util";
-import Link from "next/link";
-import ExperienceHIghlights from "../../components/expHighlights";
 import ExpHighlights from "../../components/expHighlights";
 import { HeadingSection } from "../../components/semi/heading";
 

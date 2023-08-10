@@ -2,6 +2,7 @@ import Head from 'next/head';
 import {getAllProjectIdsNew, getSpecificPostData} from '../../lib/project-util';
 import { BadgesSection, getBadgeInfo, type_author_project, type_personal_project, type_private_project } from '../../components/semi/badges';
 import Link from 'next/link';
+import { HeadingSection } from '../../components/semi/heading';
 
 const SkillSection = function(props) {
     return (
@@ -29,14 +30,24 @@ export default function Project({specificPostData}) {
     arrayForBadges.push(jsonForPersonalBadge)
     arrayForBadges.push(jsonForPrivateBadge)
     arrayForBadges.push(jsonForMeAuthorBadge)
-    const backPageId = "/project#" + specificPostData.allProjData.identifier;
+    const idOfBackPage = "/project#" + specificPostData.allProjData.identifier;
+    //
+    const dataToPassToHeader = {
+        backPageId: idOfBackPage,
+        projectTitle: projectName
+    }
+    const titleText = <div className='col-span-4 text-gray-700 justify-self-start text-4xl md:text-5xl lg:text-6xl tracking-normal my-auto'>
+                            {projectName}
+                        </div>;
+    //
     return (
         <>
             <Head>
                 <title>{titleOfPage}</title>
             </Head>
             <main className='p-2 md:p-4 text-gray-600 bg-gray-100 min-h-screen'>
-                <section className='p-2 grid grid-cols-5 hover:shadow-lg hover:text-gray-800 hover:shadow-gray-300 active:shadow-gray-300 transition duration-300 ease-in-out'>
+                <HeadingSection data={dataToPassToHeader} titleContent={titleText} />
+                {/* <section className='p-2 grid grid-cols-5 hover:shadow-lg hover:text-gray-800 hover:shadow-gray-300 active:shadow-gray-300 transition duration-300 ease-in-out'>
                     <div className='col-span-4 text-gray-700 justify-self-start text-4xl md:text-5xl lg:text-6xl tracking-normal my-auto'>
                         {projectName}
                     </div>
@@ -45,7 +56,7 @@ export default function Project({specificPostData}) {
                             <img title="Go Back" className="pr-4 h-6 inline-block hover:scale-150 transition ease-in-out duration-300" src="/logos/mock_nav_back.png" alt="Back navigation" />
                         </Link>
                     </div>
-                </section>
+                </section> */}
                 <section className='p-2'>
                     <div className='text-lg sm:text-xl lg:text-2xl tracking-tight px-4 text-gray-800'>
                         {specificPostData.allProjData.why}

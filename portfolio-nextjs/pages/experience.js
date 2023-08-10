@@ -2,32 +2,18 @@ import {getAllExperienceData} from '../lib/project-util'
 import Head from "next/head";
 import CompanyCard from '../components/companyCard';
 import HeaderSection from '../components/headerSection';
+import { button_theme_flag_green, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
+import Link from 'next/link';
 
 export default function Experience(props) {
     return (
         <>
-            {/* TODO
-            5. Write correct info data
-            6. Implement Link on click to go to card
-            12. Externalise company logo css
-            13. Truely externalise data - eg head title name
-
-            Done
-            11. Externalise CompanySkills, CompanyLocation, CompanyNameWithCss, CompanyCountry, CompanyDuration, Company 4 bullet points
-            1. Create the cards
-            2. Font reponsiveness
-            3. Card responsiveness
-            4. Extract components
-            7. Till now tech
-            */}
-            {/* {console.log(props.allExperienceData)} */}
-            {/* {console.log(data.skills)} */}
             <Head>
                 <title>Nihar Portfolio Work Experience</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
-                <HeaderSection firstName="About Me" firstLink="intro" secondName="Projects" secondLink="project" thirdName="Contact" thirdLink="contanct" />
+                <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_projects} secondLink={header_link_path_projects} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_green}/>
                 {/* Now the main body */}
                 <section className="p-3 grid grid-cols-1 md:grid-cols-3 md:gap-2 lg:gap-4">
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
@@ -40,7 +26,7 @@ export default function Experience(props) {
                     </div>
                     <div className="md:col-span-2">
                         {props.allExperienceData.map((eachCompany, index) => (
-                            <CompanyCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} />
+                            <Link key={eachCompany.identifier} id={eachCompany.identifier} href={"./experience/" + eachCompany.identifier}><CompanyCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} /></Link>
                         ))}
                     </div>
                 </section>
@@ -57,4 +43,4 @@ export async function getStaticProps() {
         allExperienceData,
       },
     };
-  }
+}

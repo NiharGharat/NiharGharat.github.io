@@ -1,42 +1,39 @@
 import Head from "next/head";
 import HeaderSection from "../components/headerSection";
-import {getAllProjectData} from '../lib/project-util'
+import {getAllProjectData} from '../lib/project-util';
 import ProjectCard from "../components/projectCard";
+import Link from "next/link";
+import { button_theme_flag_lime, header_link_path_about_me, header_link_path_contact, header_link_path_experience, header_link_title_about_me, header_link_title_contact, header_link_title_experience } from "../components/constants";
+import { Credits } from "../components/credits";
+
+const pageTitle = "Nihar Projects";
+const pageIntroPara1 = "I sort of manifest myself through my work and my projects";
+const pageIntroPara2 = "I loved working on each one of these. Ranging from Java, to Python, to Pandas, to Keras. Academic, non-academic";
 
 export default function Project(props) {
     return (
         <>
-            {/* 
-            TODO
-            1. Link, Para and multiple pictures
-            3. Responsive
-            4. Accurate info in json
-            
-            Done
-            5. Responsive Cards
-            2. Tech stack
-            */}
             <Head>
-                <title>Nihar Projects</title>
+                <title>{pageTitle}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
-                <HeaderSection firstName="About Me" firstLink="intro" secondName="Experience" secondLink="experience" thirdName="Contact" thirdLink="contanct" />
+                <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_lime}/>
                 <section className="p-3 grid grid-cols-1 md:grid-cols-3 md:gap-2 lg:gap-4">
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
                         <div className="p-3 text-4xl px-3 font-bold text-center">Projects</div>
                         <div className='mx-12 p-3 text-sm border-2 border-gray-800 text-justify'>
-                            <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
-                            <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
+                            <div className='mt-2'>{pageIntroPara1}</div>
+                            <div className='mt-2'>{pageIntroPara2}</div>
                         </div>
                     </div>
                     <div className="md:col-span-2">
-                    {/* <ProjectCard title="YouTube playlist backup" mainLogo="/logos/mock_youtube_logo.png" tagLine="Developed a Java based project which will do multithreaded http requests and backup your playlists, cronned and dockerised" techStack={skillsForProject}/> */}
-                        {props.allProjectData.map((eachProject, index) => (
-                            <ProjectCard data={eachProject} key={index} />
+                        {props.allProjectData.map((eachProject) => (
+                            <Link key={eachProject.identifier} id={eachProject.identifier} href={"./project/" + eachProject.identifier}><ProjectCard data={eachProject} key={eachProject.identifier} /></Link>
                         ))}
                     </div>
                 </section>
+                <Credits />
             </main>
         </>
     )

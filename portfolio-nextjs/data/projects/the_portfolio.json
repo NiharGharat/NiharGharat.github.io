@@ -1,0 +1,24 @@
+{
+    "projectName": "The Portfolio",
+    "identifier": "the_portfolio",
+    "techStack": [
+        "ReactJs", "NextJs", "TailwindCss", "Vercel", "Lots of introspection"
+    ],
+    "why": "Ya know, this had to be done ;)",
+    "addiction" : "",
+    "storyParas" : [
+        "Needed a more descriptive resume and online presence, was no way an easy task, the ETA which I thought was 3 days worth of effort, I took me around 3 weeks of effort, around 3 hours per day give or take",
+        "Inspiration 1 - https://www.lauren-waller.com/",
+        "Inspiration 2 - https://p5aholic.me/",
+        "Inspiration 3 - https://brittanychiang.com/",
+        "And many more...",
+        "Feel free to fork and build on top",
+        "Future enhancements? Look at the issues tab of the repo"
+    ],
+    "projectType": "personal",
+    "repoPrivate": false,
+    "githubLink": "https://github.com/NiharGharat/NiharGharat.github.io",
+    "order" : 1,
+    "mainLogo": "/logos/mock_project_the_portfolio.jpeg",
+    "author": true
+} 

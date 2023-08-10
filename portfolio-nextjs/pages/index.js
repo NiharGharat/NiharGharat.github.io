@@ -10,9 +10,6 @@ export default function Home(props) {
     </Head>
     <section>
       <Intro />
-      {/* <Experience data={props.allExpData}/>
-      <Project data={props.allProjectData}/>
-      <Contact /> */}
     </section>
     </>
   )

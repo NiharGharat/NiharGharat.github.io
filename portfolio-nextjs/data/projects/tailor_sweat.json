@@ -1,0 +1,25 @@
+{
+    "projectName": "Tailor Sweat",
+    "identifier": "tailor_sweat",
+    "techStack": [
+        "Python", "Pandas", "Jupyter", "Machine Learning", "Neural Nets", "Keras", "Github Actions"
+    ],
+    "why": "Catalog your gym data, use the app, workout on the recommendation, rise, repeat",
+    "addiction" : "",
+    "storyParas" : [
+        "I have been cataloging my gym data entries from around Oct 2022. I had the idea, can I use some fancy algo to just give me a good enough recommendation of the exercises which I should do when I visit the gym the next time?",
+        "Fortunately, had the opportunity to work on this as academic/personal with major contributions from Nelson Joseph(nelson123-lab) and Nikhil Das Karavatt(NDK22), and last but surely not the least, courtesy Dr. Alex Dillhoff for giving us the opportunity",
+        "Feature Engg in Pandas, Data creation to a large extent in ChatGPT with some of my own personal gym data entries, neural net in keras",
+        "The application would ingest user data from his/her profile, workout history, preferences, etc. Calculate insights based on preset rules, give more weightage to some aspects, etc. and then use the neural net to come up with predictions. The model was retrained with a 14 day frequency",
+        "While researching for this one, I was very much impressed with Nike Training Club(NTC) blog post",
+        "Checkout the notes for an in depth documentation",
+        "Didn't expect the data generation to be such a crucial and tedious task",
+        "I came up with the name"
+    ],
+    "projectType": "academic",
+    "repoPrivate": false,
+    "githubLink": "https://github.com/NiharGharat/TailorSweat",
+    "order" : 1,
+    "mainLogo": "/logos/mock_project_tailor_sweat.png",
+    "author": true
+}

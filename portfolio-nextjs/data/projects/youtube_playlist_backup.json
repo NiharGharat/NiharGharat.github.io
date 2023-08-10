@@ -1,0 +1,24 @@
+{
+    "projectName": "Youtube Playlist Backup",
+    "identifier": "youtube_playlist_backup",
+    "techStack": [
+        "Java", "Docker", "Cron/Anacron", "Ubuntu", "DockerHub", "Registry", "Github Actions", "Apache Poi(Xlsx)"
+    ],
+    "why": "I was tormented by youtube inconsistent behaviour on handling how copyright striked videos are treated",
+    "addiction" : "",
+    "storyParas" : [
+        "I use free music, I believe in free music. I also believe I shouldnt need to remember all the names of the songs in my youtube playlists",
+        "When a copyright strike happens on any song in the playlist, its removed and shows up as video unavailable on the playlist",
+        "To mitigate this horrendous behaviour, I came up with an idea where I would just take periodic backups of all my(public) playlists, and store them in xlsx format",
+        "Wrote the project in Java, performed multithreaded requests to get playlist data, did regex matching on songs, and stored the data in xlsx format",
+        "Dockerised the project, pushed to dockerHub, used github actions for ci/cd",
+        "Best part was I anacroned the project to run daily. Anacron doesn't run like cron, so cron + anacron was it",
+        "Further extension can use youtube playlist api for a cleaner scalable approach, intelligence engine based on the xlsx data dump"
+    ],
+    "projectType": "personal",
+    "repoPrivate": true,
+    "githubLink": "",
+    "order" : 1,
+    "mainLogo": "/logos/mock_project_youtube_playlist_backup.png",
+    "author": true
+} 

@@ -9,6 +9,11 @@ Utils-
 
 3. View meta on an image
 
+Libraries-
+1. Toastify - for the prompt on email copied. https://www.npmjs.com/package/react-toastify
+2. Clipboard
+
+
 Extractables-
 1. Click link open in new tab
 2. CLipboard copy

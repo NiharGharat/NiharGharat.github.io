@@ -6,9 +6,19 @@ import Clipboard from 'react-clipboard.js';
 import HeaderSection from "../components/headerSection";
 import { button_theme_flag_blue, header_link_path_about_me, header_link_path_experience, header_link_path_projects, header_link_title_about_me, header_link_title_experience, header_link_title_projects } from "../components/constants";
 import Link from "next/link";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const dataLine1 = "If you have an opportunity to work on some innovative product/idea, feel free to connect";
 const dataLine2 = "Drop me a line, contact me through any of the below mentioned channels!";
+
+const showToastMessage = function() {
+    toast.success('Copied!', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 1000,
+        hideProgressBar: true,
+    });
+}
 
 export default function Contact(props) {
     
@@ -36,7 +46,7 @@ export default function Contact(props) {
             </section>
             <section className="">
                 <div className="p-2 text-sm lg:text-lg">
-                    Click to copy my email to your clipboard! - <Clipboard title="Copy my email to your clipboard" data-clipboard-text={props.allContactData.email} className="mx-2 text-lg font-bold text-blue-900 hover:underline tracking-tight">{props.allContactData.email}</Clipboard>
+                    Click to copy my email to your clipboard! - <Clipboard title="Copy my email to your clipboard" data-clipboard-text={props.allContactData.email} className="mx-2 text-lg font-bold text-blue-900 hover:underline tracking-tight" onClick={showToastMessage}>{props.allContactData.email}</Clipboard>
                 </div>
                 <div className="p-2 text-sm lg:text-lg">
                     <Link className="text-lg font-bold text-blue-900 hover:underline tracking-tight" target="_blank" rel='noopener noreferrer' href={props.allContactData.resume}>Checkout my resume!</Link>
@@ -54,6 +64,7 @@ export default function Contact(props) {
                     <li>Icons from <Link className="font-bold hover:underline " href="https://www.flaticon.com/" target="_blank" rel='noopener noreferrer' >flaticon</Link></li>
                 </ul>
             </section>
+            <ToastContainer limit={3}/>
         </main>
     </>)
 }

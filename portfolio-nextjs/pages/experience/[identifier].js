@@ -27,15 +27,16 @@ export default function Company(props) {
         title: companyTitle,
         backPageId: idOfBackPage
     }
-    const titleImage = <img className="h-24 col-span-4 text-gray-700 justify-self-start text-4xl my-auto" src={pathOfLogo} alt={companyTitle} title={companyTitle} />
+    const titleImage = <img className="h-14 col-span-4 text-gray-700 justify-self-start text-4xl my-auto" src={pathOfLogo} alt={companyTitle} title={companyTitle} />
     return (
         <>
             <Head>
                 <title>Work at {props.specificExpData.fileContents.companyName}</title>
             </Head>
-            <main className="p-2 md:p-4 text-gray-600 bg-gray-100 min-h-screen">
+            <main className="p-4 md:p-4 text-gray-600 bg-gray-100 min-h-screen">
                 <HeadingSection data={dataToPassToHeader} titleContent={titleImage} />
                 {/* DO NOT REMOVE THIS PART */}
+                {/* This is externalised currently but cud be mahe it internalised */}
                 {/* <section className="p-2 grid grid-cols-5 hover:shadow-lg hover:text-gray-800 hover:shadow-gray-300 active:shadow-gray-300 transition duration-300 ease-in-out">
                     <img className="h-24 col-span-4 text-gray-700 justify-self-start text-4xl my-auto" src={pathOfLogo} alt={companyTitle} title={companyTitle} />
                     <div className='my-auto col-span-1 justify-self-end'>
@@ -46,14 +47,11 @@ export default function Company(props) {
                 </section> */}
                 {/* DO NOT REMOVE THIS PART */}
                 <section className="px-2 mt-2">
-                    <div className="text-lg sm:text-xl lg:text-2xl tracking-tight px-4 text-gray-800">
+                    <div className="text-lg sm:text-xl lg:text-2xl tracking-tight text-gray-700">
                         {props.specificExpData.fileContents.why}
                     </div>
-                    <div className="mt-2">
-                        {props.specificExpData.fileContents.duration}
-                    </div>
-                    <div>
-                        {props.specificExpData.fileContents.baseLocation}, {props.specificExpData.fileContents.country}
+                    <div className="">
+                        {props.specificExpData.fileContents.baseLocation}, {props.specificExpData.fileContents.country} - {props.specificExpData.fileContents.duration}
                     </div>
                 </section>
                 <section className="px-4 mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">

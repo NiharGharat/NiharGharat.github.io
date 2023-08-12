@@ -1,6 +1,6 @@
 import Head from "next/head";
 import HeaderSection from "../components/headerSection";
-import { button_theme_flag_brown, header_link_path_contact, header_link_path_experience, header_link_path_projects, header_link_title_contact, header_link_title_experience, header_link_title_projects } from "../components/constants";
+import { button_theme_flag_brown, button_theme_flag_orange, header_link_path_contact, header_link_path_experience, header_link_path_projects, header_link_title_contact, header_link_title_experience, header_link_title_projects } from "../components/constants";
 
 export default function Intro() {
     return (
@@ -10,7 +10,7 @@ export default function Intro() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
-            <HeaderSection firstName={header_link_title_experience} firstLink={header_link_path_experience} secondName={header_link_title_projects} secondLink={header_link_path_projects} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_brown}/>
+            <HeaderSection firstName={header_link_title_experience} firstLink={header_link_path_experience} secondName={header_link_title_projects} secondLink={header_link_path_projects} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_orange}/>
             <img src="/images/mock_intro_2.jpeg" alt="Profile icon" className="h-96 m-2 mt-6 p-2 sm:p-4 flex items-center justify-center mx-auto w-full object-cover md:hidden"/>
             <section className="p-3 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="pt-3">

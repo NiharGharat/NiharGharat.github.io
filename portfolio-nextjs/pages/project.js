@@ -3,7 +3,7 @@ import HeaderSection from "../components/headerSection";
 import {getAllProjectData} from '../lib/project-util';
 import ProjectCard from "../components/projectCard";
 import Link from "next/link";
-import { button_theme_flag_lime, header_link_path_about_me, header_link_path_contact, header_link_path_experience, header_link_title_about_me, header_link_title_contact, header_link_title_experience } from "../components/constants";
+import { button_theme_flag_lime, button_theme_flag_yellow, header_link_path_about_me, header_link_path_contact, header_link_path_experience, header_link_title_about_me, header_link_title_contact, header_link_title_experience } from "../components/constants";
 import { Credits } from "../components/credits";
 
 const pageTitle = "Nihar Projects";
@@ -18,7 +18,7 @@ export default function Project(props) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
-                <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_lime}/>
+                <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_yellow}/>
                 <section className="p-3 grid grid-cols-1 md:grid-cols-3 md:gap-2 lg:gap-4">
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
                         <div className="p-3 text-4xl px-3 font-bold text-center">Projects</div>

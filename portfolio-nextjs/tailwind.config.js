@@ -7,6 +7,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        pastel_blue_new: {
+          light: "#bbeaff",
+          dark: "	#72d3fe",
+        },
+        "pastel-yellow-new": {
+          dark: "#FDFD96",
+          light: "#fefecb",
+        },
+        "pastel-orange-new": {
+          dark: "#ffc04d",
+          light: "#ffd280",
+        },
+        "pastel-blue-new": {
+          light: "#b8e2f6",
+          dark: "#89CFF0",
+        },
+        "pastel-mint-new": {
+          light: "#cdedcf",
+          dark: "#ACE1AF"
+        },
         brandBrown: "#fbdcb6",
         brandBrown_100: "#dbaf84",
         brandBrown_200: "#db9f72",
@@ -17,6 +37,9 @@ module.exports = {
         pastel_lime_dark: "#ffee80",
         pastel_blue: "#B6D8F2",
         pastel_blue_dark: "#67aee4",
+      },
+      fontFamily: {
+
       },
       transitionProperty: {
         height: 'height'

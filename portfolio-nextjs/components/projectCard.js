@@ -38,11 +38,11 @@ export default function ProjectCard(props) {
     return (
         <div className="mt-4 p-2 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400 duration-200 ease-in-out">
             <main>
-                <div className="p-2 grid grid-cols-6">
-                    <div className="text-xl sm:text-2xl md:text-4xl col-span-4 sm:col-span-5">
+                <div className="p-2 grid grid-flow-col">
+                    <div className="text-xl sm:text-2xl md:text-4xl justify-start">
                         {props.data.projectName}
                     </div>
-                    <BadgesSection classToUse="flex flex-wrap col-span-2 sm:col-span-1 my-auto justify-end" className="" badgesArray={arrayForBadges} unq={props.data.projectName}/>
+                    <BadgesSection classToUse="flex flex-wrap my-auto justify-end" className="" badgesArray={arrayForBadges} unq={props.data.projectName}/>
                 </div>
                 <section className="p-2">
                     <img className="m-2 h-40 mx-auto" src={props.data.mainLogo} alt={`Project logo for ${props.data.projectName}`}/>

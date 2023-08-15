@@ -46,15 +46,13 @@ export default function Company(props) {
                     </div>
                 </section> */}
                 {/* DO NOT REMOVE THIS PART */}
-                <section className="px-2 mt-2">
-                    <div className="text-lg sm:text-xl lg:text-2xl tracking-tight text-gray-700">
-                        {props.specificExpData.fileContents.why}
-                    </div>
-                    <div className="">
-                        {props.specificExpData.fileContents.baseLocation}, {props.specificExpData.fileContents.country} - {props.specificExpData.fileContents.duration}
-                    </div>
+                <div className="px-4">
+                    {props.specificExpData.fileContents.baseLocation}, {props.specificExpData.fileContents.country} - {props.specificExpData.fileContents.duration}
+                </div>
+                <section className="px-4 mt-2 text-lg sm:text-xl lg:text-2xl tracking-tight text-gray-700">
+                    {props.specificExpData.fileContents.why}
                 </section>
-                <section className="px-4 mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
+                <section className="px-2 mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
                     <div className="mt-6 text-gray-700">Working at LTI...</div>
                     <ol className="px-6 list-none text-sm lg:text-xl text-gray-600 bg-gray-200">
                         {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => 
@@ -63,7 +61,7 @@ export default function Company(props) {
                     </ol>
                     <div className="mt-6 text-gray-700">Insight from work exp</div>
                     {/* Show a list of resourceful insights here */}
-                    <ul className="mt-4 p-4 text-lg lg:text-xl text-gray-600 bg-gray-200 grid grid-flow-row gap-4">
+                    <ul className="mt-2 p-2 text-lg lg:text-xl text-gray-600 bg-gray-200 grid grid-flow-row gap-4">
                         {props.specificExpData.fileContents.highlights.map((eachPt, index) => 
                             <li key={eachPt.name} className="border-2 border-gray-300">
                                 <ExpHighlights data={eachPt} index={index} />
@@ -71,7 +69,7 @@ export default function Company(props) {
                         )}
                     </ul>
                 </section>
-                <section className="px-4 mt-2">
+                <section className="px-2 mt-2">
                     {/* Tech stack */}
                     <SkillSection techStack={props.specificExpData.fileContents.skills} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>

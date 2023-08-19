@@ -2,6 +2,7 @@ import Head from "next/head";
 import { getAllComapnyIdsNew, getSpecificExpData } from "../../lib/project-util";
 import ExpHighlights from "../../components/expHighlights";
 import { HeadingSection } from "../../components/semi/heading";
+import { useState } from "react";
 
 const SkillSection = function(props) {
     return (
@@ -17,6 +18,42 @@ const EachSkill = function({skill}) {
     return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 hover:text-gray-800 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
 };
 
+const highlightThese = function(theComponent) {
+    console.log(theComponent)
+
+}
+
+const EachTextContent = function({data, index}) {
+    const path = "/logos/" + data.logo;
+    const [showContent, setShowContent] = useState(false);
+    const handleContentClick = () => {
+        setShowContent(!showContent);
+    }
+
+    return (
+        <li key={data.name} className="" >
+            <div className="flex md:p-2">
+                <div className="flex-shrink-0 my-auto mr-4">
+                    <img className="mt-2 float-left h-10 sm:h-12 md:h-14 lg:h-16" src={path} alt={data.name} title={data.name}/>
+                </div>
+                <div className="flex-grow my-auto">
+                    <p className="ml-4 text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl hover:cursor-pointer" onClick={handleContentClick}>
+                        {data.name}
+                    </p>
+                </div>
+            </div>
+            <div className="text-right text-gray-400 text-xs hover:cursor-pointer" onClick={handleContentClick}>{showContent ? "Show less" : "Show more"}</div>
+            <div className={`${showContent ? "visible" : "hidden"} border-2 border-gray-200 mt-2 lg:p-2 overflow-hidden transition duration-300 ease-in-out`}>
+                <ol className="list-none text-sm lg:text-xl">
+                    {data.stmt.map((eachPt) => 
+                        <li className="p-2">{eachPt}</li>
+                    )}
+                </ol>
+            </div>
+        </li>
+    )
+}
+
 export default function Company(props) {
     const pathOfLogo = "/logos/mock_" + props.specificExpData.fileContents.logo;
     const idOfBackPage = "/experience#" + props.specificExpData.fileContents.identifier;
@@ -28,12 +65,21 @@ export default function Company(props) {
         backPageId: idOfBackPage
     }
     const titleImage = <img className="h-14 col-span-4 text-gray-700 justify-self-start text-4xl my-auto" src={pathOfLogo} alt={companyTitle} title={companyTitle} />
+    let flattenedTagMap = props.specificExpData.fileContents.companyDetailPoints.flatMap(item => item.tags);
+    flattenedTagMap.push("reset");
+
+    const [showContent, setShowContent] = useState(false);
+    const toggleContent = () => {
+        console.log(showContent)
+        setShowContent(!showContent)
+    };
+
     return (
         <>
             <Head>
                 <title>Work at {props.specificExpData.fileContents.companyName}</title>
             </Head>
-            <main className="p-4 md:p-4 text-gray-600 bg-gray-100 min-h-screen">
+            <main className="p-4 text-gray-600 bg-gray-100 min-h-screen">
                 <HeadingSection data={dataToPassToHeader} titleContent={titleImage} />
                 {/* DO NOT REMOVE THIS PART */}
                 {/* This is externalised currently but cud be mahe it internalised */}
@@ -52,25 +98,30 @@ export default function Company(props) {
                 <section className="px-4 mt-2 text-lg sm:text-xl lg:text-2xl tracking-tight text-gray-700">
                     {props.specificExpData.fileContents.why}
                 </section>
-                <section className="px-2 mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
-                    <div className="mt-6 text-gray-700">Working at LTI...</div>
-                    <ol className="px-6 list-none text-sm lg:text-xl text-gray-600 bg-gray-200">
+                <hr className="m-2" />
+                <ul className="flex flex-wrap">
+                    {flattenedTagMap.map((eachTag) => 
+                        <li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 hover:text-gray-800 hover:scale-125 transition duration-300 ease-in-out" key={eachTag} onClick={() => highlightThese(eachTag)}>#{eachTag}</li>                        
+                    )}
+                </ul>
+                <section className="mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
+                    {/* <div className="mt-6 text-gray-700">Working at LTI...</div> */}
+                    <ol className="p-2 grid grid-flow-row gap-3 border-2 border-gray-400 text-justify text-sm lg:text-xl text-gray-600">
                         {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => 
-                            <li className="mt-2 p-2 md:p-4 ">{eachPt}</li>
+                            <li key={eachPt.id} className="">{eachPt.description}</li>
                         )}
                     </ol>
-                    <div className="mt-6 text-gray-700">Insight from work exp</div>
+                    <div className="mt-2 text-gray-700">Notables</div>
                     {/* Show a list of resourceful insights here */}
-                    <ul className="mt-2 p-2 text-lg lg:text-xl text-gray-600 bg-gray-200 grid grid-flow-row gap-4">
+                    <ul className="mt-2 p-2 px-4 border-2 border-gray-400 text-lg lg:text-xl text-gray-600 grid grid-flow-row gap-4">
                         {props.specificExpData.fileContents.highlights.map((eachPt, index) => 
-                            <li key={eachPt.name} className="border-2 border-gray-300">
-                                <ExpHighlights data={eachPt} index={index} />
-                            </li>
+                        <EachTextContent key={eachPt.name} data={eachPt} index={index}/>
                         )}
                     </ul>
                 </section>
-                <section className="px-2 mt-2">
+                <section className="">
                     {/* Tech stack */}
+                    <div className="mt-2 text-gray-700">Tech Stack Used</div>
                     <SkillSection techStack={props.specificExpData.fileContents.skills} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>
             </main>

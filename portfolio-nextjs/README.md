@@ -24,3 +24,6 @@ Extractables-
 Theming-
 1. Colouring gradient gen - https://hexcolorpedia.com/color/?q=ACE1AF
 2. Canva for colour hex - https://www.canva.com/colors/color-meanings/celadon/
+
+References-
+1. 

@@ -16,15 +16,56 @@
     ],
     "order": 2,
     "companyDetailPoints" : [
-        "Designed and developed REST APIs on Java for services like connector and scanner service; developed data parsers(connectors) for various sources like RDBMS systems (Postgres, MySql, Hive, SqlServer, Snowflake, etc.); file formats like xlsx, delimited, sas7bdat, json, xml; NoSql like mongoDb; and crm platforms like Salesforce.",
-        "Worked on cloud connectors like Azure Blob, Amazon S3, GCP; with a major focus on Azure Blob.",
-        "Improved performance of Xlsx data parser by ~50%, by identifying bottlenecks in Apache Poi implementation. Designed, implemented, and maintained new features like range read, streaming read, etc. for xlsx connector.",
-        "Developed bash scripts on Linux for doing automated performance benchmarking for various connectors for Spark on K8S.",
-        "Designed and developed functionality like upsert for RDBMS via spark, mongoDb authentication.",
-        "Researched the feasibility of a connector for Google Drive. Developed a POC to demo the integrated functionality.",
-        "Worked on other technologies like Docker, Kubernetes, Azure Blob, Amazon S3, Sftp, Spring boot, CI/CD, Snowflake, SonarQube, ElasticSearch. Strong experience in Linux, with Ubuntu as the choice of development OS.",
-        "Contributed to maintenance and enhancement of Spark cluster processing for about 15 connectors.",
-        "Worked on file connectors like Delimited, Json, Xlsx, Parquet, Xml, Sas7bdat"
+        {
+            "id": "rest_apis_work",
+            "tags" : ["rest"],
+            "description" : "Designed and developed REST APIs on Java for services like connector service - pull and push data to/from any source, and scanner service - to scan for data structure; to be run as Spark cluster jobs for ETL."
+        },
+        {
+            "id": "cloud_work",
+            "tags" : ["cloud", "connectors"],
+            "description" : "Worked on cloud connectors like Azure Blob, Amazon S3, GCP; with a major focus on Azure Blob."
+        },
+        {
+            "id": "xlsx_imp",
+            "tags" : ["improvement", "xlsx"],
+            "description" : "Improved performance of XLSX data parser by ~50%, by identifying bottlenecks in Apache Poi implementation. Designed, implemented, and maintained new features like range read, streaming read, etc. for xlsx connector."
+        },
+        {
+            "id": "bash_auto_bench",
+            "tags" : ["extra", "spark", "linux"],
+            "description" : "Developed bash scripts on Linux for doing automated performance benchmarking for various connectors for Spark on K8S."
+        },
+        {
+            "id": "mongo_scratch",
+            "tags" : ["fromScratch", "nosql", "rdbms"],
+            "description" : "Designed and developed functionality like upsert for RDBMS via spark, mongoDb authentication."
+        },
+        {
+            "id": "drive_poc",
+            "tags": ["poc"],
+            "description" : "Researched the feasibility of a connector for Google Drive. Developed a POC to demo the integrated functionality."
+        },
+        {
+            "id": "kub_etc",
+            "tags": ["devOps"],
+            "description" : "Worked on other technologies like Docker, Kubernetes, Azure Blob, Amazon S3, Sftp, Spring boot, CI/CD, Snowflake, SonarQube, ElasticSearch. Strong experience in Linux, with Ubuntu as the choice of development OS."
+        },
+        {
+            "id": "spark_basic",
+            "tags": ["spark"],
+            "description" : "Contributed to maintenance and enhancement of Spark cluster processing for about 15 connectors."
+        },
+        {
+            "id": "file_con",
+            "tags": ["file", "connectors"],
+            "description" : "Worked on file connectors like Delimited, Json, Xlsx, Parquet, Xml, Sas7bdat, etc."
+        },
+        {
+            "id": "rdbms_nosql_con",
+            "tags": ["rdbms", "nosql", "crm", "connectors"],
+            "description" : "Hands on experience working on data parsers(connectors) for various sources like RDBMS systems (PostgreSQL, MySQL, Hive, SqlServer, Snowflake, etc.); file formats like xlsx, delimited, sas7bdat, json, xml; NoSQL like mongoDb; and crm platforms like Salesforce."
+        }
     ],
     "highlights" : [
         {
@@ -61,7 +102,7 @@
             "type": "development",
             "name": "Refractor for better design",
             "logo": "mock_story_connector_jdbc.png",
-            "stmt": ["Designed and implemented better single responsibility for present class structures, while implementing advance connection url for jdbc with all SQL connectors. It allowed better creation of customised connection url string while creation of specific SQL connectors"]
+            "stmt": ["Designed and implemented better single responsibility for present class structures, while implementing advance connection url for jdbc(HA for SqlServer) with all SQL connectors. It allowed better creation of customised connection url string while creation of specific SQL connectors"]
         },
         {
             "type": "extra",

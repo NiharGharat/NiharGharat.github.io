@@ -1,4 +1,6 @@
 
+Features-
+1. Used state for highlights
 
 Utils-
 1. Stripping pictures of meta:
@@ -9,9 +11,21 @@ Utils-
 
 3. View meta on an image
 
+Libraries-
+1. Toastify - for the prompt on email copied. https://www.npmjs.com/package/react-toastify
+2. Clipboard
+
+
 Extractables-
 1. Click link open in new tab
 2. CLipboard copy
 3. Stripped images of metadata, added owner
 4. Loading data from json as opposed to loading from md
 5. Icons
+
+Theming-
+1. Colouring gradient gen - https://hexcolorpedia.com/color/?q=ACE1AF
+2. Canva for colour hex - https://www.canva.com/colors/color-meanings/celadon/
+
+References-
+1. 

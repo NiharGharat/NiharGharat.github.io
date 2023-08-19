@@ -48,7 +48,7 @@
         },
         {
             "id": "kub_etc",
-            "tags": ["handsOn"],
+            "tags": ["devOps"],
             "description" : "Worked on other technologies like Docker, Kubernetes, Azure Blob, Amazon S3, Sftp, Spring boot, CI/CD, Snowflake, SonarQube, ElasticSearch. Strong experience in Linux, with Ubuntu as the choice of development OS."
         },
         {
@@ -102,7 +102,7 @@
             "type": "development",
             "name": "Refractor for better design",
             "logo": "mock_story_connector_jdbc.png",
-            "stmt": ["Designed and implemented better single responsibility for present class structures, while implementing advance connection url for jdbc with all SQL connectors. It allowed better creation of customised connection url string while creation of specific SQL connectors"]
+            "stmt": ["Designed and implemented better single responsibility for present class structures, while implementing advance connection url for jdbc(HA for SqlServer) with all SQL connectors. It allowed better creation of customised connection url string while creation of specific SQL connectors"]
         },
         {
             "type": "extra",

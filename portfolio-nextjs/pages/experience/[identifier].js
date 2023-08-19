@@ -31,7 +31,7 @@ const EachTextContent = function({data, index}) {
     }
 
     return (
-        <li key={data.name} className="" >
+        <li key={index} className="" >
             <div className="flex md:p-2">
                 <div className="flex-shrink-0 my-auto mr-4">
                     <img className="mt-2 float-left h-10 sm:h-12 md:h-14 lg:h-16" src={path} alt={data.name} title={data.name}/>
@@ -54,6 +54,14 @@ const EachTextContent = function({data, index}) {
     )
 }
 
+const FocusedDescWithTag = function({data, isThisFocused, isReset}) {
+    console.log("Inside")
+    console.log(isThisFocused)
+    return (
+        <li className={`${(isThisFocused || isReset) ? "text-gray-600" : "text-gray-400"} text-sm`} key={data.id}>{data.description}</li>
+    )
+}
+
 export default function Company(props) {
     const pathOfLogo = "/logos/mock_" + props.specificExpData.fileContents.logo;
     const idOfBackPage = "/experience#" + props.specificExpData.fileContents.identifier;
@@ -68,10 +76,22 @@ export default function Company(props) {
     let flattenedTagMap = props.specificExpData.fileContents.companyDetailPoints.flatMap(item => item.tags);
     flattenedTagMap.push("reset");
 
-    const [showContent, setShowContent] = useState(false);
-    const toggleContent = () => {
-        console.log(showContent)
-        setShowContent(!showContent)
+    const [activeTags, setActiveTags] = useState([]);
+
+    /*
+    If the activeTags is empty -> Display all of the desc components
+    If the
+    */
+    const handleTagClick = (tag) => {
+        console.log(tag)
+        if (activeTags.includes(tag)) {
+            setActiveTags(activeTags.filter(t => t != tag));
+        } else if (tag == "reset") {
+            setActiveTags([])
+        } else {
+            setActiveTags([...activeTags, tag]);
+        }
+        console.log(activeTags)
     };
 
     return (
@@ -101,15 +121,17 @@ export default function Company(props) {
                 <hr className="m-2" />
                 <ul className="flex flex-wrap">
                     {flattenedTagMap.map((eachTag) => 
-                        <li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 hover:text-gray-800 hover:scale-125 transition duration-300 ease-in-out" key={eachTag} onClick={() => highlightThese(eachTag)}>#{eachTag}</li>                        
+                        <li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 hover:text-gray-800 hover:scale-125 transition duration-300 ease-in-out" onClick={() => handleTagClick(eachTag)}>#{eachTag}</li>                        
                     )}
                 </ul>
                 <section className="mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
                     {/* <div className="mt-6 text-gray-700">Working at LTI...</div> */}
                     <ol className="p-2 grid grid-flow-row gap-3 border-2 border-gray-400 text-justify text-sm lg:text-xl text-gray-600">
-                        {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => 
-                            <li key={eachPt.id} className="">{eachPt.description}</li>
-                        )}
+                        {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => {
+                            const isReset = activeTags.length == 0;
+                            const thisActiveTagSet = activeTags.some(eachInActive => eachPt.tags.includes(eachInActive));
+                            return (<FocusedDescWithTag isReset={isReset} isThisFocused={thisActiveTagSet} data={eachPt} />)
+                        })}
                     </ol>
                     <div className="mt-2 text-gray-700">Notables</div>
                     {/* Show a list of resourceful insights here */}
@@ -119,7 +141,7 @@ export default function Company(props) {
                         )}
                     </ul>
                 </section>
-                <section className="">
+                <section className="mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
                     {/* Tech stack */}
                     <div className="mt-2 text-gray-700">Tech Stack Used</div>
                     <SkillSection techStack={props.specificExpData.fileContents.skills} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />

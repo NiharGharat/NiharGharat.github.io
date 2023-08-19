@@ -1,4 +1,6 @@
 
+Features-
+1. Used state for highlights
 
 Utils-
 1. Stripping pictures of meta:

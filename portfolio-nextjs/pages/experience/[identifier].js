@@ -72,9 +72,18 @@ export default function Company(props) {
         title: companyTitle,
         backPageId: idOfBackPage
     }
+
     const titleImage = <img className="h-14 col-span-4 text-gray-700 justify-self-start text-4xl my-auto" src={pathOfLogo} alt={companyTitle} title={companyTitle} />
-    let flattenedTagMap = props.specificExpData.fileContents.companyDetailPoints.flatMap(item => item.tags);
-    flattenedTagMap.push("reset");
+    let uniqueOnceSet = new Set();
+    props.specificExpData.fileContents.companyDetailPoints.forEach(eachTagArray => {
+        eachTagArray.tags.forEach(eachTag => {
+            uniqueOnceSet.add(eachTag);
+        });
+    });
+    uniqueOnceSet.add("reset");
+    const flattenedTagMap = [...new Set(uniqueOnceSet)]
+    /*let flattenedTagMapDuplicate = props.specificExpData.fileContents.companyDetailPoints.flatMap(item => item.tags).distinct();
+    const flattenedTagMap = [...new Set(flattenedTagMapDuplicate)];*/
 
     const [activeTags, setActiveTags] = useState([]);
 
@@ -121,7 +130,7 @@ export default function Company(props) {
                 <hr className="m-2" />
                 <ul className="flex flex-wrap">
                     {flattenedTagMap.map((eachTag) => 
-                        <li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 hover:text-gray-800 hover:scale-125 transition duration-300 ease-in-out" onClick={() => handleTagClick(eachTag)}>#{eachTag}</li>                        
+                        <li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 hover:text-gray-800 hover:scale-125 transition duration-300 ease-in-out cursor-pointer" onClick={() => handleTagClick(eachTag)}>#{eachTag}</li>                        
                     )}
                 </ul>
                 <section className="mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">

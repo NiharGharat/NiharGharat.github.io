@@ -10,14 +10,42 @@
     "duration": "2023 Summer",
     "companyLoved4Points" : [
         "SDE intern at FedEx printAndGo product team, responsible for modernizing the legacy application",
-        "Implemented newer functionality with better throughout, while ensuring legacy systems work with it",
+        "Implemented newer functionality, while ensuring legacy systems work with it",
         "Tested and deepened understanding of development best practices",
-        "Hands on knowledge in task bifurcation, and working as a team"
+        "Focused on working as a team, and working as a team"
     ],
     "order": 1,
     "companyDetailPoints" : [
-        "Part of this that",
-        "Part of this that"
+        {
+            "id": "rest_apis_work",
+            "tags" : ["rest"],
+            "description" : "Developed apis for microservice based application, focusing on modularity. "
+        },
+        {
+            "id": "archi",
+            "tags" : ["system"],
+            "description" : "Implemented workflow of new apis, understanding the requirements, and ensuring the best possible performance, by reading RFC standards(eg- multipart form data). Highlighted performance critical bottlenecks, and ideated on ways on which it can be improved."
+        },
+        {
+            "id": "scale",
+            "tags" : ["scale"],
+            "description" : "Designed an algorithm to generate unique codes considering concurrency, and scalability"
+        },
+        {
+            "id": "service",
+            "tags": ["service"],
+            "description" : "Developed apis on Java; data access with Spring JdbcTemplate, async Web Client(OAuth), Jenkins, and PCF(Cloud Foundry)"
+        }
+    ],
+    "highlights" : [
+        {
+            "type": "perf_monitoring",
+            "name": "Application memory monitoring",
+            "logo": "mock_performance_monitoring.png",
+            "stmt": [
+                "Used jVisualVM for monitoring the application for memory footprint, and suggested ways for future improvement."
+            ]
+        }
     ],
     "logo": "fedex.png"
 } 

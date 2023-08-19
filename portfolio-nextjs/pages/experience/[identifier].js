@@ -18,11 +18,6 @@ const EachSkill = function({skill}) {
     return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 hover:text-gray-800 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
 };
 
-const highlightThese = function(theComponent) {
-    console.log(theComponent)
-
-}
-
 const EachTextContent = function({data, index}) {
     const path = "/logos/" + data.logo;
     const [showContent, setShowContent] = useState(false);
@@ -55,8 +50,6 @@ const EachTextContent = function({data, index}) {
 }
 
 const FocusedDescWithTag = function({data, isThisFocused, isReset}) {
-    console.log("Inside")
-    console.log(isThisFocused)
     return (
         <li className={`${(isThisFocused || isReset) ? "text-gray-600" : "text-gray-400"} text-sm`} key={data.id}>{data.description}</li>
     )
@@ -82,9 +75,6 @@ export default function Company(props) {
     });
     uniqueOnceSet.add("reset");
     const flattenedTagMap = [...new Set(uniqueOnceSet)]
-    /*let flattenedTagMapDuplicate = props.specificExpData.fileContents.companyDetailPoints.flatMap(item => item.tags).distinct();
-    const flattenedTagMap = [...new Set(flattenedTagMapDuplicate)];*/
-
     const [activeTags, setActiveTags] = useState([]);
 
     /*
@@ -92,7 +82,6 @@ export default function Company(props) {
     If the
     */
     const handleTagClick = (tag) => {
-        console.log(tag)
         if (activeTags.includes(tag)) {
             setActiveTags(activeTags.filter(t => t != tag));
         } else if (tag == "reset") {
@@ -100,7 +89,6 @@ export default function Company(props) {
         } else {
             setActiveTags([...activeTags, tag]);
         }
-        console.log(activeTags)
     };
 
     return (
@@ -155,6 +143,7 @@ export default function Company(props) {
                     <div className="mt-2 text-gray-700">Tech Stack Used</div>
                     <SkillSection techStack={props.specificExpData.fileContents.skills} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>
+                <hr className="m-2" />
             </main>
         </>
     )

@@ -3,12 +3,13 @@ import React from "react";
 import { colourVariants } from "./constants";
 
 // Ref - https://tailwindcss.com/docs/content-configuration#dynamic-class-names
+// Can randomise the colouring
 export default function HeaderSection(props) {
-    
+
     return (
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 sm:border-solid border-2 border-black content-center shadow-xl">
             <div className="hidden sm:block sm:col-span-1">
-                <img src="/images/mock_icon.jpeg" alt="Profile icon" className="h-16 sm:h-20 md:h-24 lg:h-28 m-2 pl-0"/>
+                <img src="/images/mock_icon.jpeg" alt="Profile icon" className="h-16 sm:h-20 md:h-24 lg:h-28 m-2 pl-0" />
                 {/* TODO - Icon here */}
             </div>
             <div className="grid grid-cols-3 text-center text-lg content-center sm:col-span-2">

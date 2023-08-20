@@ -6,18 +6,55 @@
     "skills" : [
         "Java", "SpringBoot", "SpringJdbc", "OracleDB", "JMS", "Jenkins", "WebClient"
     ],
-    "why": "Explored Java Spring Boot in more detail, dived deep in planning and execution",
+    "why": "Explored Java Spring Boot in more detail, dived deep in task planning and execution",
     "duration": "2023 Summer",
     "companyLoved4Points" : [
         "SDE intern at FedEx printAndGo product team, responsible for modernizing the legacy application",
-        "Implemented newer functionality with better throughout, while ensuring legacy systems work with it",
-        "Tested and deepened understanding of development best practices",
-        "Hands on knowledge in task bifurcation, and working as a team"
+        "Implemented newer functionality, while ensuring legacy systems work with it",
+        "Explored at depth understanding of development best practices",
+        "Focused on working as a team, and delivering as a team"
     ],
     "order": 1,
     "companyDetailPoints" : [
-        "Part of this that",
-        "Part of this that"
+        {
+            "id": "rest_apis_work",
+            "tags" : ["rest", "printAndGo"],
+            "description" : "Developed apis for microservice based application, focusing on modularity. Part of the printAndGo product team - responsible for making FedEx email printing service lighter, highly available, and reliable with modernisation for the customers"
+        },
+        {
+            "id": "archi",
+            "tags" : ["system", "extra"],
+            "description" : "Implemented workflows of new apis, while understanding the requirements, and ensured best possible performance. Deep dived into understanding performance bottlenecks by reading RFC standards(eg- multipart form data), going over pre-existing documentation, etc.; highlighted performance critical bottlenecks, and ideated on ways by which it can be improved."
+        },
+        {
+            "id": "scale",
+            "tags" : ["scale"],
+            "description" : "Designed an algorithm to generate unique codes considering concurrency, and scalability of real world"
+        },
+        {
+            "id": "service",
+            "tags": ["handsOn, devOps"],
+            "description" : "Hands on development on SpringBoot; data access with Spring JdbcTemplate, async Web Client(OAuth), Jenkins, and PCF(Cloud Foundry)"
+        }
+    ],
+    "highlights" : [
+        {
+            "type": "perf_monitoring",
+            "name": "Application memory monitoring",
+            "logo": "mock_performance_monitoring.png",
+            "stmt": [
+                "Used jVisualVM for monitoring the application for memory footprint. Analysed for biggest memory consuming methods",
+                "Analysed the output and suggested ways in which memory consumption can be reduced"
+            ]
+        },
+        {
+            "type": "improvement",
+            "name": "Ideating on possible improvements",
+            "logo": "mock_improvement_workflows.png",
+            "stmt": [
+                "Read RFC standards and java docs (eg - multipart file, UUID), for understanding/suggesting better workflows"
+            ]
+        }
     ],
     "logo": "fedex.png"
 } 

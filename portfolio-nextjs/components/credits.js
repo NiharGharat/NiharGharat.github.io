@@ -1,3 +1,7 @@
+const iconCreditMapping = {
+    
+}
+
 export const Credits = function() {
     return (
         <section className="text-xs text-gray-500">

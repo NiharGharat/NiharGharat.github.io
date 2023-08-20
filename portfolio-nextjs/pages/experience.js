@@ -26,7 +26,7 @@ export default function Experience(props) {
                     </div>
                     <div className="md:col-span-2">
                         {props.allExperienceData.map((eachCompany, index) => (
-                            <Link key={eachCompany.identifier} id={eachCompany.identifier} href={"./experience/" + eachCompany.identifier}><CompanyCard key={index} skillsArray={eachCompany.skills} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} /></Link>
+                            <Link key={eachCompany.identifier} id={eachCompany.identifier} href={"./experience/" + eachCompany.identifier}><CompanyCard key={index} skillsArray={eachCompany.skills} data={eachCompany} company={eachCompany.companyName} baseLocation={eachCompany.baseLocation} country={eachCompany.country} duration={eachCompany.duration} allPoints={eachCompany.companyLoved4Points} /></Link>
                         ))}
                     </div>
                 </section>

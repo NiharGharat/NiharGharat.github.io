@@ -35,6 +35,7 @@ export default function ProjectCard(props) {
     let arrayForBadges = [];
     arrayForBadges.push(jsonForPersonalBadge)
     arrayForBadges.push(jsonForPrivateBadge)
+    const completePathOfLogo = "/logos/" + props.data.mainLogo;
     return (
         <div className="mt-4 p-2 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400 duration-200 ease-in-out">
             <main>
@@ -45,7 +46,7 @@ export default function ProjectCard(props) {
                     <BadgesSection classToUse="flex flex-wrap my-auto justify-end" className="" badgesArray={arrayForBadges} unq={props.data.projectName} />
                 </div>
                 <section className="p-2">
-                    <img className="m-2 h-40 mx-auto" src={props.data.mainLogo} alt={`Project logo for ${props.data.projectName}`} />
+                    <img className="m-2 h-40 mx-auto" src={completePathOfLogo} alt={`Project logo for ${props.data.projectName}`} />
                     <div className="mt-2 p-2 text-sm md:text-lg text-gray-800">
                         {props.data.why}
                     </div>

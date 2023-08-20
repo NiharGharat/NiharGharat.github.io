@@ -20,6 +20,6 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/TailorSweat",
     "order" : 1,
-    "mainLogo": "/logos/mock_project_tailor_sweat.png",
+    "mainLogo": "mock_project_tailor_sweat.png",
     "author": true
 }

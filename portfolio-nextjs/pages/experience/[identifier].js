@@ -27,12 +27,12 @@ const EachTextContent = function({data, index}) {
 
     return (
         <li key={index} className="" >
-            <div className="flex md:p-2">
+            <div className="flex md:p-2 ">
                 <div className="flex-shrink-0 my-auto mr-4">
                     <img className="mt-2 float-left h-10 sm:h-12 md:h-14 lg:h-16" src={path} alt={data.name} title={data.name}/>
                 </div>
                 <div className="flex-grow my-auto">
-                    <p className="ml-4 text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl hover:cursor-pointer" onClick={handleContentClick}>
+                    <p className="ml-4 text-left text-xl sm:text-xl lg:text-2xl hover:cursor-pointer" onClick={handleContentClick}>
                         {data.name}
                     </p>
                 </div>
@@ -128,7 +128,7 @@ export default function Company(props) {
                     })}
                 </ul>
                 {/* sm:bg-pink-200 md:bg-red-200 lg:to-blue-200 */}
-                <section className="mt-2 sm:my-4 sm:mx-4 lg:mx-6">
+                <section className="mt-2 sm:my-4 sm:mx-4 lg:mx-12">
                     {/* <div className="mt-6 text-gray-700">Working at LTI...</div> */}
                     <ol className="p-2 grid grid-flow-row gap-3 border-2 border-gray-300 text-justify text-sm lg:text-xl text-gray-600">
                         {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => {
@@ -138,22 +138,22 @@ export default function Company(props) {
                         })}
                     </ol>
                 </section>
-                <section className="my-4 text-gray-700 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
+                <section className="my-4 text-gray-700 text-xl sm:text-2xl xl:text-3xl">
                     Notables
                 </section>
-                <section className="sm:my-4 sm:mx-4 lg:mx-6">
-                    <ul className="mt-2 p-2 px-4 border-2 border-gray-300 text-lg lg:text-xl text-gray-600 grid grid-flow-row gap-4">
+                <section className="sm:my-4 sm:mx-4 lg:mx-12">
+                    <ul className="mt-2 p-4 border-2 border-gray-300 text-lg lg:text-xl text-gray-600 grid grid-flow-row gap-4">
                         {props.specificExpData.fileContents.highlights.map((eachPt, index) => 
                         <EachTextContent key={eachPt.name} data={eachPt} index={index}/>
                         )}
                     </ul>
                 </section>
-                <section className="mt-2 text-2xl sm:text-3xl md:text-4xl xl:text-6xl">
+                <section className="my-4">
                     {/* Tech stack */}
-                    <div className="mt-2 text-gray-700">Tech Stack Used</div>
+                    <div className="text-gray-700 text-xl sm:text-2xl xl:text-3xl">Tech Stack Used</div>
                     <SkillSection techStack={props.specificExpData.fileContents.skills} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>
-                <hr className="m-2" />
+                <hr className="mt-3 mb-1 lg:mt-5 lg:mb-3" />
             </main>
         </>
     )

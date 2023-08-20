@@ -33,7 +33,7 @@
         },
         {
             "id": "service",
-            "tags": ["handsOn, devOps"],
+            "tags": ["handsOn", "devOps"],
             "description" : "Hands on development on SpringBoot; data access with Spring JdbcTemplate, async Web Client(OAuth), Jenkins, and PCF(Cloud Foundry)"
         }
     ],

@@ -139,7 +139,7 @@ export default function Company(props) {
                     </ol>
                 </section>
                 <section className="my-4 text-gray-700 text-xl sm:text-2xl xl:text-3xl">
-                    Notables
+                    Highlights
                 </section>
                 <section className="sm:my-4 sm:mx-4 lg:mx-12">
                     <ul className="mt-2 p-4 border-2 border-gray-300 text-lg lg:text-xl text-gray-600 grid grid-flow-row gap-4">

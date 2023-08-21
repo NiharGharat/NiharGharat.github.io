@@ -39,6 +39,7 @@ export default function Project({specificPostData}) {
     const titleText = <div className='col-span-4 text-gray-700 justify-self-start text-4xl md:text-5xl lg:text-6xl tracking-normal my-auto'>
                             {projectName}
                         </div>;
+    const pathOfImg = "/logos/" + specificPostData.allProjData.mainLogo;
     //
     return (
         <>
@@ -65,7 +66,7 @@ export default function Project({specificPostData}) {
                     </div>
                 </section>
                 <section className='mt-6 m-4 mx-6 sm:mx-12 md:mx-16 border-2 border-gray-400 rounded-sm'>
-                    <img className="mx-auto p-4 h-48 sm:h-54 md:h-64 lg:h-72 xl:h-80 object-cover" src={specificPostData.allProjData.mainLogo} alt={`Project logo for ${specificPostData.allProjData.projectName}`}/>
+                    <img className="mx-auto p-4 h-48 sm:h-54 md:h-64 lg:h-72 xl:h-80 object-cover" src={pathOfImg} alt={`Project logo for ${specificPostData.allProjData.projectName}`}/>
                 </section>
                 <div className='px-4 text-center'>{projectName}</div>
                 <section className='p-2 mt-2'>

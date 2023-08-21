@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const dataLine1 = "If you have an opportunity to work on some innovative product/idea, feel free to connect";
 const dataLine2 = "Drop me a line, contact me through any of the below mentioned channels!";
+const greetLine = "Cheers!"
 
 const showToastMessage = function() {
     toast.success('Copied!', {
@@ -21,11 +22,10 @@ const showToastMessage = function() {
 }
 
 export default function Contact(props) {
-    
     return (
     <>
         <Head>
-            <title>Contact</title>
+            <title>Contact Me</title>
             <Script src="dist/clipboard.min.js" />
         </Head>
         <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl text-gray-700">
@@ -41,7 +41,7 @@ export default function Contact(props) {
                     {dataLine2}
                 </div>
                 <div className="p-2 text-lg lg:text-xl">
-                    Cheers!
+                    {greetLine}
                 </div>
             </section>
             <section className="">

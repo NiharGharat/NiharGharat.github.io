@@ -5,11 +5,15 @@ import HeaderSection from '../components/headerSection';
 import { button_theme_flag_green, button_theme_flag_mint, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
 import Link from 'next/link';
 
+const pageTitle = "Nihar Portfolio Work Experience"
+const firstPara = "Each of these contributed to what I am now. I enjoyed working/hacking while at work at these places!";
+const secondPara = "I try to bring justice to what I do, and I always try to go above and beyond to implement and think about new ideas which can be included. This is how I always was!";
+
 export default function Experience(props) {
     return (
         <>
             <Head>
-                <title>Nihar Portfolio Work Experience</title>
+                <title>{pageTitle}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
@@ -20,8 +24,8 @@ export default function Experience(props) {
                         <div className="p-3 text-4xl px-3 font-bold text-center">Work Experience</div>
                         {/* TODO Till now tech!!*/}
                         <div className='mx-12 p-3 text-sm border-2 border-gray-800 text-justify'>
-                            <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
-                            <div className='mt-2'>I loved to work here. This and that. I like to work in product engineering mainly focused in development</div>
+                            <div className='mt-2'>{firstPara}</div>
+                            <div className='mt-2'>{secondPara}</div>
                         </div>
                     </div>
                     <div className="md:col-span-2">

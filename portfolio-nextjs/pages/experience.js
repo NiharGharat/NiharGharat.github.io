@@ -2,7 +2,7 @@ import { getAllExperienceData } from '../lib/project-util'
 import Head from "next/head";
 import CompanyCard from '../components/companyCard';
 import HeaderSection from '../components/headerSection';
-import { button_theme_flag_green, button_theme_flag_mint, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
+import { button_theme_flag_mint, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
 import Link from 'next/link';
 import { CreditHandler } from '../components/credits';
 
@@ -18,7 +18,7 @@ export default function Experience(props) {
         <>
             <Head>
                 <title>{pageTitle}</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/portfolio_icon.png" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
                 <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_projects} secondLink={header_link_path_projects} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_mint} />

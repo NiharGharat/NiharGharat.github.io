@@ -20,7 +20,7 @@ export default function Project(props) {
         <>
             <Head>
                 <title>{pageTitle}</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/portfolio_icon.png" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
                 <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_yellow} />

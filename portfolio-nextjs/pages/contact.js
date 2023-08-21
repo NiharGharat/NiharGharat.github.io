@@ -31,6 +31,7 @@ export default function Contact(props) {
             <Head>
                 <title>Contact Me</title>
                 <Script src="dist/clipboard.min.js" />
+                <link rel="icon" href="/portfolio_icon.png" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl text-gray-700">
                 <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_projects} thirdLink={header_link_path_projects} themeColour={button_theme_flag_blue} />

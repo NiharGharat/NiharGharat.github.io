@@ -4,13 +4,18 @@ import { getAllProjectData } from '../lib/project-util';
 import ProjectCard from "../components/projectCard";
 import Link from "next/link";
 import { button_theme_flag_lime, button_theme_flag_yellow, header_link_path_about_me, header_link_path_contact, header_link_path_experience, header_link_title_about_me, header_link_title_contact, header_link_title_experience } from "../components/constants";
-import { Credits } from "../components/credits";
+import { CreditHandler, Credits } from "../components/credits";
 
 const pageTitle = "Nihar Projects";
 const pageIntroPara1 = "I sort of manifest myself through my work and my projects";
 const pageIntroPara2 = "I loved working on each one of these. Ranging from Java, to Python, to Pandas, to Keras. Academic, non-academic";
 
 export default function Project(props) {
+    const allLogoList = []
+    props.allProjectData.forEach((eachProject) => {
+        allLogoList.push(eachProject.logo)
+    })
+    allLogoList.push("project_the_portfolio")
     return (
         <>
             <Head>
@@ -33,7 +38,8 @@ export default function Project(props) {
                         ))}
                     </div>
                 </section>
-                <Credits />
+                <CreditHandler listOfCreditLogo={allLogoList} />
+                {/* <Credits /> */}
             </main>
         </>
     )

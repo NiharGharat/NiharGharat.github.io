@@ -2,6 +2,8 @@ import Head from "next/head";
 import { getAllComapnyIdsNew, getSpecificExpData } from "../../lib/project-util";
 import { HeadingSection } from "../../components/semi/heading";
 import { useState } from "react";
+import { logos_base_path } from "../../components/constants";
+import { CreditHandler } from "../../components/credits";
 
 const SkillSection = function (props) {
     return (
@@ -55,7 +57,7 @@ const FocusedDescWithTag = function ({ data, isThisFocused, isReset }) {
 }
 
 export default function Company(props) {
-    const pathOfLogo = "/logos/" + props.specificExpData.fileContents.logo;
+    const pathOfLogo = logos_base_path + props.specificExpData.fileContents.logo;
     const idOfBackPage = "/experience#" + props.specificExpData.fileContents.identifier;
     const companyTitle = props.specificExpData.fileContents.companyName;
     const dataToPassToHeader = {
@@ -90,6 +92,9 @@ export default function Company(props) {
             setActiveTags([...activeTags, tag]);
         }
     };
+
+    let logosUsed = [props.specificExpData.fileContents.logo]
+    props.specificExpData.fileContents.highlights.forEach(each => logosUsed.push(each.logo))
 
     return (
         <>
@@ -153,6 +158,7 @@ export default function Company(props) {
                     <SkillSection techStack={props.specificExpData.fileContents.skills} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>
                 <hr className="mt-3 mb-1 lg:mt-5 lg:mb-3" />
+                <CreditHandler listOfCreditLogo={logosUsed} />
             </main>
         </>
     )

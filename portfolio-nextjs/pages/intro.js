@@ -1,6 +1,7 @@
 import Head from "next/head";
 import HeaderSection from "../components/headerSection";
 import { button_theme_flag_brown, button_theme_flag_orange, header_link_path_contact, header_link_path_experience, header_link_path_projects, header_link_title_contact, header_link_title_experience, header_link_title_projects } from "../components/constants";
+import { CreditHandler } from "../components/credits";
 
 const name = "Nihar Gharat";
 const introPara1 = "I am a backend software developer currently based in the US. I am passionate about working on interesting ideas/projects."
@@ -9,6 +10,9 @@ const introPara3 = "I loved working on my projects, well that was a part of the 
 
 export default function Intro() {
     const profileImagePath = "/images/mock_intro_2.jpeg"
+
+    let listOfIconsUsed = []
+
     return (
         <>
             <Head>
@@ -32,6 +36,7 @@ export default function Intro() {
                         <img src={profileImagePath} alt="Profile image" className="hidden md:inline-block mt-6 h-70 bg-gray-100 shadow-lg" />
                     </div>
                 </section>
+                <CreditHandler listOfCreditLogo={listOfIconsUsed} />
             </main>
         </>
     )

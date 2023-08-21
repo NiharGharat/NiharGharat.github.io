@@ -1,5 +1,7 @@
 import React from "react";
 import { BadgesSection, getBadgeInfo, type_personal_project, type_private_project } from "./semi/badges";
+import { CreditHandler } from "./credits";
+import { logos_base_path } from "./constants";
 
 /*
 TODO
@@ -35,7 +37,7 @@ export default function ProjectCard(props) {
     let arrayForBadges = [];
     arrayForBadges.push(jsonForPersonalBadge)
     arrayForBadges.push(jsonForPrivateBadge)
-    const completePathOfLogo = "/logos/" + props.data.mainLogo;
+    const completePathOfLogo = logos_base_path + props.data.logo;
     return (
         <div className="mt-4 p-2 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400 duration-200 ease-in-out">
             <main>

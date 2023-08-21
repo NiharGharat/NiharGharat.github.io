@@ -1,4 +1,5 @@
 import React from "react";
+import { logos_base_path } from "./constants";
 
 const EachSkill = function ({ skill }) {
     return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 hover:text-gray-800 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
@@ -29,7 +30,7 @@ const AllSkills = function ({ isHiddenOnSm, skillsArray }) {
 
 // Take children
 export default function CompanyCard(props) {
-    const pathOfLogo = "/logos/" + props.data.logo;
+    const pathOfLogo = logos_base_path + props.data.logo;
     return (<section className='text-gray-700 p-4 m-2 mt-4 md:mt-6 bg-gray-200 shadow-lg shadow-gray-400 hover:bg-gray-100 hover:-translate-y-0.5 transform transition active:bg-gray-400'>
         <div className='grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6'>
             <div className='col-span-1 text-sm py-2 px-2'>

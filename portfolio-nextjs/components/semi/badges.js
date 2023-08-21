@@ -1,3 +1,5 @@
+import { badge_base_path } from "../constants";
+
 const badge_title_personal_project = "Personal Project";
 const badge_title_academic_project = "Academic Project";
 const badge_src_personal_project = "mock_project_personal.png";
@@ -28,7 +30,7 @@ const EachBadge = function (props) {
 export const getBadgeInfo = function (type, isProjectPersonalBadge) {
     let jsonToReturn;
     let titleToUse;
-    let srcToUse = "/logos/badges/";
+    let srcToUse = badge_base_path;
     if (type === type_personal_project) {
         titleToUse = isProjectPersonalBadge ? badge_title_personal_project : badge_title_academic_project;
         srcToUse += isProjectPersonalBadge ? badge_src_personal_project : badge_src_academic_project;

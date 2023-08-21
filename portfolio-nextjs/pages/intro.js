@@ -4,8 +4,8 @@ import { button_theme_flag_brown, button_theme_flag_orange, header_link_path_con
 
 const name = "Nihar Gharat";
 const introPara1 = "I am a backend software developer currently based in the US. I am passionate about working on interesting ideas/projects."
-const introPara2 = "I thoroughly enjoy engaging with complex problems, exploring potential solutions, and crafting well-thought-out resolutions. I was fortunate enough to have interacted with and been inspired by people from various fields like designing, architecture, etc.. I try to bring this mindset to the table."
-const introPara3 = "I loved working on my projects, well that was a part of the reason why I picked them in the first place. Right from removing the mundanity of being assured that my music playlists are backed via the YouTube Music Playlist Scrapper, to diving deep in the neural network and data mining with TailorSweat, I enjoyed it all."
+const introPara2 = "I thoroughly enjoy engaging with complex problems, exploring potential solutions, and crafting well-thought resolutions. I was fortunate enough to have interacted with and be inspired by people from various fields like designing, architecture, etc.. I try to bring this mindset to the table."
+const introPara3 = "I loved working on my projects, well that was a part of the reason why I picked them in the first place. Right from removing the mundanity of being assured that my music playlists are backed via the YouTube Music Playlist Scrapper, to deep diving in the neural network and data mining with TailorSweat, I enjoyed it all."
 
 export default function Intro() {
     const profileImagePath = "/images/mock_intro_2.jpeg"

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { getAllComapnyIdsNew, getSpecificExpData } from "../../lib/project-util";
-import ExpHighlights from "../../components/expHighlights";
 import { HeadingSection } from "../../components/semi/heading";
 import { useState } from "react";
 

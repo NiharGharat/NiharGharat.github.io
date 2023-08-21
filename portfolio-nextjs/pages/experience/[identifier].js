@@ -1,10 +1,9 @@
 import Head from "next/head";
 import { getAllComapnyIdsNew, getSpecificExpData } from "../../lib/project-util";
-import ExpHighlights from "../../components/expHighlights";
 import { HeadingSection } from "../../components/semi/heading";
 import { useState } from "react";
 
-const SkillSection = function(props) {
+const SkillSection = function (props) {
     return (
         <ul className={props.classNameToUse}>
             {props.techStack.map(e => (
@@ -14,11 +13,11 @@ const SkillSection = function(props) {
     )
 }
 
-const EachSkill = function({skill}) {
+const EachSkill = function ({ skill }) {
     return (<li className='mt-1 mr-1 p-1 bg-gray-300 hover:bg-gray-100 hover:text-gray-800 lg:text-sm transition duration-300 ease-in-out'>{skill}</li>)
 };
 
-const EachTextContent = function({data, index}) {
+const EachTextContent = function ({ data, index }) {
     const path = "/logos/" + data.logo;
     const [showContent, setShowContent] = useState(false);
     const handleContentClick = () => {
@@ -29,7 +28,7 @@ const EachTextContent = function({data, index}) {
         <li key={index} className="" >
             <div className="flex md:p-2 ">
                 <div className="flex-shrink-0 my-auto mr-4">
-                    <img className="mt-2 float-left h-10 sm:h-12 md:h-14 lg:h-16" src={path} alt={data.name} title={data.name}/>
+                    <img className="mt-2 float-left h-10 sm:h-12 md:h-14 lg:h-16" src={path} alt={data.name} title={data.name} />
                 </div>
                 <div className="flex-grow my-auto">
                     <p className="ml-4 text-left text-xl sm:text-xl lg:text-2xl hover:cursor-pointer" onClick={handleContentClick}>
@@ -40,7 +39,7 @@ const EachTextContent = function({data, index}) {
             <div className="text-right text-gray-400 text-xs hover:cursor-pointer" onClick={handleContentClick}>{showContent ? "Show less" : "Show more"}</div>
             <div className={`${showContent ? "visible" : "hidden"} border-2 border-gray-200 mt-2 lg:p-2 overflow-hidden transition duration-300 ease-in-out`}>
                 <ol className="list-none text-sm lg:text-xl">
-                    {data.stmt.map((eachPt) => 
+                    {data.stmt.map((eachPt) =>
                         <li className="p-2">{eachPt}</li>
                     )}
                 </ol>
@@ -49,7 +48,7 @@ const EachTextContent = function({data, index}) {
     )
 }
 
-const FocusedDescWithTag = function({data, isThisFocused, isReset}) {
+const FocusedDescWithTag = function ({ data, isThisFocused, isReset }) {
     return (
         <li className={`${(isThisFocused || isReset) ? "text-gray-600" : "text-gray-400"} text-sm transition duration-300 ease-in-out`} key={data.id}>{data.description}</li>
     )
@@ -121,7 +120,7 @@ export default function Company(props) {
                     {flattenedTagMap.map((eachTag) => {
                         const isTagReset = eachTag == "reset"
                         if (isTagReset) {
-                            return (<li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 font-medium text-gray-950 hover:scale-125 transition duration-300 ease-in-out cursor-pointer" onClick={() => handleTagClick(eachTag)}>#{eachTag}</li>)    
+                            return (<li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 font-medium text-gray-950 hover:scale-125 transition duration-300 ease-in-out cursor-pointer" onClick={() => handleTagClick(eachTag)}>#{eachTag}</li>)
                         } else {
                             return (<li key={eachTag.id} className="m1-1 ml-4 hover:bg-gray-100 hover:text-gray-800 hover:scale-125 transition duration-300 ease-in-out cursor-pointer" onClick={() => handleTagClick(eachTag)}>#{eachTag}</li>)
                         }
@@ -139,12 +138,12 @@ export default function Company(props) {
                     </ol>
                 </section>
                 <section className="my-4 text-gray-700 text-xl sm:text-2xl xl:text-3xl">
-                    Notables
+                    Highlights
                 </section>
                 <section className="sm:my-4 sm:mx-4 lg:mx-12">
                     <ul className="mt-2 p-4 border-2 border-gray-300 text-lg lg:text-xl text-gray-600 grid grid-flow-row gap-4">
-                        {props.specificExpData.fileContents.highlights.map((eachPt, index) => 
-                        <EachTextContent key={eachPt.name} data={eachPt} index={index}/>
+                        {props.specificExpData.fileContents.highlights.map((eachPt, index) =>
+                            <EachTextContent key={eachPt.name} data={eachPt} index={index} />
                         )}
                     </ul>
                 </section>
@@ -171,8 +170,8 @@ export const getStaticPaths = async () => {
 export async function getStaticProps(props) {
     const specificExpData = getSpecificExpData(props.params.identifier);
     return {
-      props: {
-        specificExpData
-      }
+        props: {
+            specificExpData
+        }
     };
 }

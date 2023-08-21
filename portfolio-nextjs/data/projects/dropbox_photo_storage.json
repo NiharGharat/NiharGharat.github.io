@@ -8,7 +8,7 @@
     "addiction" : "",
     "storyParas" : [
         "Sem 2 Web Data Management project - Dropbox File storage. Courtesy to prof. Leonidas Fegaras",
-        "Developed a php frontend client with which any user can configure his/her account with secret key to pull/push files from/to the configured dropbox storage",
+        "Developed a php frontend client with which any user can configure his/her account with dropbox secret key to pull/push files from/to the configured dropbox storage",
         "Not much of a UI guy, but I enjoyed every bit of frontend as much as the backend",
         "Users can upload, download, delete, explore his/her account files in real time. Auth using token"
     ],
@@ -16,7 +16,7 @@
     "repoPrivate": true,
     "githubLink": "",
     "order": 2,
-    "mainLogo": "/logos/mock_project_dropbox_photo_storage.png",
+    "mainLogo": "mock_project_dropbox_photo_storage.png",
     "author": true,
     "demoPicturesPresent": true
 }

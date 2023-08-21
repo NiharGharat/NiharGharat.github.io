@@ -7,7 +7,8 @@
     "why": "Ya know, this had to be done ;)",
     "addiction" : "",
     "storyParas" : [
-        "Needed a more descriptive resume and online presence, was no way an easy task, the ETA which I thought was 3 days worth of effort, I took me around 3 weeks of effort, around 3 hours per day give or take",
+        "Needed a more descriptive resume and online presence, was no way an easy task, the ETA which I thought was 3 days worth of effort, I took me around 3 months of effort, around 3 hours per day give or take. All the ideas were converted to github issues and then implemented.",
+        "Had the most fun learning React, and implementing my ideas to reality. Did almost everything from scratch. Reading blogs, youtube tutorials, etc. Key takeaways? Its much easier to code it if the design is good!",
         "Inspiration 1 - https://www.lauren-waller.com/",
         "Inspiration 2 - https://p5aholic.me/",
         "Inspiration 3 - https://brittanychiang.com/",
@@ -19,6 +20,6 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/NiharGharat.github.io",
     "order" : 1,
-    "mainLogo": "/logos/mock_project_the_portfolio.jpeg",
+    "mainLogo": "mock_project_the_portfolio.jpeg",
     "author": true
 } 

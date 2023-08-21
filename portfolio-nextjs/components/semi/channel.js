@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { pre_contact_badges } from "../constants";
 
-export const Channel = function(props) {
+export const Channel = function (props) {
     const srcToUse = "/logos/badges/" + pre_contact_badges + props.data.logo;
     return (
         <li>

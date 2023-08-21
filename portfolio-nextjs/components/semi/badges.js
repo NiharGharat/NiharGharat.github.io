@@ -17,7 +17,7 @@ export const type_personal_project = "personalProject";
 export const type_private_project = "privateProject";
 export const type_author_project = "myself_author";
 
-const EachBadge = function(props) {
+const EachBadge = function (props) {
     return (
         <li>
             <img title={props.badgeData.title} className="p-2 h-10 sm:h-12 inline-block float-right transform hover:scale-125 transition ease-in-out duration-300" src={props.badgeData.src} alt={props.badgeData.title} />
@@ -25,7 +25,7 @@ const EachBadge = function(props) {
     )
 }
 
-export const getBadgeInfo = function(type, isProjectPersonalBadge) {
+export const getBadgeInfo = function (type, isProjectPersonalBadge) {
     let jsonToReturn;
     let titleToUse;
     let srcToUse;
@@ -60,7 +60,7 @@ export const getBadgeInfo = function(type, isProjectPersonalBadge) {
     return jsonToReturn;
 }
 
-export const BadgesSection = function(props) {
+export const BadgesSection = function (props) {
     return (
         <ul key={props.unq} className={props.classToUse}>
             {props.badgesArray.map(e => (

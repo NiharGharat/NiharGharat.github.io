@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const TitleComponent = function(props) {
+const TitleComponent = function (props) {
     console.log(props.data)
     return (
         <>
@@ -10,7 +10,7 @@ const TitleComponent = function(props) {
 }
 
 // This was common and hence was extracted out
-export const HeadingSection = function(props) {
+export const HeadingSection = function (props) {
     return (
         <section className="p-2 grid grid-cols-5 hover:shadow-lg hover:text-gray-800 hover:shadow-gray-300 active:shadow-gray-300 transition duration-300 ease-in-out">
             {/* {props.specificExpData.fileContents.companyName} */}

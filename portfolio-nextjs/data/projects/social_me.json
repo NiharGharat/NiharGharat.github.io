@@ -2,16 +2,16 @@
     "projectName": "Social Me",
     "identifier": "social_me",
     "techStack": [
-        "React Native", "Firebase", "Android"
+        "React Native", "Firebase", "Android", "CSS"
     ],
-    "why": "An android app to add friends, and push notification on your social status at a set region",
+    "why": "An android app to add friends, and push notification on your social status at a set region to your circle",
     "addiction" : "",
     "storyParas" : [
         "Sem 3 Software Engg project - Social Me",
-        "Letting your friend circle know(except some pesky once) on what's on your mind",
-        "Set a region as social region and when you come in vicinity of that region, your status is shared as a push notification to your circle",
+        "Letting your friend circle know(except some pesky once) what's on your mind",
+        "Set a region as social region and when you come in vicinity of that region, your status is shared as a push notification to your circle. Add friends to let everyone know.",
         "Developed this one as an organic new idea with major contribution from Sushrut Diwan as academic SE1 project - courtesy Dr. Mike Siok",
-        "Had fun learning React and programming for android(and css)"
+        "Had fun learning React Native and programming for android(and css)"
     ],
     "projectType": "academic",
     "repoPrivate": true,

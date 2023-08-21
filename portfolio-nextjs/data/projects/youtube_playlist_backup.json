@@ -12,7 +12,7 @@
         "To mitigate this horrendous behavior, I came up with an idea where I would just take periodic backups of all my(public) playlists, and store them in xlsx format",
         "Wrote the project in Java, performed multithreaded requests to get playlist data, did regex matching on songs, and stored the data in xlsx format",
         "Dockerised the project, pushed to dockerHub, used github actions for ci/cd",
-        "Best part was I anacroned the project to run daily. Anacron doesn't run like cron, so cron + anacron was it",
+        "Best part was I anacroned the project to run daily. Anacron doesn't run like cron(dosent have a deamon running), so cron + anacron was it",
         "Further extension can use youtube playlist api for a cleaner scalable approach, intelligence engine based on the xlsx data dump"
     ],
     "projectType": "personal",

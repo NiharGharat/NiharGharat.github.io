@@ -55,7 +55,7 @@ const FocusedDescWithTag = function ({ data, isThisFocused, isReset }) {
 }
 
 export default function Company(props) {
-    const pathOfLogo = "/logos/mock_" + props.specificExpData.fileContents.logo;
+    const pathOfLogo = "/logos/" + props.specificExpData.fileContents.logo;
     const idOfBackPage = "/experience#" + props.specificExpData.fileContents.identifier;
     const companyTitle = props.specificExpData.fileContents.companyName;
     const dataToPassToHeader = {

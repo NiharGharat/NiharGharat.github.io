@@ -69,7 +69,7 @@ export default function Contact(props) {
                     </ul>
                 </section>
                 <ToastContainer limit={3} />
-                <CreditHandler listOfCreditLogo={allLogoList} />
+                <CreditHandler listOfCreditLogo={allLogoList} requiredMargins="mt-4"/>
             </main>
         </>)
 }

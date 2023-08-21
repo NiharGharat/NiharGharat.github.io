@@ -113,7 +113,7 @@ const iconCreditMapping = {
     }
 }
 
-export const CreditHandler = function({listOfCreditLogo}) {
+export const CreditHandler = function({listOfCreditLogo, requiredMargins}) {
     let uniqueOnceSet = new Set(listOfCreditLogo);
     listOfCreditLogo = [...new Set(uniqueOnceSet)]
     const isPresent = listOfCreditLogo.length != 0;
@@ -121,7 +121,7 @@ export const CreditHandler = function({listOfCreditLogo}) {
         return (
             <div>
                 {/* <hr className="my-4" /> */}
-                <div className="mt-4 mx-4 text-xs text-gray-500">
+                <div className={`${requiredMargins ? requiredMargins : "mx-4 mt-4"} text-xs text-gray-400`}>
                     Icon Credits
                     <div className="m-2 flex flex-wrap">
                     {listOfCreditLogo.map((each) => {

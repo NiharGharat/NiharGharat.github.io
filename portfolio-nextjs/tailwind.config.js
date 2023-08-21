@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xxs: '0.5rem',
+      },
       colors: {
         pastel_blue_new: {
           light: "#bbeaff",

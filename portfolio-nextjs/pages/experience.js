@@ -2,19 +2,23 @@ import { getAllExperienceData } from '../lib/project-util'
 import Head from "next/head";
 import CompanyCard from '../components/companyCard';
 import HeaderSection from '../components/headerSection';
-import { button_theme_flag_green, button_theme_flag_mint, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
+import { button_theme_flag_mint, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
 import Link from 'next/link';
+import { CreditHandler } from '../components/credits';
 
 const pageTitle = "Work Experience"
 const firstPara = "Each of these contributed to what I am now. I enjoyed working/hacking while at work at these places!";
 const secondPara = "I try to bring justice to what I do, and I always try to go above and beyond to implement and think about new ideas which can be included. This is how I always was!";
 
 export default function Experience(props) {
+    let allLogoList = []
+    props.allExperienceData.forEach((eachCompany) => allLogoList.push(eachCompany.logo))
+    allLogoList.push("project_the_portfolio")
     return (
         <>
             <Head>
                 <title>{pageTitle}</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/portfolio_icon.png" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
                 <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_projects} secondLink={header_link_path_projects} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_mint} />
@@ -34,6 +38,7 @@ export default function Experience(props) {
                         ))}
                     </div>
                 </section>
+                <CreditHandler listOfCreditLogo={allLogoList} />
             </main>
         </>
     )

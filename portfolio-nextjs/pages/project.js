@@ -4,18 +4,23 @@ import { getAllProjectData } from '../lib/project-util';
 import ProjectCard from "../components/projectCard";
 import Link from "next/link";
 import { button_theme_flag_lime, button_theme_flag_yellow, header_link_path_about_me, header_link_path_contact, header_link_path_experience, header_link_title_about_me, header_link_title_contact, header_link_title_experience } from "../components/constants";
-import { Credits } from "../components/credits";
+import { CreditHandler, Credits } from "../components/credits";
 
 const pageTitle = "Nihar Projects";
 const pageIntroPara1 = "I sort of manifest myself through my work and my projects";
 const pageIntroPara2 = "I loved working on each one of these. Ranging from Java, to Python, to Pandas, to Keras. Academic, non-academic";
 
 export default function Project(props) {
+    const allLogoList = []
+    props.allProjectData.forEach((eachProject) => {
+        allLogoList.push(eachProject.logo)
+    })
+    allLogoList.push("project_the_portfolio")
     return (
         <>
             <Head>
                 <title>{pageTitle}</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/portfolio_icon.png" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
                 <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_contact} thirdLink={header_link_path_contact} themeColour={button_theme_flag_yellow} />
@@ -33,7 +38,8 @@ export default function Project(props) {
                         ))}
                     </div>
                 </section>
-                <Credits />
+                <CreditHandler listOfCreditLogo={allLogoList} />
+                {/* <Credits /> */}
             </main>
         </>
     )

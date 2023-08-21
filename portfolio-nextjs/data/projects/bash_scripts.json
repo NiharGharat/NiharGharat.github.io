@@ -4,7 +4,7 @@
     "techStack": [
         "Bash", "Kubernetes", "Git", "Automation", "Ubuntu", "rSync"
     ],
-    "why": "Tried and was hooked to bash. Tried and was tired of doing same tasks manually",
+    "why": "Tried and was tired of doing same tasks manually. Tried and was hooked to bash script",
     "addiction" : "",
     "storyParas" : [
         "Needed huge files for performance benchmarking. Wrote a bash script to create a variable columnar/rows csv file from a sample smaller file",
@@ -16,6 +16,6 @@
     "repoPrivate": true,
     "githubLink": "",
     "order" : 5,
-    "mainLogo": "mock_project_bash_scripts.png",
+    "logo": "mock_project_bash_scripts.png",
     "author": true
 } 

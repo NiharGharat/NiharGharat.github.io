@@ -3,6 +3,8 @@ import { getAllProjectIdsNew, getSpecificPostData } from '../../lib/project-util
 import { BadgesSection, getBadgeInfo, type_author_project, type_personal_project, type_private_project } from '../../components/semi/badges';
 import Link from 'next/link';
 import { HeadingSection } from '../../components/semi/heading';
+import { CreditHandler } from '../../components/credits';
+import { badge_base_path, logos_base_path } from '../../components/constants';
 
 const SkillSection = function (props) {
     return (
@@ -39,8 +41,11 @@ export default function Project({ specificPostData }) {
     const titleText = <div className='col-span-4 text-gray-700 justify-self-start text-4xl md:text-5xl lg:text-6xl tracking-normal my-auto'>
         {projectName}
     </div>;
-    const pathOfImg = "/logos/" + specificPostData.allProjData.mainLogo;
-    //
+    const pathOfImg = logos_base_path + specificPostData.allProjData.logo;
+
+    let listOfLogoUsed = [specificPostData.allProjData.logo]
+    arrayForBadges.forEach(eachBadge => listOfLogoUsed.push(eachBadge.src.replace(badge_base_path, "")))
+
     return (
         <>
             <Head>
@@ -88,6 +93,7 @@ export default function Project({ specificPostData }) {
                         </section>}
                     <SkillSection techStack={specificPostData.allProjData.techStack} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>
+                <CreditHandler listOfCreditLogo={listOfLogoUsed} />
             </main>
         </>
     );

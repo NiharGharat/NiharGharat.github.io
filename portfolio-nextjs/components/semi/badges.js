@@ -1,15 +1,17 @@
+import { badge_base_path } from "../constants";
+
 const badge_title_personal_project = "Personal Project";
 const badge_title_academic_project = "Academic Project";
-const badge_src_personal_project = "/logos/badges/mock_project_personal.png";
-const badge_src_academic_project = "/logos/badges/mock_project_academic.png";
+const badge_src_personal_project = "mock_project_personal.png";
+const badge_src_academic_project = "mock_project_academic.png";
 
-const badge_src_private_project = "/logos/badges/mock_repo_private.png";
-const badge_src_public_project = "/logos/badges/mock_repo_public.png";
+const badge_src_private_project = "mock_repo_private.png";
+const badge_src_public_project = "mock_repo_public.png";
 const badge_title_private_project = "Private Repo";
 const badge_title_public_project = "Public Repo";
 
-const badge_src_me_author_project = "/logos/badges/mock_repo_me_author.png";
-const badge_src_me_contributor_project = "/logos/badges/mock_repo_me_contributor.png";
+const badge_src_me_author_project = "mock_repo_me_author.png";
+const badge_src_me_contributor_project = "mock_repo_me_contributor.png";
 const badge_title_me_author_project = "@Author";
 const badge_title_me_contributor_project = "Contributor";
 
@@ -28,10 +30,10 @@ const EachBadge = function (props) {
 export const getBadgeInfo = function (type, isProjectPersonalBadge) {
     let jsonToReturn;
     let titleToUse;
-    let srcToUse;
+    let srcToUse = badge_base_path;
     if (type === type_personal_project) {
         titleToUse = isProjectPersonalBadge ? badge_title_personal_project : badge_title_academic_project;
-        srcToUse = isProjectPersonalBadge ? badge_src_personal_project : badge_src_academic_project;
+        srcToUse += isProjectPersonalBadge ? badge_src_personal_project : badge_src_academic_project;
         jsonToReturn = {
             type: type_personal_project,
             src: srcToUse,
@@ -39,7 +41,7 @@ export const getBadgeInfo = function (type, isProjectPersonalBadge) {
         };
     } else if (type === type_private_project) {
         titleToUse = isProjectPersonalBadge ? badge_title_private_project : badge_title_public_project;
-        srcToUse = isProjectPersonalBadge ? badge_src_private_project : badge_src_public_project;
+        srcToUse += isProjectPersonalBadge ? badge_src_private_project : badge_src_public_project;
         jsonToReturn = {
             type: type_personal_project,
             src: srcToUse,
@@ -47,7 +49,7 @@ export const getBadgeInfo = function (type, isProjectPersonalBadge) {
         };
     } else if (type === type_author_project) {
         titleToUse = isProjectPersonalBadge ? badge_title_me_author_project : badge_title_me_contributor_project;
-        srcToUse = isProjectPersonalBadge ? badge_src_me_author_project : badge_src_me_contributor_project;
+        srcToUse += isProjectPersonalBadge ? badge_src_me_author_project : badge_src_me_contributor_project;
         jsonToReturn = {
             type: type_author_project,
             src: srcToUse,

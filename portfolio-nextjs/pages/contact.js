@@ -8,6 +8,7 @@ import { button_theme_flag_blue, header_link_path_about_me, header_link_path_exp
 import Link from "next/link";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { CreditHandler } from "../components/credits";
 
 const dataLine1 = "If you have an opportunity to work on some innovative product/idea, feel free to connect";
 const dataLine2 = "Drop me a line, contact me through any of the below mentioned channels!";
@@ -22,11 +23,15 @@ const showToastMessage = function () {
 }
 
 export default function Contact(props) {
+    let allLogoList = []
+    props.allContactData.allLinks.forEach(each => allLogoList.push(each.logo))
+    allLogoList.push("project_the_portfolio")
     return (
         <>
             <Head>
                 <title>Contact Me</title>
                 <Script src="dist/clipboard.min.js" />
+                <link rel="icon" href="/portfolio_icon.png" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl text-gray-700">
                 <HeaderSection firstName={header_link_title_about_me} firstLink={header_link_path_about_me} secondName={header_link_title_experience} secondLink={header_link_path_experience} thirdName={header_link_title_projects} thirdLink={header_link_path_projects} themeColour={button_theme_flag_blue} />
@@ -65,6 +70,7 @@ export default function Contact(props) {
                     </ul>
                 </section>
                 <ToastContainer limit={3} />
+                <CreditHandler listOfCreditLogo={allLogoList} requiredMargins="mt-4"/>
             </main>
         </>)
 }

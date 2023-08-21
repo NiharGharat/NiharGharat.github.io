@@ -6,7 +6,7 @@ export default function Home(props) {
     <>
       <Head>
         <title>Nihar</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/portfolio_icon.png" />
       </Head>
       <section>
         <Intro />

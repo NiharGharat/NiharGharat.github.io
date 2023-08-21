@@ -7,6 +7,7 @@
     "why": "Developed a reader for pulling data from Salesforce as a structured data",
     "addiction" : "",
     "storyParas" : [
+        "The app will pull data from salesforce as structured data, objects(salesforce) are similar to tables(RDBMS)",
         "Did this as a learning project for REST api",
         "Wanted to implement a writer to salesforce, but did not impl one"
     ],
@@ -14,6 +15,6 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/SalesforceParser",
     "order": 3,
-    "mainLogo": "mock_project_salesforce_reader.png",
+    "logo": "mock_project_salesforce_reader.png",
     "author": true
 } 

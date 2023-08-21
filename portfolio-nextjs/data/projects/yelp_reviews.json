@@ -17,7 +17,7 @@
     "repoPrivate": true,
     "githubLink": "",
     "order": 2,
-    "mainLogo": "mock_project_yelp_reviews.png",
+    "logo": "mock_project_yelp_reviews.png",
     "author": true,
     "demoPicturesPresent": true
 } 

@@ -20,6 +20,6 @@
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/NiharGharat.github.io",
     "order" : 1,
-    "mainLogo": "mock_project_the_portfolio.jpeg",
+    "logo": "mock_project_the_portfolio.png",
     "author": true
 } 

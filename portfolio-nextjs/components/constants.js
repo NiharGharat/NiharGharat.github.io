@@ -1,3 +1,8 @@
+// Paths
+export const badge_base_path = "/logos/badges/";
+export const logos_base_path = "/logos/"
+
+//
 export const header_link_title_about_me = "About Me";
 export const header_link_path_about_me = "intro";
 

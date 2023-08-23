@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import { getAllProjectIdsNew, getSpecificPostData } from '../../lib/project-util';
+import { getAllFilesFromDirectory, getAllProjectIdsNew, getSpecificPostData } from '../../lib/project-util';
 import { BadgesSection, getBadgeInfo, type_author_project, type_personal_project, type_private_project } from '../../components/semi/badges';
 import Link from 'next/link';
 import { HeadingSection } from '../../components/semi/heading';
 import { CreditHandler } from '../../components/credits';
-import { badge_base_path, logos_base_path } from '../../components/constants';
+import { badge_base_path, logos_base_path, path_dir_of_project_images, path_dir_of_project_images_file, path_dir_of_project_images_image } from '../../components/constants';
 
 const SkillSection = function (props) {
     return (
@@ -46,6 +46,10 @@ export default function Project({ specificPostData }) {
     let listOfLogoUsed = [specificPostData.allProjData.logo]
     arrayForBadges.forEach(eachBadge => listOfLogoUsed.push(eachBadge.src.replace(badge_base_path, "")))
 
+    const areDemoPicsPresent = Boolean(specificPostData.allProjData.demoPicturesPresent)
+    const dirOfImages = specificPostData.allProjData.namesOfDemoImages
+    console.log("Here")
+    console.log(specificPostData.allProjData.namesOfDemoImages)
     return (
         <>
             <Head>
@@ -93,6 +97,16 @@ export default function Project({ specificPostData }) {
                         </section>}
                     <SkillSection techStack={specificPostData.allProjData.techStack} classNameToUse="md:px-2 mt-2 flex flex-wrap text-gray-600 text-sm" />
                 </section>
+                {areDemoPicsPresent && (
+                    <div>
+                        <div className=''>App screen grabs</div>
+                        {specificPostData.allProjData.namesOfDemoImages.map((each) => {
+                            console.log(path_dir_of_project_images_image + specificPostData.allProjData.identifier + "/" + each)
+                            return (<img className='h-20' src={path_dir_of_project_images_image + specificPostData.allProjData.identifier + "/" + each} />)
+                        }
+                        )}
+                    </div>
+                )}
                 <CreditHandler listOfCreditLogo={listOfLogoUsed} />
             </main>
         </>
@@ -110,9 +124,16 @@ export const getStaticPaths = async () => {
 
 export async function getStaticProps(props) {
     const specificPostData = getSpecificPostData(props.params.identifier);
+    console.log(Boolean(specificPostData.allProjData.demoPicturesPresent))
+    if (Boolean(specificPostData.allProjData.demoPicturesPresent)) {
+        const dirOfProjectDemoImages = path_dir_of_project_images_file + specificPostData.allProjData.identifier
+        let namesOfDemoImages = getAllFilesFromDirectory(dirOfProjectDemoImages)
+        console.log(namesOfDemoImages)
+        specificPostData["allProjData"]["namesOfDemoImages"] = namesOfDemoImages
+    }
     return {
         props: {
-            specificPostData
+            specificPostData,
         }
     };
 }

@@ -4,7 +4,7 @@ import { Channel } from "../components/semi/channel";
 import Script from "next/script";
 import Clipboard from 'react-clipboard.js';
 import HeaderSection from "../components/headerSection";
-import { button_theme_flag_blue, header_link_path_about_me, header_link_path_experience, header_link_path_projects, header_link_title_about_me, header_link_title_experience, header_link_title_projects } from "../components/constants";
+import { button_theme_flag_blue, header_link_path_about_me, header_link_path_experience, header_link_path_projects, header_link_title_about_me, header_link_title_experience, header_link_title_projects, portfolio_logo_name } from "../components/constants";
 import Link from "next/link";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,7 +25,7 @@ const showToastMessage = function () {
 export default function Contact(props) {
     let allLogoList = []
     props.allContactData.allLinks.forEach(each => allLogoList.push(each.logo))
-    allLogoList.push("project_the_portfolio")
+    allLogoList.push(portfolio_logo_name)
     return (
         <>
             <Head>

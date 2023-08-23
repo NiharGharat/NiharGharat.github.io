@@ -14,11 +14,11 @@ Utils-
 Libraries-
 1. Toastify - for the prompt on email copied. https://www.npmjs.com/package/react-toastify
 2. Clipboard
-
+3. Google Analytics
 
 Extractables-
 1. Click link open in new tab
-2. CLipboard copy
+2. Clipboard copy
 3. Stripped images of metadata, added owner
 4. Loading data from json as opposed to loading from md
 5. Icons

@@ -2,6 +2,11 @@
 export const badge_base_path = "/logos/badges/";
 export const logos_base_path = "/logos/"
 
+// Image names
+export const mock_name = "mock"
+export const badge_extension = ".png"
+export const portfolio_logo_name = "mock_project_the_portfolio.png";
+
 //
 export const header_link_title_about_me = "About Me";
 export const header_link_path_about_me = "intro";

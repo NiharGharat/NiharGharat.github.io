@@ -25,7 +25,7 @@
     {
       "id": "rest_apis_work",
       "tags": ["rest", "printAndGo"],
-      "description": "Developed REST apis for microservice based application, focusing on modularity. Part of the printAndGo product team(FedEx mobile printing solution). Responsible for modernisation for making the service lighter, highly available, and reliable for the customers."
+      "description": "Developed REST apis for microservice based application, focusing on modularity. Part of the printAndGo product team(FedEx mobile printing solution). Responsible for modernisation, for making the service lighter, highly available, and reliable for the customers."
     },
     {
       "id": "archi",

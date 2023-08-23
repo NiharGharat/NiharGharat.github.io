@@ -126,9 +126,8 @@ export const CreditHandler = function({listOfCreditLogo, requiredMargins}) {
                     <div className="m-2 flex flex-wrap">
                     {listOfCreditLogo.map((each) => {
                         let key = each.replace("mock_", "").replace(".png", "");
-                        console.log(key)
                         const filteredFromMapForThatIcon = iconCreditMapping[key];
-                        return (<span className="m-1 p-1 bg-gray-200 hover:bg-gray-100">{filteredFromMapForThatIcon.created_by} - {filteredFromMapForThatIcon.link}</span>)
+                        return (<span key={key} className="m-1 p-1 bg-gray-200 hover:bg-gray-100">{filteredFromMapForThatIcon.created_by} - {filteredFromMapForThatIcon.link}</span>)
                     })}
                     </div>
                 </div>

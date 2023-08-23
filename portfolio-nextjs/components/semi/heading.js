@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const TitleComponent = function (props) {
-    console.log(props.data)
     return (
         <>
             {props.data}

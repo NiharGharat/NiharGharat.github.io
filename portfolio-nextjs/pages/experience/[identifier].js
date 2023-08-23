@@ -27,7 +27,7 @@ const EachTextContent = function ({ data, index }) {
     }
 
     return (
-        <li key={index} className="" >
+        <li className="" >
             <div className="flex md:p-2 ">
                 <div className="flex-shrink-0 my-auto mr-4">
                     <img className="mt-2 float-left h-10 sm:h-12 md:h-14 lg:h-16" src={path} alt={data.name} title={data.name} />
@@ -41,8 +41,8 @@ const EachTextContent = function ({ data, index }) {
             <div className="text-right text-gray-400 text-xs hover:cursor-pointer" onClick={handleContentClick}>{showContent ? "Show less" : "Show more"}</div>
             <div className={`${showContent ? "visible" : "hidden"} border-2 border-gray-200 mt-2 lg:p-2 overflow-hidden transition duration-300 ease-in-out`}>
                 <ol className="list-none text-sm lg:text-xl">
-                    {data.stmt.map((eachPt) =>
-                        <li className="p-2">{eachPt}</li>
+                    {data.stmt.map((eachPt, index) =>
+                        <li key={index} className="p-2">{eachPt}</li>
                     )}
                 </ol>
             </div>
@@ -96,10 +96,11 @@ export default function Company(props) {
     let logosUsed = [props.specificExpData.fileContents.logo]
     props.specificExpData.fileContents.highlights.forEach(each => logosUsed.push(each.logo))
 
+    const pageTitle = "Work at " + companyTitle;
     return (
         <>
             <Head>
-                <title>Work at {props.specificExpData.fileContents.companyName}</title>
+                <title>{pageTitle}</title>
             </Head>
             <main className="p-4 text-gray-600 bg-gray-100 min-h-screen">
                 <HeadingSection data={dataToPassToHeader} titleContent={titleImage} />
@@ -138,7 +139,7 @@ export default function Company(props) {
                         {props.specificExpData.fileContents.companyDetailPoints.map((eachPt) => {
                             const isReset = activeTags.length == 0;
                             const thisActiveTagSet = activeTags.some(eachInActive => eachPt.tags.includes(eachInActive));
-                            return (<FocusedDescWithTag isReset={isReset} isThisFocused={thisActiveTagSet} data={eachPt} />)
+                            return (<FocusedDescWithTag key={eachPt.id} isReset={isReset} isThisFocused={thisActiveTagSet} data={eachPt} />)
                         })}
                     </ol>
                 </section>

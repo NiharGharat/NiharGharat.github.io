@@ -1,6 +1,7 @@
 // Paths
 export const badge_base_path = "/logos/badges/";
 export const logos_base_path = "/logos/"
+export const images_base_path = "/images/"
 // File handling requires it to be not root
 export const path_dir_of_project_images_file = "public/images/project_images/"
 export const path_dir_of_project_images_image = "/images/project_images/"

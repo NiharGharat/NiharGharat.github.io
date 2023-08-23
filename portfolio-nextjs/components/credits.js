@@ -122,12 +122,12 @@ export const CreditHandler = function({listOfCreditLogo, requiredMargins}) {
             <div>
                 {/* <hr className="my-4" /> */}
                 <div className={`${requiredMargins ? requiredMargins : "mx-4 mt-4"} text-xs text-gray-400`}>
-                    Icon Credits
+                    <div className="hover:text-gray-500 transition duration-300 ease-in-out">Icon Credits</div>
                     <div className="m-2 flex flex-wrap">
                     {listOfCreditLogo.map((each) => {
                         let key = each.replace("mock_", "").replace(".png", "");
                         const filteredFromMapForThatIcon = iconCreditMapping[key];
-                        return (<span key={key} className="m-1 p-1 bg-gray-200 hover:bg-gray-100">{filteredFromMapForThatIcon.created_by} - {filteredFromMapForThatIcon.link}</span>)
+                        return (<span key={key} className="m-1 p-1 bg-gray-200 hover:bg-gray-100 hover:text-gray-500 transition duration-300 ease-in-out">{filteredFromMapForThatIcon.created_by} - {filteredFromMapForThatIcon.link}</span>)
                     })}
                     </div>
                 </div>

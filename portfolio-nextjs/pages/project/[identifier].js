@@ -96,9 +96,17 @@ export default function Project({ specificPostData }) {
                             const img = <Image src={imgPath} alt="" />
                             const isTaller = img.height/img.width > 1;
                             if (isTaller) {
-                                return (<img className='hover:scale-105 duration-300 ease-in-out transition-all rounded-md shadow-md shadow-gray-400 mt-2 max-h-96 object-contain mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>)
+                                return (
+                                    <div className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
+                                        <img className='rounded-md max-h-96 object-contain mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>
+                                    </div>
+                                )
                             } else {
-                                return (<img className='hover:scale-105 hover:translate-x-1 duration-300 ease-in-out transition-all rounded-md shadow-lg shadow-gray-400 mt-2 max-h-96 object-cover mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>)
+                                return (
+                                    <div className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
+                                        <img className='rounded-md max-h-96 object-cover mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>
+                                    </div>
+                                )
                             }
                         }
                         )}

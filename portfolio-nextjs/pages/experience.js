@@ -8,7 +8,7 @@ import { CreditHandler } from '../components/credits';
 
 const pageTitle = "Work Experience Page"
 const firstPara = "Each of these contributed to what I am now. I enjoyed working/hacking while at work at these places!";
-const secondPara = "I try to bring justice to what I do, and I always try to go above and beyond to implement and think about new ideas which can be included. This is how I always was!";
+const secondPara = "I try to bring justice to what I do, and I always try to go above and beyond to implement and think about new ideas which can be included. This is what I have learnt!";
 
 export default function Experience(props) {
     let allLogoList = []

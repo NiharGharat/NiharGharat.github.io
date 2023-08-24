@@ -77,7 +77,7 @@ export default function Project({ specificPostData }) {
                 </section>
                 <div className='px-4 text-center'>{projectName}</div>
                 <section className='p-2 mt-2'>
-                    <ul className='p-2 text-base lg:text-lg text-gray-500'>
+                    <ul className='p-2 text-base lg:text-lg text-gray-500 text-justify'>
                         {specificPostData.allProjData.storyParas.map((eachPara, index) => {
                             return (<li className='mt-3' key={index}>{eachPara}</li>)
                         })}
@@ -90,15 +90,15 @@ export default function Project({ specificPostData }) {
                 {areDemoPicsPresent && (
                     <div className='px-4 mt-4 text-xl lg:text-2xl'>
                         <div className='text-gray-700'>Working Screen Grabs</div>
-                        <div className='grid grid-flow-row lg:grid-flow-col gap-4'>
+                        <div className='mt-2 grid grid-flow-row lg:grid-flow-col gap-4'>
                         {specificPostData.allProjData.namesOfDemoImages.map((each, index) => {
                             const imgPath = path_dir_of_project_images_image + specificPostData.allProjData.identifier + "/" + each;
                             const img = <Image src={imgPath} alt="" />
                             const isTaller = img.height/img.width > 1;
                             if (isTaller) {
-                                return (<img className='rounded-md shadow-md shadow-gray-400 mt-2 max-h-96 object-contain mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>)
+                                return (<img className='hover:scale-105 duration-300 ease-in-out transition-all rounded-md shadow-md shadow-gray-400 mt-2 max-h-96 object-contain mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>)
                             } else {
-                                return (<img className='rounded-md shadow-lg shadow-gray-400 mt-2 max-h-96 object-cover mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>)
+                                return (<img className='hover:scale-105 hover:translate-x-1 duration-300 ease-in-out transition-all rounded-md shadow-lg shadow-gray-400 mt-2 max-h-96 object-cover mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>)
                             }
                         }
                         )}

@@ -22,6 +22,8 @@ const showToastMessage = function () {
     });
 }
 
+const pageTitle = "Contact Page";
+
 export default function Contact(props) {
     let allLogoList = []
     props.allContactData.allLinks.forEach(each => allLogoList.push(each.logo))
@@ -29,7 +31,7 @@ export default function Contact(props) {
     return (
         <>
             <Head>
-                <title>Contact Me</title>
+                <title>{pageTitle}</title>
                 <Script src="dist/clipboard.min.js" />
                 <link rel="icon" href="/portfolio_icon.png" />
             </Head>

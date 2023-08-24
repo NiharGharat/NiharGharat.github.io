@@ -66,7 +66,7 @@ export default function Company(props) {
         title: companyTitle,
         backPageId: idOfBackPage
     }
-
+    const pageTitle = companyTitle + " Work Page";
     const titleImage = <img className="h-14 col-span-4 text-gray-700 justify-self-start text-4xl my-auto" src={pathOfLogo} alt={companyTitle} title={companyTitle} />
     let uniqueOnceSet = new Set();
     props.specificExpData.fileContents.companyDetailPoints.forEach(eachTagArray => {
@@ -96,7 +96,6 @@ export default function Company(props) {
     let logosUsed = [props.specificExpData.fileContents.logo]
     props.specificExpData.fileContents.highlights.forEach(each => logosUsed.push(each.logo))
 
-    const pageTitle = "Work at " + companyTitle;
     return (
         <>
             <Head>

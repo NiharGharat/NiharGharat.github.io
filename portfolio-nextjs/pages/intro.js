@@ -7,16 +7,16 @@ const name = "Nihar Gharat";
 const introPara1 = "I am a backend software developer currently based in the US. I am passionate about working on interesting ideas/projects."
 const introPara2 = "I thoroughly enjoy engaging with complex problems, exploring potential solutions, and crafting well-thought resolutions. I was fortunate enough to have interacted with and be inspired by people from various fields like designing, architecture, etc.. I try to bring this mindset to the table."
 const introPara3 = "I loved working on my projects, well that was a part of the reason why I picked them in the first place. Right from removing the mundanity of being assured that my music playlists are backed via the YouTube Music Playlist Scrapper, to deep diving in the neural network and data mining with TailorSweat, I enjoyed it all."
+const pageTitle = "AboutMe Page";
 
 export default function Intro() {
     const profileImagePath = "/images/mock_intro_2.jpeg"
-
     let listOfIconsUsed = []
 
     return (
         <>
             <Head>
-                <title>AboutMe</title>
+                <title>{pageTitle}</title>
                 <link rel="icon" href="/portfolio_icon.png" />
             </Head>
             <main className="bg-gray-100 m-2 p-2 mx-auto max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-6xl">

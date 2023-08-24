@@ -29,3 +29,5 @@ Theming-
 
 References-
 1. Icons - https://www.flaticon.com/
+2. GA - https://www.makeuseof.com/nextjs-google-analytics/
+3. 

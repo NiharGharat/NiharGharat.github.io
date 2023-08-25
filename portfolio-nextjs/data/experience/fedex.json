@@ -25,7 +25,7 @@
     {
       "id": "rest_apis_work",
       "tags": ["rest", "printAndGo"],
-      "description": "Developed REST apis for microservice based application, focusing on modularity. Part of the printAndGo product team(FedEx mobile printing solution). Responsible for modernisation for making the service lighter, highly available, and reliable for the customers."
+      "description": "Developed REST apis for microservice based application, focusing on modularity. Part of the printAndGo product team(FedEx mobile printing solution). Responsible for modernisation, for making the service lighter, highly available, and reliable for the customers."
     },
     {
       "id": "archi",
@@ -47,7 +47,7 @@
     {
       "type": "perf_monitoring",
       "name": "Application memory monitoring",
-      "logo": "mock_performance_monitoring.png",
+      "logo": "performance_monitoring.png",
       "stmt": [
         "Used jVisualVM for monitoring the application for memory footprint. Analyzed for biggest memory consuming methods.",
         "Analyzed the output and suggested ways in which memory consumption can be reduced."
@@ -56,11 +56,11 @@
     {
       "type": "improvement",
       "name": "Ideating on possible improvements",
-      "logo": "mock_improvement_workflows.png",
+      "logo": "improvement_workflows.png",
       "stmt": [
         "Read RFC standards and java docs (eg - multipart file, UUID), for understanding/suggesting better workflows."
       ]
     }
   ],
-  "logo": "mock_fedex.png"
+  "logo": "fedex.png"
 }

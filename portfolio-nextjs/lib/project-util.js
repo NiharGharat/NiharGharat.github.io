@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { path_dir_of_project_images } from '../components/constants'
 
 const expDirectory = path.join(process.cwd(), 'data/experience')
 const projectsDirectory = path.join(process.cwd(), 'data/projects')
@@ -105,6 +106,12 @@ export function getSpecificPostData(identifier) {
     allProjData,
   };
   return retnData;
+}
+
+// Used for getting all images from the project demo directory
+export function getAllFilesFromDirectory(directoryOfImages) {
+  const demoProjectImagesDirectory = path.join(process.cwd(), directoryOfImages)
+  return fs.readdirSync(demoProjectImagesDirectory)
 }
 
 // For contact

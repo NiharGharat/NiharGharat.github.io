@@ -4,10 +4,10 @@
     "techStack": [
         "Vanilla Javascript", "Ajax", "Css", "Yelp API", "Google Maps API"
     ],
-    "why": "Developed a web app based on pure javascript to fetch data from yelp api on hottest restaurants near me, and present the data on a web page on a google map. Courtesy to prof. Leonidas Fegaras",
+    "why": "Developed a web app based on pure javascript to fetch data from yelp api on hottest restaurants near me, and present the data on a web page on a google map",
     "addiction" : "",
     "storyParas" : [
-        "Sem 2 Web Data Management project - Yelp Reviews",
+        "Sem 2 Web Data Management assignment project - Yelp Reviews. Courtesy to prof. Leonidas Fegaras",
         "The app will get the data from yelp api on specific lat long coordinate",
         "This list will be presented to the user as pins on a Google Map",
         "The user can drag, zoom in/out, and explore the presented restaurants on the map. Events on the map will invoke new responses from yelp. Interacting with the pin will get details on that restaurant",
@@ -17,7 +17,7 @@
     "repoPrivate": true,
     "githubLink": "",
     "order": 2,
-    "logo": "mock_project_yelp_reviews.png",
+    "logo": "project_yelp_reviews.png",
     "author": true,
     "demoPicturesPresent": true
 } 

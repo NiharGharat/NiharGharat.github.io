@@ -1,6 +1,17 @@
 // Paths
 export const badge_base_path = "/logos/badges/";
 export const logos_base_path = "/logos/"
+export const images_base_path = "/images/"
+// File handling requires it to be not root
+export const path_dir_of_project_images_file = "public/images/project_images/"
+export const path_dir_of_project_images_image = "/images/project_images/"
+
+// Image names
+export const mock_name = ""
+export const badge_extension = ".png"
+export const portfolio_logo_name = "project_the_portfolio.png";
+export const intro_image_main = "/images/intro_2.jpeg";
+export const logo_nav_back = "/logos/nav_back.png";
 
 //
 export const header_link_title_about_me = "About Me";
@@ -15,7 +26,7 @@ export const header_link_path_contact = "contact";
 export const header_link_title_projects = "Projects";
 export const header_link_path_projects = "project";
 
-export const pre_contact_badges = "mock_link_badge_";
+export const pre_contact_badges = "link_badge_";
 
 export const button_theme_flag_yellow = "pastel_yellow";
 export const button_theme_flag_orange = "pastel_orange";

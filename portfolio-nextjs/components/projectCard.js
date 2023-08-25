@@ -1,6 +1,5 @@
 import React from "react";
 import { BadgesSection, getBadgeInfo, type_personal_project, type_private_project } from "./semi/badges";
-import { CreditHandler } from "./credits";
 import { logos_base_path } from "./constants";
 
 /*

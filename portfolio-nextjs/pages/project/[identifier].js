@@ -1,10 +1,11 @@
 import Head from 'next/head';
-import { getAllProjectIdsNew, getSpecificPostData } from '../../lib/project-util';
+import { getAllFilesFromDirectory, getAllProjectIdsNew, getSpecificPostData } from '../../lib/project-util';
 import { BadgesSection, getBadgeInfo, type_author_project, type_personal_project, type_private_project } from '../../components/semi/badges';
 import Link from 'next/link';
 import { HeadingSection } from '../../components/semi/heading';
 import { CreditHandler } from '../../components/credits';
-import { badge_base_path, logos_base_path } from '../../components/constants';
+import { badge_base_path, logos_base_path, path_dir_of_project_images, path_dir_of_project_images_file, path_dir_of_project_images_image } from '../../components/constants';
+import Image from 'next/image';
 
 const SkillSection = function (props) {
     return (
@@ -22,7 +23,7 @@ const EachSkill = function ({ skill }) {
 
 export default function Project({ specificPostData }) {
     const projectName = specificPostData.allProjData.projectName;
-    const titleOfPage = "Nihar Project " + projectName;
+    const titleOfPage = projectName + " ProjectPage";
     const isGithubLinkPresent = specificPostData.allProjData.githubLink;
 
     const jsonForPersonalBadge = getBadgeInfo(type_personal_project, Boolean(specificPostData.allProjData.projectType) && specificPostData.allProjData.projectType === "personal");
@@ -46,6 +47,7 @@ export default function Project({ specificPostData }) {
     let listOfLogoUsed = [specificPostData.allProjData.logo]
     arrayForBadges.forEach(eachBadge => listOfLogoUsed.push(eachBadge.src.replace(badge_base_path, "")))
 
+    const areDemoPicsPresent = Boolean(specificPostData.allProjData.demoPicturesPresent)
     return (
         <>
             <Head>
@@ -75,17 +77,43 @@ export default function Project({ specificPostData }) {
                 </section>
                 <div className='px-4 text-center'>{projectName}</div>
                 <section className='p-2 mt-2'>
-                    <ul className='p-2 text-lg lg:text-xl text-gray-600'>
+                    <ul className='p-2 text-base lg:text-lg text-gray-500 text-justify'>
                         {specificPostData.allProjData.storyParas.map((eachPara, index) => {
                             return (<li className='mt-3' key={index}>{eachPara}</li>)
                         })}
                     </ul>
                 </section>
-                <section className='m-2 pl-4'>
+                <section className='m-2 pl-2'>
                     {/* Badges */}
                     <BadgesSection classToUse="flex flex-wrap my-auto" className="" badgesArray={arrayForBadges} unq={specificPostData.allProjData.projectName} />
                 </section>
-                <section className='p-2'>
+                {areDemoPicsPresent && (
+                    <div className='px-4 mt-4 text-xl lg:text-2xl'>
+                        <div className='text-gray-700'>Working Screen Grabs</div>
+                        <div className='mt-2 grid grid-flow-row lg:grid-flow-col gap-4'>
+                        {specificPostData.allProjData.namesOfDemoImages.map((each, index) => {
+                            const imgPath = path_dir_of_project_images_image + specificPostData.allProjData.identifier + "/" + each;
+                            const img = <Image src={imgPath} alt="" />
+                            const isTaller = img.height/img.width > 1;
+                            if (isTaller) {
+                                return (
+                                    <div className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
+                                        <img className='rounded-md max-h-96 object-contain mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>
+                                    </div>
+                                )
+                            } else {
+                                return (
+                                    <div className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
+                                        <img className='rounded-md max-h-96 object-cover mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>
+                                    </div>
+                                )
+                            }
+                        }
+                        )}
+                        </div>
+                    </div>
+                )}
+                <section className='p-2 mt-4'>
                     {isGithubLinkPresent &&
                         <section className='text-xs'>
                             {/* Github link */}
@@ -110,9 +138,14 @@ export const getStaticPaths = async () => {
 
 export async function getStaticProps(props) {
     const specificPostData = getSpecificPostData(props.params.identifier);
+    if (Boolean(specificPostData.allProjData.demoPicturesPresent)) {
+        const dirOfProjectDemoImages = path_dir_of_project_images_file + specificPostData.allProjData.identifier
+        let namesOfDemoImages = getAllFilesFromDirectory(dirOfProjectDemoImages)
+        specificPostData["allProjData"]["namesOfDemoImages"] = namesOfDemoImages
+    }
     return {
         props: {
-            specificPostData
+            specificPostData,
         }
     };
 }

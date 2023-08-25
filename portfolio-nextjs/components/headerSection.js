@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { colourVariants } from "./constants";
+import { colourVariants, images_base_path, portfolio_logo_name } from "./constants";
 
 // Ref - https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 // Can randomise the colouring
 export default function HeaderSection(props) {
-    const headerLogo = "/images/mock_project_the_portfolio.png";
+    const headerLogo = images_base_path + portfolio_logo_name;
     return (
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 sm:border-solid border-2 border-black content-center shadow-xl">
             <div className="hidden sm:block sm:col-span-1">

@@ -87,7 +87,7 @@
     {
       "type": "perf_improvement",
       "name": "XLSX connector performance improvement",
-      "logo": "mock_story_connector_apache_poi.png",
+      "logo": "story_connector_apache_poi.png",
       "stmt": [
         "Apache POI was the best for working on xlsx, but it was the slowest impl when it came to files of size > 50MB. I was heavily involved in identifying the bottlenecks at the worksheet object creation, looking for alternatives, and poc on different libraries usage. Firsthand learning using jvisualVM for analysing JVMs.",
         "Integrated a streaming based approach for reading huge xlsx files. Ensured all custom features worked with newer approach."
@@ -96,7 +96,7 @@
     {
       "type": "perf_improvement",
       "name": "JSON connector performance improvement",
-      "logo": "mock_story_connector_json.png",
+      "logo": "story_connector_json.png",
       "stmt": [
         "Involved in refactoring Json reading impl 3 times, with the last refractor was on top of Spark's own impl. Sparks impl caused many issues with multiLine. Our impl was lighter, used Gson streaming, worked on spark cluster, reading json as bytes line by line to create a Dataset.",
         "This approach was the best, as it worked on multi-line json, jsonL, and beautified json perfectly."
@@ -105,7 +105,7 @@
     {
       "type": "extra",
       "name": "Git",
-      "logo": "mock_story_git.png",
+      "logo": "story_git.png",
       "stmt": [
         "One of the maintainer of our repo, solving all git issues. Used a linear history model, which was easier to comprehend."
       ]
@@ -113,7 +113,7 @@
     {
       "type": "development",
       "name": "Custom features on XLSX/CSV",
-      "logo": "mock_story_connector_apache_poi.png",
+      "logo": "story_connector_apache_poi.png",
       "stmt": [
         "Implemented all custom features on xlsx, delimited files. Language support and encoding caused some issues when spark/non-spark libraries were used. But, I ensured the impl were as consistent as possible."
       ]
@@ -121,7 +121,7 @@
     {
       "type": "development",
       "name": "Refractor for better design",
-      "logo": "mock_story_connector_jdbc.png",
+      "logo": "story_connector_jdbc.png",
       "stmt": [
         "Designed and implemented better single responsibility for present class structures, while implementing advance connection url for jdbc(HA for SqlServer) with all SQL connectors. It allowed better creation of customized connection url string while creation of specific SQL connectors."
       ]
@@ -129,12 +129,12 @@
     {
       "type": "extra",
       "name": "Bash Scripts",
-      "logo": "mock_story_extra_bash_scripts.png",
+      "logo": "story_extra_bash_scripts.png",
       "stmt": [
         "Bash scripting is my favourite. I started to write bash scripts for almost all mundane jobs. Honorary mention - while doing performance benchmarking, I developed a script that will spawn pods(Kubernetes) of different configs, for specified connector type, and sleep in the background. It will periodically check the pods completion status, and once done, it will grep the log, and prune the timings to present the result. EOD - the performance timings were ready for me in a csv. All this thanks to the support team not tightly controlling the environment.",
         "Wrote another bash script for pushing our latest code on support's git env for deployment only based on image tags. The script would \"correctly\" rebase main, and push our new tags on the deploy file, and push with a consistent commit message. Also, handled scenarios where there would be conflicts on pull/push. With the script, you just need to have the image tags ready, don't need to interact with git."
       ]
     }
   ],
-  "logo": "mock_lti.png"
+  "logo": "lti.png"
 }

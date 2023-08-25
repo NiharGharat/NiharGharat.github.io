@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { logo_nav_back } from "../constants";
 
 const TitleComponent = function (props) {
     return (
@@ -17,7 +18,7 @@ export const HeadingSection = function (props) {
             {/* <img className="h-24 col-span-4 text-gray-700 justify-self-start text-4xl my-auto" src={props.data.path} alt={props.data.alt} title={props.data.title} /> */}
             <div className='hidden sm:grid my-auto col-span-1 justify-self-end'>
                 <Link href={props.data.backPageId}>
-                    <img title="Go Back" className="pr-4 h-6 inline-block hover:scale-150 transition ease-in-out duration-300" src="/logos/mock_nav_back.png" alt="Back navigation" />
+                    <img title="Go Back" className="pr-4 h-6 inline-block hover:scale-150 transition ease-in-out duration-300" src={logo_nav_back} alt="Back navigation" />
                 </Link>
             </div>
         </section>

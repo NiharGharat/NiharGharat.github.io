@@ -10,6 +10,10 @@ Utils-
     'exiftool -Owner="Nihar" -Copyright="©NiharGharat" yelp_reviews_5.png'
 
 3. View meta on an image
+    'exiftool *'
+
+4. Script to rename
+    'rename -v 's/mock_//' '' *.png'
 
 Libraries-
 1. Toastify - for the prompt on email copied. https://www.npmjs.com/package/react-toastify

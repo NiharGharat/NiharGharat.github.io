@@ -4,7 +4,7 @@ const iconCreditMapping = {
         "link": "https://www.flaticon.com/free-icons/fedex"
     },
     "lti": {
-        "created_by": "https://companieslogo.com/",
+        "created_by": "LTI logo created by https://companieslogo.com/",
         "link": "https://companieslogo.com/larsen-toubro-infotech/logo/"
     },
     "stack_overflow": {
@@ -125,7 +125,7 @@ export const CreditHandler = function({listOfCreditLogo, requiredMargins}) {
                     <div className="hover:text-gray-500 transition duration-300 ease-in-out">Icon Credits</div>
                     <div className="m-2 flex flex-wrap">
                     {listOfCreditLogo.map((each) => {
-                        let key = each.replace("mock_", "").replace(".png", "");
+                        let key = each.replace(".png", "");
                         const filteredFromMapForThatIcon = iconCreditMapping[key];
                         return (<span key={key} className="m-1 p-1 bg-gray-200 hover:bg-gray-100 hover:text-gray-500 transition duration-300 ease-in-out">{filteredFromMapForThatIcon.created_by} - {filteredFromMapForThatIcon.link}</span>)
                     })}

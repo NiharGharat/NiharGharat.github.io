@@ -2,16 +2,16 @@ import { badge_base_path } from "../constants";
 
 const badge_title_personal_project = "Personal Project";
 const badge_title_academic_project = "Academic Project";
-const badge_src_personal_project = "mock_project_personal.png";
-const badge_src_academic_project = "mock_project_academic.png";
+const badge_src_personal_project = "project_personal.png";
+const badge_src_academic_project = "project_academic.png";
 
-const badge_src_private_project = "mock_repo_private.png";
-const badge_src_public_project = "mock_repo_public.png";
+const badge_src_private_project = "repo_private.png";
+const badge_src_public_project = "repo_public.png";
 const badge_title_private_project = "Private Repo";
 const badge_title_public_project = "Public Repo";
 
-const badge_src_me_author_project = "mock_repo_me_author.png";
-const badge_src_me_contributor_project = "mock_repo_me_contributor.png";
+const badge_src_me_author_project = "repo_me_author.png";
+const badge_src_me_contributor_project = "repo_me_contributor.png";
 const badge_title_me_author_project = "@Author";
 const badge_title_me_contributor_project = "Contributor";
 

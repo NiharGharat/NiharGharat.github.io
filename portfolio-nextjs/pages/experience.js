@@ -2,7 +2,7 @@ import { getAllExperienceData } from '../lib/project-util'
 import Head from "next/head";
 import CompanyCard from '../components/companyCard';
 import HeaderSection from '../components/headerSection';
-import { button_theme_flag_mint, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects } from '../components/constants';
+import { button_theme_flag_mint, header_link_path_about_me, header_link_path_contact, header_link_path_projects, header_link_title_about_me, header_link_title_contact, header_link_title_projects, portfolio_logo_name } from '../components/constants';
 import Link from 'next/link';
 import { CreditHandler } from '../components/credits';
 
@@ -13,7 +13,7 @@ const secondPara = "I try to bring justice to what I do, and I always try to go 
 export default function Experience(props) {
     let allLogoList = []
     props.allExperienceData.forEach((eachCompany) => allLogoList.push(eachCompany.logo))
-    allLogoList.push("project_the_portfolio")
+    allLogoList.push(portfolio_logo_name)
     return (
         <>
             <Head>

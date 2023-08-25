@@ -1,6 +1,6 @@
 import Head from "next/head";
 import HeaderSection from "../components/headerSection";
-import { button_theme_flag_brown, button_theme_flag_orange, header_link_path_contact, header_link_path_experience, header_link_path_projects, header_link_title_contact, header_link_title_experience, header_link_title_projects } from "../components/constants";
+import { button_theme_flag_orange, header_link_path_contact, header_link_path_experience, header_link_path_projects, header_link_title_contact, header_link_title_experience, header_link_title_projects, intro_image_main } from "../components/constants";
 import { CreditHandler } from "../components/credits";
 
 const name = "Nihar Gharat";
@@ -10,8 +10,9 @@ const introPara3 = "I loved working on my projects, well that was a part of the 
 const pageTitle = "AboutMe Page";
 
 export default function Intro() {
-    const profileImagePath = "/images/mock_intro_2.jpeg"
+    const profileImagePath = intro_image_main
     let listOfIconsUsed = []
+    // Kept empty here
 
     return (
         <>

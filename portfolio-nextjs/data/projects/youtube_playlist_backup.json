@@ -7,13 +7,13 @@
     "why": "I was tormented by youtube's inconsistent behaviour of handling how copyright-striked videos are treated",
     "addiction" : "",
     "storyParas" : [
-        "I use free music, I believe in free music. I also believe I shouldn't need to remember all the names of the songs in my youtube playlists",
-        "When a copyright strike happens on any song in the playlist, its removed and shows up as video unavailable on the playlist",
-        "To mitigate this horrendous behavior(thanks YouTube), I came up with an idea where I would just take periodic backups of all my(public) playlists, and store them in xlsx format",
-        "Wrote the project in Java, performed multithreaded requests to get playlist data, did regex matching on songs, and stored the data in xlsx format",
-        "Dockerised the project, pushed to dockerHub, used github actions for CICD",
-        "Best part was I anacroned the project to run daily. Anacron doesn't run like cron(dosent have a deamon running), so cron + anacron was it",
-        "Further extension can use youtube playlist api for a cleaner scalable approach, intelligence engine based on the xlsx data dump"
+        "I use <strong>free music</strong>, I believe in free music. I also believe I shouldn't need to remember all the names of the songs in my youtube playlists",
+        "When a <strong>copyright</strong> strike happens on any song in the playlist, its removed and shows up as video unavailable on the playlist",
+        "To mitigate this horrendous behavior(thanks YouTube), I came up with an idea where I would just take periodic backups of all my(public) playlists, and store them in <strong>xlsx</strong> format",
+        "Wrote the project in Java, performed <strong>multithreaded http requests</strong> to get playlist data, did regex matching on songs, and stored the data in xlsx format",
+        "<strong>Dockerised</strong> the project, pushed to <strong>dockerHub(registry)</strong>, used github actions for <strong>CICD</strong>",
+        "Best part was I <strong>anacroned</strong> the project to run daily without missing. Anacron doesn't run like cron(dosent have a deamon running), so <strong>cron + anacron</strong> was it",
+        "Further extension can use <strong>youtube playlist api</strong> for a cleaner scalable approach, intelligence engine based on the xlsx data dump"
     ],
     "projectType": "personal",
     "repoPrivate": true,

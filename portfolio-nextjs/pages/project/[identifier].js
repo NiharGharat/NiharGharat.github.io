@@ -6,6 +6,7 @@ import { HeadingSection } from '../../components/semi/heading';
 import { CreditHandler } from '../../components/credits';
 import { badge_base_path, logos_base_path, path_dir_of_project_images, path_dir_of_project_images_file, path_dir_of_project_images_image } from '../../components/constants';
 import Image from 'next/image';
+import HTMLReactParser from 'html-react-parser';
 
 const SkillSection = function (props) {
     return (
@@ -79,7 +80,7 @@ export default function Project({ specificPostData }) {
                 <section className='p-2 mt-2'>
                     <ul className='p-2 text-base lg:text-lg text-gray-500 text-justify'>
                         {specificPostData.allProjData.storyParas.map((eachPara, index) => {
-                            return (<li className='mt-3' key={index}>{eachPara}</li>)
+                            return (<li className='mt-3' key={index}>{HTMLReactParser(eachPara)}</li>)
                         })}
                     </ul>
                 </section>

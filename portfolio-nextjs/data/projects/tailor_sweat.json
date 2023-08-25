@@ -7,12 +7,12 @@
     "why": "Catalog your gym data, use the app, workout on the recommendation, rise, repeat",
     "addiction" : "",
     "storyParas" : [
-        "I have been cataloging my gym data entries from around Oct 2022. I had the idea, can I use some fancy algo to just give me a good enough recommendation of the exercises which I should do when I visit the gym the next time?",
-        "Fortunately, had the opportunity to work on this as academic/personal with major contributions from Nelson Joseph(nelson123-lab) and Nikhil Das Karavatt(NDK22), and last but surely not the least, courtesy Dr. Alex Dillhoff for giving us the opportunity",
-        "Feature Engg in Pandas, Data creation to a large extent in ChatGPT with some of my own personal gym data entries, neural net in keras",
-        "The application would ingest user data from his/her profile, workout history, preferences, etc. Calculate insights based on preset rules, give more weightage to some aspects, etc. and then use the neural net to come up with predictions. The model was retrained with a 14 day frequency",
-        "While researching for this one, I was very much impressed with Nike Training Club(NTC) blog post",
-        "Checkout the notes for an in depth documentation",
+        "I have been <strong>cataloging</strong> my gym data entries from around Oct 2022. I had the idea, can I use some fancy algo to just give me a <strong>good enough recommendation</strong> of the exercises which I should do when I visit the gym the next time? Based on how fun the workout was",
+        "Fortunately, had the opportunity to work on this as <strong>academic/personal</strong> with major contributions from <strong>Nelson Joseph(@github/nelson123-lab)</strong> and <strong>Nikhil Das Karavatt(@github/NDK22)</strong>, and last but surely not the least, courtesy <strong>Dr. Alex Dillhoff</strong> for giving us the opportunity",
+        "Feature Engg in <strong>Pandas</strong>, Data creation to a large extent in <strong>ChatGPT</strong> with some of my own personal gym data entries, neural net in <strong>keras</strong>",
+        "The application would <strong>ingest</strong> user data from his/her profile, workout history, preferences, etc. Calculate insights based on preset <strong>rules</strong>, give more weightage to some aspects, etc. and then use the neural net to come up with predictions. The model was retrained with a <strong>14 day frequency</strong>",
+        "While researching for this one, I was very much impressed with <strong>Nike Training Club(NTC)</strong> blog post",
+        "Checkout the notes for an <strong>in-depth documentation</strong>",
         "Didn't expect the data generation to be such a crucial and tedious task",
         "I came up with the name"
     ],

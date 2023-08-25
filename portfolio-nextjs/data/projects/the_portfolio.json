@@ -7,13 +7,13 @@
     "why": "Ya know, this had to be done ;)",
     "addiction" : "",
     "storyParas" : [
-        "Needed a more descriptive resume and online presence, was no way an easy task, the ETA which I thought was 3 days worth of effort, I took me around 3 months of effort, around 3 hours per day give or take. All the ideas were converted to github issues and then implemented.",
-        "Had the most fun learning React, and implementing my ideas to reality. Did almost everything from scratch. Reading blogs, youtube tutorials, etc. Key takeaways? Its much easier to code it if the design is good!",
+        "Needed a more <strong>descriptive resume</strong> and <strong>online presence</strong>, was no way an easy task, the ETA which I thought was 3 days worth of effort, I took me around 3 months of effort, around 3 hours per day give or take. All the ideas were converted to <strong>github issues</strong> and then implemented.",
+        "Had the most fun learning React, and implementing my ideas to reality. Did almost everything from <strong>scratch</strong>. Reading blogs, youtube tutorials, etc. Key takeaways? Its much easier to code it if the <strong>design is good!</strong>",
         "Inspiration 1 - https://www.lauren-waller.com/",
         "Inspiration 2 - https://p5aholic.me/",
         "Inspiration 3 - https://brittanychiang.com/",
         "And many more...",
-        "Feel free to fork and build on top",
+        "Feel free to <strong>fork</strong> and build on top",
         "Future enhancements? Look at the issues tab of the repo"
     ],
     "projectType": "personal",

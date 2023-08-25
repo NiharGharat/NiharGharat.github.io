@@ -5,9 +5,10 @@ import ProjectCard from "../components/projectCard";
 import Link from "next/link";
 import { button_theme_flag_yellow, header_link_path_about_me, header_link_path_contact, header_link_path_experience, header_link_title_about_me, header_link_title_contact, header_link_title_experience, portfolio_logo_name } from "../components/constants";
 import { CreditHandler } from "../components/credits";
+import HTMLReactParser from "html-react-parser";
 
 const pageTitle = "Projects Page";
-const pageIntroPara1 = "I sort of manifest myself through my work and my projects";
+const pageIntroPara1 = "I sort of <strong>manifest</strong> myself through my work and my projects";
 const pageIntroPara2 = "I loved working on each one of these. Ranging from Java, to Python, to Pandas, to Keras. Academic, non-academic";
 
 export default function Project(props) {
@@ -28,8 +29,8 @@ export default function Project(props) {
                     <div className="pt-3 text-xl text-gray-700 col-span-1">
                         <div className="p-3 text-4xl px-3 font-bold text-center">Projects</div>
                         <div className='mx-12 p-3 text-sm border-2 border-gray-800 text-justify'>
-                            <div className='mt-2'>{pageIntroPara1}</div>
-                            <div className='mt-2'>{pageIntroPara2}</div>
+                            <div className='mt-2'>{HTMLReactParser(pageIntroPara1)}</div>
+                            <div className='mt-2'>{HTMLReactParser(pageIntroPara2)}</div>
                         </div>
                     </div>
                     <div className="md:col-span-2">

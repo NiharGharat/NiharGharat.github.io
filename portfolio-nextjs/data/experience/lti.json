@@ -35,42 +35,42 @@
     {
       "id": "rest_apis_work",
       "tags": ["rest"],
-      "description": "Designed and developed REST APIs on Java for services like connector service - pull and push data from/to any source, and scanner service - to scan for data structure; to be run as Spark cluster jobs for ETL."
+      "description": "Designed and developed REST APIs on Java for services like connector service - <strong>pull and push data from/to any source</strong>, and scanner service - to scan for data structure; to be run as Spark cluster jobs for ETL."
     },
     {
       "id": "cloud_work",
       "tags": ["cloud", "connectors"],
-      "description": "Worked on cloud connectors like Azure Blob, Amazon S3, GCP; with a major focus on Azure Blob."
+      "description": "Worked on cloud connectors like Azure Blob, Amazon S3, GCP; with a major focus on <strong>Azure Blob</strong>."
     },
     {
       "id": "xlsx_imp",
       "tags": ["improvement", "xlsx"],
-      "description": "Improved performance of XLSX data parser by ~50%, by identifying bottlenecks in Apache Poi implementation. Designed, implemented, and maintained new features like range read, streaming read, etc. for xlsx connector."
+      "description": "Improved performance of XLSX data parser by <strong>~50%</strong>, by identifying bottlenecks in <strong>Apache Poi implementation</strong>. Designed, implemented, and maintained new features like range read, streaming read, etc. for xlsx connector."
     },
     {
       "id": "bash_auto_bench",
       "tags": ["extra", "spark", "linux"],
-      "description": "Developed bash scripts on Linux for doing automated performance benchmarking for various connectors for Spark on K8S."
+      "description": "Developed bash scripts on Linux for doing <strong>automated performance benchmarking</strong> for various connectors for Spark on K8S."
     },
     {
       "id": "mongo_scratch",
       "tags": ["fromScratch", "nosql", "rdbms"],
-      "description": "Designed and developed functionality like upsert for RDBMS via spark, mongoDb authentication."
+      "description": "Designed and developed functionality like <strong>upsert</strong> for RDBMS via spark, <strong>mongoDb authentication</strong>."
     },
     {
       "id": "drive_poc",
       "tags": ["poc"],
-      "description": "Researched the feasibility of a connector for Google Drive. Developed a POC to demo the integrated functionality."
+      "description": "Researched the feasibility of a connector for <strong>Google Drive</strong>. Developed a <strong>POC</strong> to demo the integrated functionality."
     },
     {
       "id": "kub_etc",
       "tags": ["devOps"],
-      "description": "Worked on other technologies like Docker, Kubernetes, Azure Blob, Amazon S3, Sftp, Spring boot, CI/CD, Snowflake, SonarQube, ElasticSearch. Strong experience in Linux, with Ubuntu as the choice of development OS."
+      "description": "Worked on <strong>other technologies</strong> like Docker, Kubernetes, Azure Blob, Amazon S3, Sftp, Spring boot, CI/CD, Snowflake, SonarQube, ElasticSearch. Strong experience in Linux, with <strong>Ubuntu</strong> as the choice of development OS."
     },
     {
       "id": "spark_basic",
       "tags": ["spark"],
-      "description": "Contributed to maintenance and enhancement of Spark cluster processing for about 15 connectors."
+      "description": "Contributed to maintenance and enhancement of <strong>Spark cluster</strong> processing for about 15 connectors."
     },
     {
       "id": "file_con",
@@ -89,8 +89,8 @@
       "name": "XLSX connector performance improvement",
       "logo": "story_connector_apache_poi.png",
       "stmt": [
-        "Apache POI was the best for working on xlsx, but it was the slowest impl when it came to files of size > 50MB. I was heavily involved in identifying the bottlenecks at the worksheet object creation, looking for alternatives, and poc on different libraries usage. Firsthand learning using jvisualVM for analysing JVMs.",
-        "Integrated a streaming based approach for reading huge xlsx files. Ensured all custom features worked with newer approach."
+        "<strong>Apache POI</strong> was the best for working on xlsx, but it was the slowest impl when it came to files of <strong>size > 50MB</strong>. I was heavily involved in identifying the bottlenecks at the worksheet object creation, looking for alternatives, and poc on different libraries usage. Firsthand learning using jvisualVM for analysing JVMs.",
+        "Integrated a <strong>streaming</strong> based approach for reading huge xlsx files. Ensured all custom features worked with newer approach."
       ]
     },
     {
@@ -98,8 +98,8 @@
       "name": "JSON connector performance improvement",
       "logo": "story_connector_json.png",
       "stmt": [
-        "Involved in refactoring Json reading impl 3 times, with the last refractor was on top of Spark's own impl. Sparks impl caused many issues with multiLine. Our impl was lighter, used Gson streaming, worked on spark cluster, reading json as bytes line by line to create a Dataset.",
-        "This approach was the best, as it worked on multi-line json, jsonL, and beautified json perfectly."
+        "Involved in refactoring Json reading impl <strong>3 times</strong>, with the last refractor was on top of Spark's own impl. Sparks impl caused many issues with multiLine. Our impl was lighter, used <strong>Gson</strong> streaming, worked on spark cluster, reading json as bytes line by line to create a Dataset.",
+        "This approach was the <strong>best</strong>, as it worked on multi-line json, jsonL, and beautified json perfectly."
       ]
     },
     {
@@ -107,7 +107,7 @@
       "name": "Git",
       "logo": "story_git.png",
       "stmt": [
-        "One of the maintainer of our repo, solving all git issues. Used a linear history model, which was easier to comprehend."
+        "One of the <strong>maintainer</strong> of our repo, solving all git issues. Used a <strong>linear</strong> history model, which was easier to comprehend."
       ]
     },
     {
@@ -115,7 +115,7 @@
       "name": "Custom features on XLSX/CSV",
       "logo": "story_connector_apache_poi.png",
       "stmt": [
-        "Implemented all custom features on xlsx, delimited files. Language support and encoding caused some issues when spark/non-spark libraries were used. But, I ensured the impl were as consistent as possible."
+        "Implemented <strong>all custom</strong> features on xlsx, delimited files. Language support and encoding caused some issues when spark/non-spark libraries were used. But, I ensured the impl were as consistent as possible."
       ]
     },
     {
@@ -123,7 +123,7 @@
       "name": "Refractor for better design",
       "logo": "story_connector_jdbc.png",
       "stmt": [
-        "Designed and implemented better single responsibility for present class structures, while implementing advance connection url for jdbc(HA for SqlServer) with all SQL connectors. It allowed better creation of customized connection url string while creation of specific SQL connectors."
+        "Designed and implemented better <strong>single responsibility</strong> for present class structures, while implementing advance connection url for jdbc(HA for SqlServer) with all SQL connectors. It allowed better creation of customized connection url string while creation of specific SQL connectors."
       ]
     },
     {
@@ -131,8 +131,8 @@
       "name": "Bash Scripts",
       "logo": "story_extra_bash_scripts.png",
       "stmt": [
-        "Bash scripting is my favourite. I started to write bash scripts for almost all mundane jobs. Honorary mention - while doing performance benchmarking, I developed a script that will spawn pods(Kubernetes) of different configs, for specified connector type, and sleep in the background. It will periodically check the pods completion status, and once done, it will grep the log, and prune the timings to present the result. EOD - the performance timings were ready for me in a csv. All this thanks to the support team not tightly controlling the environment.",
-        "Wrote another bash script for pushing our latest code on support's git env for deployment only based on image tags. The script would \"correctly\" rebase main, and push our new tags on the deploy file, and push with a consistent commit message. Also, handled scenarios where there would be conflicts on pull/push. With the script, you just need to have the image tags ready, don't need to interact with git."
+        "<strong>Bash scripting</strong> is my personal favourite. I started to write bash scripts for almost all mundane jobs. Honorary mention - while doing performance benchmarking, I developed a script that will spawn pods(Kubernetes) of different configs, for specified connector type, and sleep in the background. It will periodically check the pods completion status, and once done, it will grep the log, and prune the timings to present the result. <strong>EOD</strong> - the performance timings were ready for me in a csv. All this thanks to the support team not tightly controlling the environment.",
+        "Wrote another bash script for pushing our latest code on support's git env for deployment only based on image tags. The script would <strong>\"correctly\"</strong> rebase main, and push our new tags on the deploy file, and push with a consistent commit message. Also, handled scenarios where there would be conflicts on pull/push. With the script, you just need to have the image tags ready, don't need to interact with git."
       ]
     }
   ],

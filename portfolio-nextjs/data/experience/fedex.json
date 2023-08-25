@@ -25,12 +25,12 @@
     {
       "id": "rest_apis_work",
       "tags": ["rest", "printAndGo"],
-      "description": "Developed REST apis for microservice based application, focusing on modularity. Part of the printAndGo product team(FedEx mobile printing solution). Responsible for modernisation, for making the service lighter, highly available, and reliable for the customers."
+      "description": "Developed REST apis for microservice based application, focusing on modularity. Part of the <strong>printAndGo</strong> product team(FedEx mobile printing solution). Responsible for modernisation, for making the service lighter, highly available, and reliable for the customers."
     },
     {
       "id": "archi",
       "tags": ["system", "extra"],
-      "description": "Implemented workflows of new apis, while understanding the requirements, and ensured best possible performance. Deep dived into understanding performance bottlenecks by reading RFC standards(eg- multipart form data, UUID), going over pre-existing documentation, etc.; highlighted performance critical bottlenecks, and ideated on ways by which it can be improved."
+      "description": "Implemented workflows of new apis, while understanding the requirements, and ensured best possible <strong>performance</strong>. Deep dived into understanding performance bottlenecks by reading <strong>RFC standards</strong>(eg- multipart form data, UUID), going over pre-existing documentation, etc.; highlighted performance critical bottlenecks, and ideated on ways by which it can be improved."
     },
     {
       "id": "scale",
@@ -49,7 +49,7 @@
       "name": "Application memory monitoring",
       "logo": "performance_monitoring.png",
       "stmt": [
-        "Used jVisualVM for monitoring the application for memory footprint. Analyzed for biggest memory consuming methods.",
+        "Used <strong>jVisualVM</strong> for monitoring the application for memory footprint. Analyzed for biggest memory consuming methods.",
         "Analyzed the output and suggested ways in which memory consumption can be reduced."
       ]
     },
@@ -58,7 +58,7 @@
       "name": "Ideating on possible improvements",
       "logo": "improvement_workflows.png",
       "stmt": [
-        "Read RFC standards and java docs (eg - multipart file, UUID), for understanding/suggesting better workflows."
+        "Read <strong>RFC standards</strong> and java docs (eg - multipart file, UUID), for understanding/suggesting better workflows."
       ]
     }
   ],

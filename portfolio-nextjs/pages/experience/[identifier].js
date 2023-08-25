@@ -4,6 +4,7 @@ import { HeadingSection } from "../../components/semi/heading";
 import { useState } from "react";
 import { logos_base_path } from "../../components/constants";
 import { CreditHandler } from "../../components/credits";
+import HTMLReactParser from "html-react-parser";
 
 const SkillSection = function (props) {
     return (
@@ -40,9 +41,9 @@ const EachTextContent = function ({ data, index }) {
             </div>
             <div className="text-right text-gray-400 text-xs hover:cursor-pointer" onClick={handleContentClick}>{showContent ? "Show less" : "Show more"}</div>
             <div className={`${showContent ? "visible" : "hidden"} border-2 border-gray-200 mt-2 lg:p-2 overflow-hidden transition duration-300 ease-in-out`}>
-                <ol className="list-none text-sm lg:text-xl">
+                <ol className="list-none text-sm lg:text-lg">
                     {data.stmt.map((eachPt, index) =>
-                        <li key={index} className="p-2">{eachPt}</li>
+                        <li key={index} className="p-2">{HTMLReactParser(eachPt)}</li>
                     )}
                 </ol>
             </div>
@@ -52,7 +53,7 @@ const EachTextContent = function ({ data, index }) {
 
 const FocusedDescWithTag = function ({ data, isThisFocused, isReset }) {
     return (
-        <li className={`${(isThisFocused || isReset) ? "text-gray-600" : "text-gray-400"} text-sm transition duration-300 ease-in-out`} key={data.id}>{data.description}</li>
+        <li className={`${(isThisFocused || isReset) ? "text-gray-600" : "text-gray-400"} text-sm transition duration-300 ease-in-out`} key={data.id}>{HTMLReactParser(data.description)}</li>
     )
 }
 

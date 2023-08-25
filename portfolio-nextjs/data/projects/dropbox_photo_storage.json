@@ -7,8 +7,8 @@
     "why": "A php client to show your dropbox account photos with a nice UI",
     "addiction" : "",
     "storyParas" : [
-        "Sem 2 Web Data Management project - Dropbox File storage. Courtesy to prof. Leonidas Fegaras",
-        "Developed a php frontend client with which any user can configure his/her account with dropbox secret key to pull/push files from/to the configured dropbox storage",
+        "Sem 2 Web Data Management project - Dropbox File storage. Courtesy to <strong>Dr. Leonidas Fegaras</strong>",
+        "Developed a <strong>php frontend client</strong> with which any user can configure his/her account with dropbox secret key to pull/push files from/to the configured dropbox storage",
         "Not much of a UI guy, but I enjoyed every bit of frontend as much as the backend. Sort of tried neumorphic with this one",
         "Users can upload, download, delete, explore his/her account files in real time. Auth using token"
     ],

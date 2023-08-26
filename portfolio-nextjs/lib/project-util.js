@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { path_dir_of_project_images } from '../components/constants'
 
 const expDirectory = path.join(process.cwd(), 'data/experience')
 const projectsDirectory = path.join(process.cwd(), 'data/projects')

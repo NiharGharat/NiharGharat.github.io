@@ -10,6 +10,7 @@
         "Sem 3 Software Engg project - Social Me",
         "Letting your friend circle know(except some pesky once) what's on your mind",
         "Set a region as social region and when you come in vicinity of that region, your status is shared as a <strong>push notification</strong> to your circle. Add friends to let everyone know.",
+        "Learnt/Used react native, with database on Firebase - including using out-of-box auth provided by firestore",
         "Developed this one as an organic new idea with major contribution from <strong>Sushrut Diwan</strong> as academic SE1 project - Courtesy <strong>Dr. Mike Siok</strong>",
         "Had fun learning <strong>React Native</strong> and programming for android(and css)"
     ],

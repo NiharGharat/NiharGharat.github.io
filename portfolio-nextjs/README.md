@@ -15,9 +15,18 @@ Utils-
 4. Script to rename
     'rename -v 's/mock_//' '' *.png'
 
+CMDs-
+1. npx create-next-app@latest portfolio-nextjs --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+
+2. npx tailwindcss init -p
+
+3. npm run dev
+
+4. 
+
 Libraries-
 1. Toastify - for the prompt on email copied. https://www.npmjs.com/package/react-toastify
-2. Clipboard
+2. Clipboard - CP functonality
 3. Google Analytics
 
 Extractables-

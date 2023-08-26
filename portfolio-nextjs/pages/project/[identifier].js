@@ -98,13 +98,13 @@ export default function Project({ specificPostData }) {
                             const isTaller = img.height/img.width > 1;
                             if (isTaller) {
                                 return (
-                                    <div className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
+                                    <div key={imgPath} className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
                                         <img className='rounded-md max-h-96 object-contain mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>
                                     </div>
                                 )
                             } else {
                                 return (
-                                    <div className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
+                                    <div key={imgPath} className='mt-2 mx-auto shadow-lg rounded-md shadow-gray-400 hover:scale-105 duration-300 ease-in-out transition-all'>
                                         <img className='rounded-md max-h-96 object-cover mx-auto' src={imgPath} title={specificPostData.allProjData.identifier + " "  + index} alt={specificPostData.allProjData.identifier + " "  + index}/>
                                     </div>
                                 )

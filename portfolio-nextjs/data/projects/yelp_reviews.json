@@ -11,7 +11,7 @@
         "The app will get the data from yelp api on specific lat long coordinate",
         "This list will be presented to the user as pins on a <strong>Google Map</strong>",
         "The user can drag, zoom in/out, and explore the presented restaurants on the map. Events on the map will invoke new responses from yelp. Interacting with the pin will get details on that restaurant",
-        "Had the most fun in <strong>styling</strong> the page, tried my hand on the <strong>comic</strong> theme which I so dearly loved"
+        "Developed on pure javascript to manipulate the DOM, used yelp and google api, plain css. Had the most fun in <strong>styling</strong> the page, tried my hand on the <strong>comic</strong> theme which I so dearly loved"
     ],
     "projectType": "academic",
     "repoPrivate": true,

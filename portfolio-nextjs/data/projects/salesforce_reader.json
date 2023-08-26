@@ -8,7 +8,7 @@
     "addiction" : "",
     "storyParas" : [
         "The app will pull data from salesforce as <strong>structured data</strong>, objects(salesforce) are similar to tables(RDBMS)",
-        "Did this as a learning project for REST api",
+        "Did this as a learning project for REST api. Referred to Salesforce Docs for creating an app, auth with username pwd",
         "Wanted to implement a writer to salesforce, but did not impl one"
     ],
     "projectType": "personal",

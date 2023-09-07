@@ -30,7 +30,7 @@
     "Supported implementation of 15 connectors ranging from AzureBlob, S3, file formats like json, csv, parquet, xml, etc., RDBMS like Snowflake, MySQL, postgreSQL, etc.",
     "Extensively working on core functionality, thinking about problems at scale"
   ],
-  "order": 2,
+  "order": 1,
   "companyDetailPoints": [
     {
       "id": "rest_apis_work",

@@ -7,15 +7,15 @@
     "why": "Tried and was tired of doing same tasks manually. Tried and was hooked to bash script",
     "addiction" : "",
     "storyParas" : [
-        "Needed huge files for performance benchmarking. Wrote a bash script to create a variable columnar/rows csv file from a sample smaller file generated based on <strong>required size</strong>",
-        "LTI(Not a part of this repo) - Midway with all the hype of deployment to ease the deployment process at client environment, support came up with their version of script to do so. Easy for them, ain't so for us, we needed to be <strong>extra meticulous</strong> with the git push on their branch. I wrote a script client auto deploy which will take the cutout from their main, do necessary changes to tags - commit and push the changes on supports deploy_repo. <strong>Deployment successful!</strong>",
-        "Tried my hand using <strong>rSync</strong> for ensuring backups are <strong>periodic</strong> and my mobile data is backed up correctly on my HDD (WIP)",
-        "LTI(Not a part of this repo) - Wrote 2 bash scripts for doing <strong>auto performance benchmarking</strong> of our connector service. Eg-Today we will benchmark our MySQL connector; it will do 1 parallel request, 3, 5, 10, etc. on loads of 10k, 50k, 100k rows, etc. All <strong>standardized</strong>. All metric data pushed as csv export, safely tucked away on our service pod's storage mount. I would start the script at the start of the day, and retrieve the results at EOD. Script was robust enough to handle pod failures. The one for <strong>Spark on K8S</strong> submitted a job on Spark on K8S monitored <strong>pod activity periodically</strong>, and once finished collected the metric. The other one will submit our requested load requests periodically and monitor the service pod logs and collect metrics once done."
+        "Required extensive files for <strong>performance benchmarking</strong>. Developed a Bash script to generate a variable columnar/row CSV file by appending from a smaller sample file, as per the specified size",
+        "While at LTI (Not a part of this repository), amidst the excitement of deploying to ease deployment process, the support team introduced their iteration of a deployment script. Though it was straightforward for them, the same couldn't be said for us. We had to <strong>extra meticulous</strong> when executing the git push on their branch. To streamline this, I authored a client <strong>auto-deploy</strong> script. This script rebased the relevant banch for particular client from their main, implements required tag adjustments(based on our repo tags), commits the changes, and then pushes them to the support deploy_repo. This made it possible not to deal with supports repo, and let the script take care of the push",
+        "Tried my hand using <strong>rSync</strong> for ensuring <strong>periodic</strong> backups from my mobile to HDD(WIP)",
+        "At LTI (Not a part of this repository), I authored two Bash scripts to automate the process of performance benchmarking for our connector service. For instance, we could use the script to benchmark our MySQL connector, executing parallel requests of 1, 3, 5, 10, etc., with varying loads such as 10k, 50k, 100k, etc. rows, all adhering to standardized procedures. The resulting metric data was exported as CSV files, securely stored on our service pod's storage mount. I would initiate the script at the beginning of the day and retrieve the results by day's end. The script was written to robustly handle potential pod failures. The first script, designed for Spark on K8S, would submit a job to Spark on K8S, monitor pod activity at intervals, and upon completion, gather the metrics. The second script systematically submitted requested load requests at intervals, monitored service pod logs, and collected metrics upon completion"
     ],
     "projectType": "personal",
     "repoPrivate": true,
     "githubLink": "",
-    "order" : 5,
+    "order" : 6,
     "logo": "project_bash_scripts.png",
     "author": true
 } 

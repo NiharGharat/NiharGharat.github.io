@@ -2,20 +2,20 @@
     "projectName": "Google Apartment Review Analyser",
     "identifier": "google_apartment_review_analyser",
     "techStack": [
-        "Python", "Selenium", "Scrapping"
+        "Python", "Selenium", "Scrapping", "Regex"
     ],
     "why": "Ever rented an apartment? Yeah, that's why. Didn't wrote the analyser engine, but I will someday",
     "addiction" : "",
     "storyParas" : [
         "So when I was moving to US for studies and hunting apartments, I didn't knew that hunting for apartments would be such a daunting process",
-        "Wrote a project on python which used <strong>selenium</strong> to pull data from <strong>google apartment reviews</strong>, and analyze for authenticity. Selenium would open Chrome, go to specified apartment reviews, pull <strong>data(all)</strong>, and store in json(deprecated mongoDB for storing, used plain files).",
-        "My plan was to check the number of bad reviews, number of reviews by Indians(to gague how many indian students are living in the apartment complex) to get the authenticity and usefulness of a review(Did Not write this part)",
+        "Wrote a project on python which used <strong>selenium</strong> to pull data from <strong>google apartment reviews</strong>, and analyze for authenticity. Selenium would open Chrome(non-headless), go to specified apartment reviews, pull <strong>data(all)</strong>, and store in json(deprecated mongoDB for storing, used plain files)",
+        "My plan was to check the number of bad reviews, number of reviews by Indians(to gague how many indian students are living in the apartment complex) to get the authenticity and usefulness of reviews(Did Not write this part), and in turn the apartment",
         "Provide a list of apartments, and it will fetch the data in json format"
     ],
     "projectType": "personal",
     "repoPrivate": false,
     "githubLink": "https://github.com/NiharGharat/ReviewScrapperAnalyser",
-    "order": 1,
+    "order": 5,
     "logo": "project_google_apartment_review_analyser.png",
     "author": true
 } 

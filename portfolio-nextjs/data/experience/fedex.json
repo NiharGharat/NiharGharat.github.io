@@ -13,7 +13,7 @@
     "WebClient"
   ],
   "why": "Explored Java Spring Boot in more detail, dived deep in task planning and execution",
-  "duration": "2023 Summer",
+  "duration": "2023 Summer Intern - Full time Jan 24",
   "companyLoved4Points": [
     "SDE intern at FedEx printAndGo product team, responsible for modernizing the legacy application",
     "Implemented newer functionality, while ensuring legacy systems work with it",
@@ -22,6 +22,11 @@
   ],
   "order": 2,
   "companyDetailPoints": [
+    {
+      "id": "service",
+      "tags": ["system", "scale"],
+      "description": "As full time product engineer with Fedex Store Print team, focused on development of modernized Store and production support. Improved Splunk backend service logging(Java service) for consistency; ideated, lead design and development of newer dashboard for getting better metrics from Splunk logs on weekly basis. Actively monitored Splunk and AppDynamics dashboards on production."
+    },
     {
       "id": "rest_apis_work",
       "tags": ["rest", "printAndGo"],
@@ -50,7 +55,8 @@
       "logo": "performance_monitoring.png",
       "stmt": [
         "Used <strong>jVisualVM</strong> for monitoring the application for memory footprint. Analyzed for biggest memory consuming methods.",
-        "Analyzed the output and suggested ways in which memory consumption can be reduced."
+        "Analyzed the output and suggested ways in which memory consumption can be reduced.",
+        "Analysed production Splunk logs for debugging real time issues, monitored application health on appDynamics. Suggested improvements in dashboard for getting detailed information on issues"
       ]
     },
     {
